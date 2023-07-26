@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*primitive-color*/
 /*semantic-color*/
-/*font-size*/
+/*font-sizeを指定*/
 /*グローバルスタイルを指定*/
 html {
   font-family: system-ui, sans-serif;

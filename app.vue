@@ -9,7 +9,6 @@
 h1{
   color: $red-700;
 }
-
 .caption{
   color: $text-link;
   }

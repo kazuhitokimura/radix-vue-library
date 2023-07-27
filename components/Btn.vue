@@ -1,23 +1,122 @@
 <template>
-    <button :class="$style.color">
-        <slot>{{ label }}</slot>
+    <button :class="[$style.btn, $style[color], $style[size], {[$style.is-loading]: isLoading}]" :disabled="isDisabled">
+        <LoadingSpinner v-if="isLoading" />
+        <span v-else>
+            <slot>{{ label }}</slot>
+        </span>
     </button>
 </template>
 
 <script setup>
 import { defineProps } from 'vue'
+import LoadingSpinner from './LoadingSpinner.vue';
 
 const props = defineProps({
     label: {
         type: String,
         default: 'ラベル'
-    }
+    },
+    color: {
+        type: String,
+        default: 'primary'
+    },
+    size: {
+        type: String,
+        default: 'M'
+    },
+    isDisabled: {
+      type: Boolean,
+      default: false,
+    },
+    isLoading: {
+      type: Boolean,
+      default: false,
+    },
 })
+
 </script>
 
 <style lang="scss" module>
-.color{
-    background-color: $red-700;
+
+/* 共通のスタイル */
+.btn{
+    border-radius: $radius-S;
+    font-size: $text-M;
+    cursor: pointer;
+
+    &:focus-visible {
+    outline: 2px solid $focus-main;
+    outline-offset: 2px;
+}
+
+    &:disabled  {
+        opacity: $opacity-disabled;
+        cursor: not-allowed;
+    }
+}
+
+/* color別のスタイル */
+.primary{
+    background-color: $primary-main;
     color: $text-white;
+
+    &:hover{
+        background-color: $gray-900;
+    }
+    &:active{
+        background-color: darken($gray-900, 20%);
+    }
+    &:disabled  {
+        background-color: $primary-main;
+    }
+}
+
+.neutral{
+    background-color: $surface-main;
+    color: $text-main;
+    border: 1px solid $border-main;
+
+    &:hover{
+        background-color: $gray-50;
+    }
+
+    &:active{
+        background-color: $gray-100;
+    }
+
+    &:disabled  {
+        background-color: $surface-main;
+    }
+}
+
+.text{
+    color: $text-main;
+
+    &:hover{
+        background-color: $overay-hover;
+    }
+
+    &:active{
+        background-color: $overay-active;
+    }
+    &:disabled  {
+        background-color: transparent;
+    }
+}
+
+/* size別のスタイル */
+.S{
+    padding: 0 0.75rem 0 0.75rem;
+    height: 2.5rem;
+}
+
+.L{
+    padding: 0 2rem 0 2rem;
+    height: 2.75rem;
+}
+
+/* isLoadingのスタイル */
+.is-loading {
+    cursor: not-allowed;
 }
 </style>

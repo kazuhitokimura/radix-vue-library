@@ -2,6 +2,7 @@
   <div>
   <h1>タイトルが入ります</h1>
   <p :class="$style.caption">何かしらの文章</p>
+  <Btn label="テスト" />
   </div>
 </template>
 

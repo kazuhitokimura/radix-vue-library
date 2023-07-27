@@ -11,6 +11,15 @@
   <Btn label="テスト" color="neutral" size="L" isLoading="true" disabled="true" />
   <Btn label="テスト" color="primary" size="L" isLoading="true" disabled="true" />
   <Btn label="テスト" color="text" size="L" isLoading="true" disabled="true" />
+  <Btn label="テスト" color="neutral" size="S"/>
+  <Btn label="テスト" color="primary" size="S"/>
+  <Btn label="テスト" color="text" size="S"/>
+  <Btn label="テスト" color="neutral" size="S" disabled="true"/>
+  <Btn label="テスト" color="primary" size="S" disabled="true"/>
+  <Btn label="テスト" color="text" size="S" disabled="true"/>
+  <Btn label="テスト" color="neutral" size="S" isLoading="true" disabled="true" />
+  <Btn label="テスト" color="primary" size="S" isLoading="true" disabled="true" />
+  <Btn label="テスト" color="text" size="S" isLoading="true" disabled="true" />
 
   </div>
 </template>

@@ -8,7 +8,7 @@ import { defineProps } from 'vue'
 const props = defineProps({
     label: {
         type: String,
-        default: ''
+        default: 'メニュー'
     },
     current: {
       type: Boolean,

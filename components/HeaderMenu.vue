@@ -1,6 +1,6 @@
 <template>
 <header :class=$style.header>
-<img :class=$style.logo src="../public/LOGO.svg" alt="ロゴ">
+<img :class=$style.logo src="/LOGO.svg" alt="ロゴ">
 <button :class=$style.user>
 <div :class="$style.userWrapper">
 ユーザー名
@@ -34,8 +34,8 @@
     align-items: center;
     gap: 0.75rem;
     height: 100%;
-    cursor: pointer;
     padding: 0.5rem 1rem;
+    color: $text-main;
 
     &:hover{
         background-color: $overlay-hover;

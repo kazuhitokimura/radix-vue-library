@@ -9,7 +9,6 @@
 
 <script setup>
 import { defineProps } from 'vue'
-import LoadingSpinner from './BtnLoadingSpinner.vue';
 
 const props = defineProps({
     label: {
@@ -42,7 +41,6 @@ const props = defineProps({
 .btn{
     border-radius: $radius-S;
     font-size: $text-M;
-    cursor: pointer;
 
     &:focus-visible {
     outline: 2px solid $focus-main;

@@ -1,26 +1,14 @@
 <template>
   <HeaderMenu />
-  <div :class="$style.col">
+  <div :class="$style.wholeWrapper">
+  <NavigationMenu />
+  <main>
   <h1>タイトルが入ります</h1>
-  <p :class="$style.caption">何かしらの文章</p>
-  <Btn label="テスト" color="neutral" size="L"/>
-  <Btn label="テスト" color="primary" size="L"/>
-  <Btn label="テスト" color="text" size="L"/>
-  <Btn label="テスト" color="neutral" size="L" disabled="true"/>
-  <Btn label="テスト" color="primary" size="L" disabled="true"/>
-  <Btn label="テスト" color="text" size="L" disabled="true"/>
-  <Btn label="テスト" color="neutral" size="L" isLoading="true" disabled="true" />
-  <Btn label="テスト" color="primary" size="L" isLoading="true" disabled="true" />
-  <Btn label="テスト" color="text" size="L" isLoading="true" disabled="true" />
-  <Btn label="テスト" color="neutral" size="S"/>
-  <Btn label="テスト" color="primary" size="S"/>
-  <Btn label="テスト" color="text" size="S"/>
-  <Btn label="テスト" color="neutral" size="S" disabled="true"/>
-  <Btn label="テスト" color="primary" size="S" disabled="true"/>
-  <Btn label="テスト" color="text" size="S" disabled="true"/>
-  <Btn label="テスト" color="neutral" size="S" isLoading="true" disabled="true" />
-  <Btn label="テスト" color="primary" size="S" isLoading="true" disabled="true" />
-  <Btn label="テスト" color="text" size="S" isLoading="true" disabled="true" />
+  <p>文章が入ります</p>
+  <h2>タイトルが入ります</h2>
+  <p>文章が入ります</p>
+  <h3>タイトルが入ります</h3>
+  </main>
   </div>
 </template>
 
@@ -28,17 +16,21 @@
 </script>
 
 <style lang="scss" module>
-h1{
-  color: $red-700;
+.wholeWrapper{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
 }
 
-.col{
+main{
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
   gap: 1.25rem;
+  height: 100%;
+  padding: 0 2rem;
+  background-color: $surface-main;
 }
-.caption{
-  color: $text-link;
-  }
 </style>

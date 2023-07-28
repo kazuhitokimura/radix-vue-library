@@ -19,31 +19,42 @@ html {
 h1 {
   font-size: $text-XXL;
   font-weight: 600;
+  color: $text-main;
 }
 
 h2 {
   font-size: $text-XL;
   font-weight: 600;
+  color: $text-main;
 }
 
 h3 {
   font-size: $text-L;
   font-weight: 600;
+  color: $text-main;
 }
 
 h4 {
   font-size: $text-M;
   font-weight: 600;
+  color: $text-main;
 }
 
 h5 {
   font-size: $text-S;
   font-weight: 600;
+  color: $text-main;
 }
 
 h6 {
   font-size: $text-XS;
   font-weight: 600;
+  color: $text-main;
+}
+
+p {
+  font-size: $text-M;
+  color: $text-main;
 }
 
 button {

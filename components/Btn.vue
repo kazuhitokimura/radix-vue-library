@@ -1,6 +1,6 @@
 <template>
     <button :class="[$style.btn, $style[color], $style[size], {[$style.is-loading]: isLoading}]" :disabled="isDisabled">
-        <LoadingSpinner v-if="isLoading" />
+        <BtnLoadingSpinner v-if="isLoading" :btnColor="color"/>
         <span v-else>
             <slot>{{ label }}</slot>
         </span>
@@ -9,7 +9,7 @@
 
 <script setup>
 import { defineProps } from 'vue'
-import LoadingSpinner from './LoadingSpinner.vue';
+import LoadingSpinner from './BtnLoadingSpinner.vue';
 
 const props = defineProps({
     label: {

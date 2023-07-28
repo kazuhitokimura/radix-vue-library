@@ -1,12 +1,12 @@
 <template>
-    <div :class="[$style.spinner, $style[color]]"></div>
+    <div :class="[$style.spinner, $style[btnColor]]"></div>
 </template>
 
 <script setup>
 import { defineProps } from 'vue'
 
 const props = defineProps({
-    color: {
+    btnColor: {
         type: String,
         default: 'primary'
     },
@@ -37,30 +37,23 @@ const props = defineProps({
 
 /* color別のスタイル */
 .primary {
-  border-top-color: $surface-sub;
-  border-right-color: $surface-sub;
-  border-bottom-color: $surface-sub;
-  border-left-color: $primary-main;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: $text-white;
 }
 
-.text {
-  border-top-color: $surface-sub;
-  border-right-color: $surface-sub;
-  border-bottom-color: $surface-sub;
+.neutral {
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
   border-left-color: $text-main;
 }
 
-.text-sub {
-  border-top-color: $surface-sub;
-  border-right-color: $surface-sub;
-  border-bottom-color: $surface-sub;
-  border-left-color: $text-sub;
-}
-
-.white {
-  border-top-color: $surface-sub;
-  border-right-color: $surface-sub;
-  border-bottom-color: $surface-sub;
-  border-left-color: $text-white;
+.text {
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: $text-main;
 }
 </style>

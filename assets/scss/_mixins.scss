@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+@import "./_border-radius";
+@import "./_color";
+@import "./_opacity";
+@import "./_shadow";
+@import "./_spacing";
+@import "./_typography";
+
+
+/*ローディングスピナーのスタイルを指定*/
+
+@mixin spinner($size: 1rem, $border-width: 2px, $border-color: currentColor) {
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    text-indent: -9999em;
+    border-top: $border-width solid $border-color;
+    border-right: $border-width solid $border-color;
+    border-bottom: $border-width solid $border-color;
+    border-left: $border-width solid $border-color;
+    animation: animate 0.8s linear infinite;
+  
+    @keyframes animate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+  

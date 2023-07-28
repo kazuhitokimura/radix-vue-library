@@ -1,6 +1,6 @@
 <template>
     <nav :class="$style.navigationMenu">
-    <NavigationMenuBtn label="長いやつ長いやつ長いやつ長いやつ" current="true"/>
+    <NavigationMenuBtn label="メニュー" :current="true" />
     <NavigationMenuBtn label="メニュー" />
     </nav>
 </template>

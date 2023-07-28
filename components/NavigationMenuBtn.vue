@@ -8,7 +8,7 @@ import { defineProps } from 'vue'
 const props = defineProps({
     label: {
         type: String,
-        default: 'メニュー'
+        default: ''
     },
     current: {
       type: Boolean,
@@ -48,7 +48,7 @@ const props = defineProps({
 
     .current{
         background-color: $surface-sub;
-        border-left: 4px solid $primary-main;
+        border-left: 2px solid $primary-main;
 
         &:hover{
             background-color: $gray-100;

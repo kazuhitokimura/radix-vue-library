@@ -1,6 +1,6 @@
 <template>
     <button :class="[$style.btn, $style[color], $style[size], {[$style.loading]: isLoading}]" :disabled="isDisabled">
-        <BtnLoadingSpinner v-if="isLoading" :btnColor="color"/>
+        <BtnLoadingSpinner v-if="isLoading" btnColor="color"/>
         <span v-else>
             <slot>{{ label }}</slot>
         </span>

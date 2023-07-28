@@ -1,5 +1,5 @@
 <template>
-    <button :class="[$style.btn, $style[color], $style[size], {[$style.is-loading]: isLoading}]" :disabled="isDisabled">
+    <button :class="[$style.btn, $style[color], $style[size], {[$style.loading]: isLoading}]" :disabled="isDisabled">
         <BtnLoadingSpinner v-if="isLoading" :btnColor="color"/>
         <span v-else>
             <slot>{{ label }}</slot>
@@ -93,11 +93,11 @@ const props = defineProps({
     color: $text-main;
 
     &:hover{
-        background-color: $overay-hover;
+        background-color: $overlay-hover;
     }
 
     &:active{
-        background-color: $overay-active;
+        background-color: $overlay-active;
     }
     &:disabled  {
         background-color: transparent;
@@ -116,7 +116,7 @@ const props = defineProps({
 }
 
 /* isLoadingのスタイル */
-.is-loading {
+.loading {
     cursor: not-allowed;
 }
 </style>

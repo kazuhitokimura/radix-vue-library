@@ -2,7 +2,22 @@
 /*primitive-color*/
 /*semantic-color*/
 /*定義したが使っていない*/ /*font-sizeを指定*/
-/*グローバルスタイルを指定*/
+/*32px*/
+/*24px*/
+/*20px*/
+/*16px*/
+/*14px*/
+/*12px*/
+/*primitive-color*/
+/*semantic-color*/
+/*定義したが使っていない*/ /*font-sizeを指定*/
+/*32px*/
+/*24px*/
+/*20px*/
+/*16px*/
+/*14px*/
+/*12px*/
+/*ローディングスピナーのスタイルを指定*/ /*グローバルスタイルを指定*/
 html {
   font-family: system-ui, sans-serif;
   font-size: 16px;
@@ -37,5 +52,13 @@ h5 {
 h6 {
   font-size: 0.75rem;
   font-weight: 600;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
 }
 /*# sourceMappingURL=global.css.map */

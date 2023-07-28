@@ -1,4 +1,5 @@
 <template>
+  <HeaderMenu />
   <div :class="$style.col">
   <h1>タイトルが入ります</h1>
   <p :class="$style.caption">何かしらの文章</p>
@@ -20,9 +21,11 @@
   <Btn label="テスト" color="neutral" size="S" isLoading="true" disabled="true" />
   <Btn label="テスト" color="primary" size="S" isLoading="true" disabled="true" />
   <Btn label="テスト" color="text" size="S" isLoading="true" disabled="true" />
-
   </div>
 </template>
+
+<script setup>
+</script>
 
 <style lang="scss" module>
 h1{

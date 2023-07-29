@@ -1,6 +1,6 @@
 <template>
     <table :class="$style.table">
-        <thead :class="$style.thead">
+        <thead>
         <tr>
             <Th text="タイトル"/>
             <Th text="タイトル" />
@@ -8,15 +8,15 @@
             <Th text="タイトル" />
         </tr>
         </thead>
-        <tbody :class="$style.tbody">
+        <tbody>
         <tr>
-            <Td text="テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト" :isLink="true" minWidth="15rem"/>
+            <Td text="テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト" :isLink="true" href="#" minWidth="15rem"/>
             <Td text="テキスト" />
             <Td text="テキスト" />
             <Td text="テキスト" />
         </tr>
         <tr>
-            <Td text="テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト" :isLink="true"/>
+            <Td text="テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト" :isLink="true"  href="#"/>
             <Td text="テキスト" />
             <Td text="テキスト" />
             <Td text="テキスト" />

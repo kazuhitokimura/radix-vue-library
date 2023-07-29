@@ -1,6 +1,6 @@
 <template>
         <td :class="[$style.td, $style.tdMinWidth, {[$style.truncate]: isTruncate}]" :style="{ minWidth: minWidth }">
-            <a href="{{ href }}" v-if="isLink" :class="$style.link">{{ text }}</a>
+        <a :href="href" v-if="isLink" :class="$style.link">{{ text }}</a>
         <span v-else>{{ text }}</span>
         </td>
   </template>

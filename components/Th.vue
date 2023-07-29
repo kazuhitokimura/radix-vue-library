@@ -1,5 +1,5 @@
 <template>
-    <td :class="[$style.th, {[$style.truncate]: isTruncate}]">{{ text }}</td>
+    <th :class="[$style.th, {[$style.truncate]: isTruncate}]">{{ text }}</th>
 </template>
 
 <script setup>
@@ -25,7 +25,7 @@ const props = defineProps({
         text-align: left;
         border-bottom: 1px solid $border-main;
         color: $text-sub;
-        @include h4();
+        @include h5();
         max-width: 0;
     }
 

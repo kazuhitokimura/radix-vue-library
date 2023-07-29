@@ -1,5 +1,5 @@
 <template>
-        <td :class="[$style.td, $style.tdMinWidth, {[$style.fixedHeight]: isFixedHeight}, {[$style.truncate]: isTruncate}]" :style="{ minWidth: minWidth }">
+        <td :class="[$style.td, $style.tdMinWidth, {[$style.truncate]: isTruncate}]" :style="{ minWidth: minWidth }">
             <a href="{{ href }}" v-if="isLink" :class="$style.link">{{ text }}</a>
         <span v-else>{{ text }}</span>
         </td>
@@ -13,10 +13,6 @@
           type: String,
           default: 'テキスト'
       },
-        isFixedHeight: {
-            type: Boolean,
-            default: false,
-        },
         isTruncate: {
             type: Boolean,
             default: true,
@@ -46,13 +42,6 @@
         max-width: 0;
         @include p();
     }
-
-    .fixedHeight{
-        height: 3.5rem;
-        display: flex;
-        align-items: center;
-    }
-
     .truncate{
         overflow: hidden;
         text-overflow: ellipsis;

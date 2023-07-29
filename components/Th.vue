@@ -1,5 +1,5 @@
 <template>
-    <td :class="[$style.th, {[$style.fixedHeight]: isFixedHeight}]">{{ text }}</td>
+    <td :class="[$style.th, {[$style.truncate]: isTruncate}]">{{ text }}</td>
 </template>
 
 <script setup>
@@ -10,9 +10,9 @@ const props = defineProps({
       type: String,
       default: 'テキスト'
   },
-    isFixedHeight: {
+    isTruncate: {
         type: Boolean,
-        default: false,
+        default: true,
     },
 })
 
@@ -26,11 +26,12 @@ const props = defineProps({
         border-bottom: 1px solid $border-main;
         color: $text-sub;
         @include h4();
+        max-width: 0;
     }
 
-.fixedHeight{
-        height: 3.5rem;
-        display: flex;
-        align-items: center;
+    .truncate{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 </style>

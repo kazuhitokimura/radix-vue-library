@@ -102,12 +102,12 @@ const props = defineProps({
 
 /* size別のスタイル */
 .S{
-    padding: 0 0.75rem 0 0.75rem;
-    height: 2.5rem;
+    padding: 0 12px;
+    height: 40rem;
 }
 
 .L{
-    padding: 0 2rem 0 2rem;
+    padding: 0 12px;
     height: 2.75rem;
 }
 

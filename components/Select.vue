@@ -37,7 +37,7 @@ import {
     align-items: center;
     flex-wrap: wrap;
     gap: 0.5rem;
-    padding: 0.625rem 0.5rem;
+    padding: 10px 8px;
     border: 1px solid $border-main;
     border-radius: $radius-S;
     min-height: 2.75rem;
@@ -59,8 +59,8 @@ import {
     fill: $text-sub;
 }
 .selectContent{
-    margin-top: 0.25rem;
-    padding: 0.25rem 0;
+    margin-top: 4px;
+    padding: 4px 0;
     background-color: $bg-main;
     border-radius: $radius-S;
     box-shadow: $shadow-10;
@@ -70,7 +70,7 @@ import {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0.5rem 1rem;
+    padding: 8px 16px;
     color: $text-main;
     width: 100%;
     cursor: pointer;

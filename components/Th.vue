@@ -19,7 +19,7 @@ const props = defineProps({
 <style lang="scss" module>
 
 .th{
-        padding: 1rem 0.75rem;
+        padding: 16px 12px;
         text-align: left;
         border-bottom: 1px solid $border-main;
         color: $text-sub;

@@ -25,7 +25,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 0.25rem;
+        padding: 4px;
         height: calc(100vh - 3.75rem);
         width: 13rem;
         background-color: $surface-main;

@@ -18,7 +18,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1rem;
+    padding: 0 16px;
     height: 3.75rem;
     width: 100%;
     background-color: $surface-main;
@@ -34,7 +34,7 @@
     align-items: center;
     gap: 0.75rem;
     height: 100%;
-    padding: 0.5rem 1rem;
+    padding: 8px 16px;
     color: $text-main;
 
     &:hover{

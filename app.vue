@@ -25,7 +25,7 @@ main{
   flex-direction: column;
   justify-content: flex-start;
   height: 100%;
-  padding: 0 2rem;
+  padding: 32px;
   background-color: $surface-main;
 }
 </style>

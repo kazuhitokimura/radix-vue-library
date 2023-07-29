@@ -1,7 +1,9 @@
 <template>
     <nav :class="$style.navigationMenu">
-    <NavigationMenuBtn label="メニュー" :current="true" />
-    <NavigationMenuBtn label="メニュー" />
+    <NavigationMenuItem label="メニュー" :current="true" />
+    <NavigationMenuItem label="メニュー" />
+    <NavigationMenuItem label="メニュー" />
+    <NavigationMenuItem label="メニュー" />
     </nav>
 </template>
 
@@ -13,9 +15,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 0rem 0.25rem;
+        padding: 0.25rem;
         gap: 0.25rem;
-        height: 100vh;
+        height: calc(100vh - 3.75rem);
         width: 13rem;
+        background-color: $surface-main;
     }
 </style>

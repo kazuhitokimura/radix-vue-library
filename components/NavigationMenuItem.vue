@@ -1,5 +1,5 @@
 <template>
-    <button :class="[$style.navMenuBtn, {[$style.current]: current}]">{{ label }}</button>
+    <button :class="[$style.navMenuItem, {[$style.current]: current}]">{{ label }}</button>
 </template>
 
 <script setup>
@@ -20,13 +20,13 @@ const props = defineProps({
 
 <style lang="scss" module>
 
-    .navMenuBtn{
+    .navMenuItem{
         display: block;
         flex-direction: row;
         align-items: center;
         gap: 0.25rem;
         width: 100%;
-        padding: 0.5rem 0.75rem;
+        padding: 0.375rem 0.5rem;
         color: $text-main;
         background-color: $surface-main;
         text-overflow: ellipsis;

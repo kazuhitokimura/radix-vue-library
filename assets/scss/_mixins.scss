@@ -39,3 +39,8 @@
   font-size: $text-XS;
   font-weight: 600;
 }
+
+@mixin p() {
+  font-size: $text-M;
+  font-weight: 300;
+}

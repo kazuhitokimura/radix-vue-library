@@ -1,14 +1,26 @@
 <template>
     <table :class="$style.table">
         <thead :class="$style.thead">
-        <th :class="$style.th">タイトル</th>
-        <th :class="$style.th">タイトル</th>
-        <th :class="$style.th">タイトル</th>
+        <tr>
+            <Th text="タイトル"/>
+            <Th text="タイトル" />
+            <Th text="タイトル" />
+            <Th text="タイトル" />
+        </tr>
         </thead>
         <tbody :class="$style.tbody">
-        <td :class="$style.td">テキスト</td>
-        <td :class="$style.td">テキスト</td>
-        <td :class="$style.td">テキスト</td>
+        <tr>
+            <Td text="テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト" :isLink="true" minWidth="15rem"/>
+            <Td text="テキスト" />
+            <Td text="テキスト" />
+            <Td text="テキスト" />
+        </tr>
+        <tr>
+            <Td text="テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト" :isLink="true"/>
+            <Td text="テキスト" />
+            <Td text="テキスト" />
+            <Td text="テキスト" />
+        </tr>
         </tbody>
     </table>
   </template>
@@ -17,23 +29,18 @@
   </script>
   
   <style lang="scss" module>
-    .table{
+  .table{
         width: 100%;
         border-collapse: collapse;
         border-spacing: 0;
     }
 
     .th{
-        padding: 0.5rem;
+        padding: 1rem 0.75rem;
         text-align: left;
         border-bottom: 1px solid $border-main;
         color: $text-sub;
+        @include h4();
     }
 
-    .td{
-        padding: 0.5rem;
-        text-align: left;
-        border-bottom: 1px solid $border-main;
-        color: $text-main;
-    }
   </style>

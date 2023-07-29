@@ -23,7 +23,7 @@ const props = defineProps({
         text-align: left;
         border-bottom: 1px solid $border-main;
         color: $text-sub;
-        @include h5();
+        @include text-h5();
         max-width: 0;
     }
 

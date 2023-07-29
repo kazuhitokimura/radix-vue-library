@@ -10,37 +10,37 @@
 
 /*見出しと同じfontを見出し以外で使う場合*/
 
-@mixin h1() {
+@mixin text-h1() {
   font-size: $text-XXL;
   font-weight: 600;
 }
 
-@mixin h2() {
+@mixin text-h2() {
   font-size: $text-XL;
   font-weight: 600;
 }
 
-@mixin h3() {
+@mixin text-h3() {
   font-size: $text-L;
   font-weight: 600;
 }
 
-@mixin h4() {
+@mixin text-h4() {
   font-size: $text-M;
   font-weight: 600;
 }
 
-@mixin h5() {
+@mixin text-h5() {
   font-size: $text-S;
   font-weight: 600;
 }
 
-@mixin h6() {
+@mixin text-h6() {
   font-size: $text-XS;
   font-weight: 600;
 }
 
-@mixin p() {
+@mixin text-p() {
   font-size: $text-M;
   font-weight: 300;
 }

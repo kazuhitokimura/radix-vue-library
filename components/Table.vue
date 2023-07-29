@@ -40,7 +40,7 @@
         text-align: left;
         border-bottom: 1px solid $border-main;
         color: $text-sub;
-        @include h4();
+        @include text-h4();
     }
 
   </style>

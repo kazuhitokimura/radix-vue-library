@@ -1,7 +1,8 @@
 /** @type { import('@storybook/vue3-vite').StorybookConfig } */
 const config = {
   stories: [
-    '../components/Btn.stories.js',
+    "../stories/**/*.mdx",
+    "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
   ],
   addons: [
     "@storybook/addon-links",

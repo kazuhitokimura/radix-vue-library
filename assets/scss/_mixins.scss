@@ -8,26 +8,34 @@
 @import "./_typography";
 
 
-/*ローディングスピナーのスタイルを指定*/
+/*見出しと同じfontを見出し以外で使う場合*/
 
-@mixin spinner($size: 1rem, $border-width: 2px, $border-color: currentColor) {
-    width: $size;
-    height: $size;
-    border-radius: 50%;
-    text-indent: -9999em;
-    border-top: $border-width solid $border-color;
-    border-right: $border-width solid $border-color;
-    border-bottom: $border-width solid $border-color;
-    border-left: $border-width solid $border-color;
-    animation: animate 0.8s linear infinite;
-  
-    @keyframes animate {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-  }
-  
+@mixin h1() {
+  font-size: $text-XXL;
+  font-weight: 600;
+}
+
+@mixin h2() {
+  font-size: $text-XL;
+  font-weight: 600;
+}
+
+@mixin h3() {
+  font-size: $text-L;
+  font-weight: 600;
+}
+
+@mixin h4() {
+  font-size: $text-M;
+  font-weight: 600;
+}
+
+@mixin h5() {
+  font-size: $text-S;
+  font-weight: 600;
+}
+
+@mixin h6() {
+  font-size: $text-XS;
+  font-weight: 600;
+}

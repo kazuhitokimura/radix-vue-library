@@ -4,6 +4,7 @@
   <NavigationMenu />
   <main>
   <h1>タイトルが入ります</h1>
+  <Table />
   </main>
   </div>
 </template>

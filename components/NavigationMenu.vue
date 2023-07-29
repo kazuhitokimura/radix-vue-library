@@ -1,9 +1,19 @@
 <template>
     <nav :class="$style.navigationMenu">
-    <NavigationMenuItem label="メニュー" :current="true" />
-    <NavigationMenuItem label="メニュー" />
-    <NavigationMenuItem label="メニュー" />
-    <NavigationMenuItem label="メニュー" />
+    <ul :class="$style.itemUl">
+    <li :class="$style.itemLi">
+        <NavigationMenuItem label="メニュー" :current="true" />
+    </li>
+    <li :class="$style.itemLi">
+        <NavigationMenuItem label="メニュー" />
+    </li>
+    <li :class="$style.itemLi">
+        <NavigationMenuItem label="メニュー" />
+    </li>
+    <li :class="$style.itemLi">
+        <NavigationMenuItem label="メニュー" />
+    </li>
+    </ul>
     </nav>
 </template>
 
@@ -16,9 +26,20 @@
         flex-direction: column;
         align-items: center;
         padding: 0.25rem;
-        gap: 0.25rem;
         height: calc(100vh - 3.75rem);
         width: 13rem;
         background-color: $surface-main;
+    }
+
+    .itemUl{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.25rem;
+        width: 100%;
+    }
+
+    .itemLi{
+        width: 100%;
     }
 </style>

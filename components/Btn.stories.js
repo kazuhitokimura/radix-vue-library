@@ -1,48 +1,37 @@
-import MyButton from './Button.vue';
+import Btn from './Btn.vue';
 
-// More on how to set up stories at: https://storybook.js.org/docs/vue/writing-stories/introduction
 export default {
-  title: 'Example/Button',
-  component: MyButton,
-  tags: ['autodocs'],
+  title: 'Example/Btn',
+  component: Btn,
   argTypes: {
-    backgroundColor: {
-      control: 'color',
+    color: {
+      control: { type: 'select', options: ['primary', 'neutral', 'text'] },
     },
-    onClick: {},
     size: {
-      control: {
-        type: 'select',
-      },
-      options: ['small', 'medium', 'large'],
+      control: { type: 'select', options: ['S', 'M', 'L'] },
+    },
+    isDisabled: {
+      control: { type: 'boolean' },
+    },
+    isLoading: {
+      control: { type: 'boolean' },
     },
   },
 };
 
-// More on writing stories with args: https://storybook.js.org/docs/vue/writing-stories/args
-export const Primary = {
-  args: {
-    primary: true,
-    label: 'Button',
+const Template = (args) => ({
+  components: { Btn },
+  setup() {
+    return { args };
   },
-};
+  template: '<Btn v-bind="args" />',
+});
 
-export const Secondary = {
-  args: {
-    label: 'Button',
-  },
-};
-
-export const Large = {
-  args: {
-    size: 'large',
-    label: 'Button',
-  },
-};
-
-export const Small = {
-  args: {
-    size: 'small',
-    label: 'Button',
-  },
+export const Primary = Template.bind({});
+Primary.args = {
+  label: 'Button',
+  color: 'primary',
+  size: 'M',
+  isDisabled: false,
+  isLoading: false,
 };

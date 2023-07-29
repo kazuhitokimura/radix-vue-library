@@ -5,6 +5,7 @@
   <main>
   <h1>タイトルが入ります</h1>
   <Table />
+  <Select />
   </main>
   </div>
 </template>

@@ -17,30 +17,37 @@ html {
 
 h1 {
   @include text-h1();
+  color: $text-main;
 }
 
 h2 {
   @include text-h2();
+  color: $text-main;
 }
 
 h3 {
   @include text-h3();
+  color: $text-main;
 }
 
 h4 {
   @include text-h4();
+  color: $text-main;
 }
 
 h5 {
   @include text-h5();
+  color: $text-main;
 }
 
 h6 {
   @include text-h6();
+  color: $text-main;
 }
 
 p {
   @include text-body1();
+  color: $text-main;
 }
 
 button {

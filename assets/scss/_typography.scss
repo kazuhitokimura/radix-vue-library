@@ -48,3 +48,8 @@ $text-XS: 0.75rem; /*12px*/
     font-size: $text-S;
     font-weight: 300;
   }
+
+  @mixin text-caption() {
+    font-size: $text-XS;
+    font-weight: 300;
+  }

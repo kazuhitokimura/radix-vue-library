@@ -1,5 +1,6 @@
 <template>
         <td :class="[$style.td, $style.tdMinWidth, {[$style.truncate]: isTruncate}]" :style="{ minWidth: minWidth }">
+        <NuxtLink :to=nuxtLink v-if="isNuxtLink" :class="$style.link">{{ text }}</NuxtLink>
         <a :href="href" v-if="isLink" :class="$style.link">{{ text }}</a>
         <span v-else>{{ text }}</span>
         </td>
@@ -22,6 +23,14 @@
         isLink: {
             type: Boolean,
             default: false,
+        },
+        isNuxtLink: {
+            type: Boolean,
+            default: false,
+        },
+        nuxtLink: {
+            type: String,
+            default: '/',
         },
         href: {
             type: String,
@@ -47,19 +56,6 @@
     }
 
     .link{
-        color: $text-link;
-        text-decoration: underline;
-
-        &:hover{
-            color: $blue-700;
-        }
-
-        &:active{
-            color: $blue-800;
-        }
-
-        &:focus-visible{
-            outline : 2px solid $focus-main;
-        }
+        @include link-base();
     }
   </style>

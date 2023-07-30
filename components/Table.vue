@@ -10,13 +10,13 @@
         </thead>
         <tbody>
         <tr>
-            <Td text="テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト" :isLink="true" href="#" minWidth="15rem"/>
+            <Td text="テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト" :isNuxtLink="true" nuxtLink="/detail" minWidth="15rem" />
             <Td text="テキスト" />
             <Td text="テキスト" />
             <Td text="テキスト" />
         </tr>
         <tr>
-            <Td text="テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト" :isLink="true"  href="#"/>
+            <Td text="テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト" :isNuxtLink="true" nuxtLink="/detail" />
             <Td text="テキスト" />
             <Td text="テキスト" />
             <Td text="テキスト" />

@@ -1,18 +1,12 @@
 <template>
     <button :class="[$style.btn, $style[color], $style[size], {[$style.loading]: isLoading}]" :disabled="isDisabled">
         <BtnLoadingSpinner v-if="isLoading" btnColor="color"/>
-        <span v-else>
-            <slot>{{ label }}</slot>
-        </span>
+        <slot v-else />
     </button>
 </template>
 
 <script setup>
 const props = defineProps({
-    label: {
-        type: String,
-        default: 'ラベル'
-    },
     color: {
         type: String,
         default: 'primary'
@@ -37,6 +31,11 @@ const props = defineProps({
 
 /* 共通のスタイル */
 .btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
     border-radius: $radius-S;
     font-size: $text-M;
 
@@ -103,12 +102,12 @@ const props = defineProps({
 /* size別のスタイル */
 .M{
     padding: 0 12px;
-    min-height: 40rem;
+    height: 2.5rem;
 }
 
 .L{
-    padding: 0 12px;
-    min-height: 2.75rem;
+    padding: 0 32px;
+    height: 2.75rem;
 }
 
 /* isLoadingのスタイル */

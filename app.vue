@@ -5,8 +5,9 @@
   <main>
   <h1>タイトルが入ります</h1>
   <Table />
-  <Select triggerWidth="20rem" contentWidth="20rem"/>
-  <IconBtn color="primary" size="M"/>
+  <div :class="$style.tableFooter">
+  <PageNation />
+  </div>
   </main>
   </div>
 </template>
@@ -28,5 +29,12 @@ main{
   height: 100%;
   padding: 32px;
   background-color: $surface-main;
+}
+
+.tableFooter{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 12px 0;
 }
 </style>

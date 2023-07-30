@@ -5,7 +5,8 @@
   <main>
   <h1>タイトルが入ります</h1>
   <Table />
-  <Select />
+  <Select triggerWidth="20rem" contentWidth="20rem"/>
+  <IconBtn color="primary" size="M"/>
   </main>
   </div>
 </template>

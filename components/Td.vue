@@ -38,7 +38,7 @@
         border-bottom: 1px solid $border-main;
         color: $text-main;
         max-width: 0;
-        @include text-p();
+        @include text-body1();
     }
     .truncate{
         overflow: hidden;

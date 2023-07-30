@@ -1,6 +1,7 @@
 <template>
     <div :class="$style.tableFooter">
-    表示件数
+    表示件数：
+    <Select triggerText="10" triggerWidth="8rem" contentWidth="8rem"/>
     </div>
 </template>
 

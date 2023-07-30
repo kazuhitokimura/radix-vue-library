@@ -1,5 +1,3 @@
-@charset "utf-8";
-
 @import "./_border-radius";
 @import "./_color";
 @import "./_opacity";
@@ -7,6 +5,7 @@
 @import "./_spacing";
 @import "./_typography";
 @import "./_mixins";
+@import "./_z-index";
 
 /*グローバルスタイルを指定*/
 
@@ -17,45 +16,31 @@ html {
 }
 
 h1 {
-  font-size: $text-XXL;
-  font-weight: 600;
-  color: $text-main;
+  @include text-h1();
 }
 
 h2 {
-  font-size: $text-XL;
-  font-weight: 600;
-  color: $text-main;
+  @include text-h2();
 }
 
 h3 {
-  font-size: $text-L;
-  font-weight: 600;
-  color: $text-main;
+  @include text-h3();
 }
 
 h4 {
-  font-size: $text-M;
-  font-weight: 600;
-  color: $text-main;
+  @include text-h4();
 }
 
 h5 {
-  font-size: $text-S;
-  font-weight: 600;
-  color: $text-main;
+  @include text-h5();
 }
 
 h6 {
-  font-size: $text-XS;
-  font-weight: 600;
-  color: $text-main;
+  @include text-h6();
 }
 
 p {
-  font-size: $text-M;
-  font-weight: 300;
-  color: $text-main;
+  @include text-body1();
 }
 
 button {

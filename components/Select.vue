@@ -1,15 +1,15 @@
+<!-- Radix Vueを使用 -->
+
 <template>
   <SelectRoot >
-    <SelectTrigger :class="$style.selectTrigger">
-      <span :class="$style.selectTriggerText">選択してください</span>
+    <SelectTrigger :class="$style.selectTrigger" :style="{ width: triggerWidth }">
+      <span :class="$style.selectTriggerText">{{ triggerText }}</span>
       <Icon icon="radix-icons:chevron-down" :class="$style.selectIcon"/>
     </SelectTrigger>
-    <SelectPortal>
-      <SelectContent :class="$style.selectContent">
+      <SelectContent :class="$style.selectContent" :style="{ width: contentWidth }">
         <SelectItem :class="$style.selectItem" value="1">オプション</SelectItem>
         <SelectItem :class="$style.selectItem" value="2">オプション</SelectItem>
        </SelectContent>
-    </SelectPortal>
   </SelectRoot>
 </template>
 
@@ -26,31 +26,31 @@ import {
     SelectSeparator,
     SelectTrigger,
 } from "radix-vue";
+
+const props = defineProps({
+    triggerText: {
+        type: String,
+        default: '選択してください'
+    },
+    triggerWidth: {
+        type: String,
+        default: '100%'
+    },
+    contentWidth: {
+        type: String,
+        default: '100%'
+    },
+})
 </script>
 
 
 <style lang="scss" module>
 .selectTrigger {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    padding: 10px 8px;
-    border: 1px solid $border-main;
-    border-radius: $radius-S;
-    min-height: 2.75rem;
-    width: 100%;
-
-    &:focus-visible {
-        border-color: $focus-main;
-        outline: 2px solid $blue-100;
-    }
+    @include input-base();
 }
 .selectTriggerText {
     flex: 1;
-    @include text-p();
+    @include text-body1();
     color: $text-main;
 }
 .selectIcon{
@@ -65,7 +65,6 @@ import {
     border-radius: $radius-S;
     box-shadow: $shadow-10;
 }
-
 .selectItem{
     display: flex;
     flex-direction: row;

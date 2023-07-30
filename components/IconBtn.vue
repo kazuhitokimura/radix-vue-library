@@ -2,16 +2,18 @@
     <button :class="[$style.btn, $style[color], $style[size], {[$style.loading]: isLoading}]" :disabled="isDisabled">
         <BtnLoadingSpinner v-if="isLoading" btnColor="color"/>
         <span v-else>
-            <slot>{{ label }}</slot>
+            <slot><span class="material-symbols-outlined">
+                {{ icon }}
+            </span></slot>
         </span>
     </button>
 </template>
 
 <script setup>
 const props = defineProps({
-    label: {
+    icon: {
         type: String,
-        default: 'ラベル'
+        default: 'sentiment_satisfied_alt'
     },
     color: {
         type: String,
@@ -37,8 +39,12 @@ const props = defineProps({
 
 /* 共通のスタイル */
 .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: $radius-S;
-    font-size: $text-M;
+    font-size: $text-XL;
+    line-height: 0;
 
     &:focus-visible {
     outline: 2px solid $focus-main;
@@ -69,7 +75,7 @@ const props = defineProps({
 
 .neutral{
     background-color: $surface-main;
-    color: $text-main;
+    color: $text-sub;
     border: 1px solid $border-main;
 
     &:hover{
@@ -86,7 +92,7 @@ const props = defineProps({
 }
 
 .text{
-    color: $text-main;
+    color: $text-sub;
 
     &:hover{
         background-color: $overlay-hover;
@@ -102,13 +108,15 @@ const props = defineProps({
 
 /* size別のスタイル */
 .M{
-    padding: 0 12px;
-    min-height: 40rem;
+    padding: 8px;
+    height: 2.5rem;
+    width: 2.5rem;
 }
 
 .L{
-    padding: 0 12px;
-    min-height: 2.75rem;
+    padding: 10px;
+    height: 2.75rem;
+    width: 2.75rem;
 }
 
 /* isLoadingのスタイル */

@@ -12,35 +12,7 @@
         minWidth: {
             type: String,
             default: '5rem',
-        },
-        secondBtn: {
-            type: Boolean,
-            default: false,
-        },
-        thirdBtn: {
-            type: Boolean,
-            default: false,
-        },
-        fourthBtn: {
-            type: Boolean,
-            default: false,
-        },
-        iconBtn: {
-            type: Boolean,
-            default: false,
-        },
-        secondIconBtn: {
-            type: Boolean,
-            default: false,
-        },
-        thirdIconBtn: {
-            type: Boolean,
-            default: false,
-        },
-        fourthIconBtn: {
-            type: Boolean,
-            default: false,
-        },
+        }
   })
   </script>
   

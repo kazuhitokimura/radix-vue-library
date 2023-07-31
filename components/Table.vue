@@ -5,17 +5,20 @@
             <Th text="タイトル"/>
             <Th text="タイトル" />
             <Th text="タイトル" />
+            <Th text="タイトル" />
         </tr>
         </thead>
         <tbody>
         <tr>
             <TdText text="テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト" :isNuxtLink="true" nuxtLink="/detail" minWidth="15rem" caption="説明が入りますこれはtruncate不可です"/>
-            <TdBtn/>
+            <TdText text="テキストテキストテキストテキスト"/>
+            <TdBtn :secondBtn="true"/>
             <TdBtn/>
         </tr>
         <tr>
             <TdText text="テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト" :isNuxtLink="true" nuxtLink="/detail" minWidth="15rem" :isTruncate="false" caption="説明が入りますこれはtruncate不可です"/>
-            <TdBtn/>
+            <TdText text="テキスト"/>
+            <TdBtn :secondBtn="true"/>
             <TdBtn/>
         </tr>
         </tbody>

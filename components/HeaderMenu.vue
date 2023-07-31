@@ -1,63 +1,62 @@
 <template>
-<header :class=$style.header>
-<img :class=$style.logo src="/LOGO.svg" alt="ロゴ">
-<button :class=$style.user>
-<div :class="$style.userWrapper">
-ユーザー名
-<span :class="$style.team">組織名</span>
-</div>
-</button>
-</header>
+  <header :class="$style.header">
+    <img :class="$style.logo" src="/LOGO.svg" alt="ロゴ" />
+    <button :class="$style.user">
+      <div :class="$style.userWrapper">
+        ユーザー名
+        <span :class="$style.team">組織名</span>
+      </div>
+    </button>
+  </header>
 </template>
 
-<script setup>
-</script>
+<script setup></script>
 
 <style lang="scss" module>
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 16px;
-    height: 3.75rem;
-    width: 100%;
-    background-color: $surface-main;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  height: 3.75rem;
+  width: 100%;
+  background-color: $surface-main;
 }
 
-.logo{
-    width: 3.5rem;
+.logo {
+  width: 3.5rem;
 }
 
-.user{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.75rem;
-    height: 100%;
-    padding: 8px 16px;
-    color: $text-main;
+.user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+  height: 100%;
+  padding: 8px 16px;
+  color: $text-main;
 
-    &:hover{
-        background-color: $overlay-hover;
-    }
+  &:hover {
+    background-color: $overlay-hover;
+  }
 
-    &:active{
-        background-color: $overlay-active;
-    }
+  &:active {
+    background-color: $overlay-active;
+  }
 
-    &:focus-visible{
-        outline : 2px solid $focus-main;
-    }
+  &:focus-visible {
+    outline: 2px solid $focus-main;
+  }
 }
 
-.userWrapper{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.userWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.team{
-    font-size: $text-S;
-    color: $text-sub;
+.team {
+  font-size: $text-S;
+  color: $text-sub;
 }
 </style>

@@ -1,45 +1,46 @@
+<!-- NavigationMenuの状態管理をして繰り返し表示にする予定 -->
+
 <template>
-    <nav :class="$style.navigationMenu">
+  <nav :class="$style.navigationMenu">
     <ul :class="$style.itemUl">
-    <li :class="$style.itemLi">
+      <li :class="$style.itemLi">
         <NavigationMenuItem label="メニュー" :current="true" />
-    </li>
-    <li :class="$style.itemLi">
+      </li>
+      <li :class="$style.itemLi">
         <NavigationMenuItem label="メニュー" />
-    </li>
-    <li :class="$style.itemLi">
+      </li>
+      <li :class="$style.itemLi">
         <NavigationMenuItem label="メニュー" />
-    </li>
-    <li :class="$style.itemLi">
+      </li>
+      <li :class="$style.itemLi">
         <NavigationMenuItem label="メニュー" />
-    </li>
+      </li>
     </ul>
-    </nav>
+  </nav>
 </template>
 
-<script setup>
-</script>
+<script setup></script>
 
 <style lang="scss" module>
-    .navigationMenu{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 4px;
-        height: calc(100vh - 3.75rem);
-        width: 13rem;
-        background-color: $surface-main;
-    }
+.navigationMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4px;
+  height: calc(100vh - 3.75rem);
+  width: 13rem;
+  background-color: $surface-main;
+}
 
-    .itemUl{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.25rem;
-        width: 100%;
-    }
+.itemUl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  width: 100%;
+}
 
-    .itemLi{
-        width: 100%;
-    }
+.itemLi {
+  width: 100%;
+}
 </style>

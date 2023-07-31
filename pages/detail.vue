@@ -5,7 +5,7 @@
     <main :class="$style.main">
     <div :class="$style.pageHeader">
     <LinkText text="戻る" :chevronLeft="true" />
-    <Btn size="L">ボタン</Btn>
+    <Btn label="ボタン" size="L" />
     </div>
     <div :class="$style.pageContentWrapper">
     <h1 :class="$style.h1">このページのタイトルが入ります</h1>

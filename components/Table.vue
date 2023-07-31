@@ -10,13 +10,13 @@
         <tbody>
         <tr>
             <TdText text="テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト" :isNuxtLink="true" nuxtLink="/detail" minWidth="15rem" caption="説明が入りますこれはtruncate不可です"/>
-            <TdText text="テキスト" />
-            <TdText text="テキスト" />
+            <TdBtn/>
+            <TdBtn/>
         </tr>
         <tr>
             <TdText text="テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト" :isNuxtLink="true" nuxtLink="/detail" minWidth="15rem" :isTruncate="false" caption="説明が入りますこれはtruncate不可です"/>
-            <TdText text="テキスト" />
-            <TdText text="テキスト" />
+            <TdBtn/>
+            <TdBtn/>
         </tr>
         </tbody>
     </table>

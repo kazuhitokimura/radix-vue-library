@@ -1,7 +1,7 @@
 <!-- メモ：td、内容の種類によって別のコンポーネントに　-->
 
 <template>
-    <td :class="[$style.td, $style.tdMinWidth, {[$style.truncate]: isTruncate}]" :style="{ minWidth: minWidth }">
+    <td :class="[$style.td, {[$style.truncate]: isTruncate}]" :style="{ minWidth: minWidth }">
     <div :class="$style.captionWrapper">
         <NuxtLink v-if="isNuxtLink" :to="nuxtLink" :class="[$style.link, {[$style.truncate]: isTruncate}]">{{ text }}</NuxtLink>
         <span v-else :class="{[$style.truncate]: isTruncate}">{{ text }}</span>

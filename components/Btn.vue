@@ -1,12 +1,18 @@
 <template>
     <button :class="[$style.btn, $style[color], $style[size], {[$style.loading]: isLoading}]" :disabled="isDisabled">
         <BtnLoadingSpinner v-if="isLoading" btnColor="color"/>
-        <slot v-else />
+        <span v-else>
+            <slot>{{ label }}</slot>
+        </span>
     </button>
 </template>
 
 <script setup>
 const props = defineProps({
+    label: {
+        type: String,
+        default: 'ボタン'
+    },
     color: {
         type: String,
         default: 'primary'

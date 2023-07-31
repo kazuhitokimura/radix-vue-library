@@ -8,7 +8,7 @@
         <h1>ページのタイトルが入ります</h1>
         <p :class="$style.pageCaption">このページに関する説明が入ります。これは必須ではありません。</p>
     </div>
-    <Btn size="L">ボタン</Btn>
+    <Btn label="ボタン" size="L" />
     <IconBtn icon="more_horiz" color="neutral" size="L" ariaLabel="その他の操作"/>
     </div>
     <Table />

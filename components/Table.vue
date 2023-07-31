@@ -1,46 +1,16 @@
-<!-- メモ：表示させる内容とpropsを呼び出す時に定義できるようにする -->
-
 <template>
   <table :class="$style.table">
     <thead>
       <tr>
-        <Th text="タイトル" />
-        <Th text="タイトル" />
-        <Th text="タイトル" />
-        <Th text="タイトル" />
+        <slot name="tableHeader"></slot>
       </tr>
     </thead>
+
     <tbody>
-      <tr>
-        <TdText
-          text="テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト"
-          :isNuxtLink="true"
-          nuxtLink="/detail"
-          minWidth="15rem"
-          caption="説明が入りますこれはtruncate不可です"
-        />
-        <TdText text="テキストテキストテキストテキスト" />
-        <TdBtn />
-        <TdBtn />
-      </tr>
-      <tr>
-        <TdText
-          text="テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト"
-          :isNuxtLink="true"
-          nuxtLink="/detail"
-          minWidth="15rem"
-          :isTruncate="false"
-          caption="説明が入りますこれはtruncate不可です"
-        />
-        <TdText text="テキスト" />
-        <TdBtn />
-        <TdBtn />
-      </tr>
+      <slot name="tableData"></slot>
     </tbody>
   </table>
 </template>
-
-<script setup></script>
 
 <style lang="scss" module>
 .table {

@@ -1,4 +1,4 @@
-<!-- メモ：表示させる内容とpropsを呼び出す時に定義できるようにする -->
+<!-- メモ：slotで中身を変更できるようにする -->
 
 <template>
   <nav :class="$style.navigationMenu">

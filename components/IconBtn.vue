@@ -1,5 +1,6 @@
 <template>
-    <button :class="[$style.btn, $style[color], $style[size], {[$style.loading]: isLoading}]" :disabled="isDisabled">
+    <button :class="[$style.btn, $style[color], $style[size], {[$style.loading]: isLoading}]" :disabled="isDisabled"
+    aria-label="{{ ariaLabel }}">
         <BtnLoadingSpinner v-if="isLoading" btnColor="color"/>
         <span v-else>
             <slot><span class="material-symbols-outlined">
@@ -30,6 +31,10 @@ const props = defineProps({
     isLoading: {
       type: Boolean,
       default: false,
+    },
+    ariaLabel: {
+        type: String,
+        default: 'ボタン'
     },
 })
 
@@ -75,7 +80,7 @@ const props = defineProps({
 
 .neutral{
     background-color: $surface-main;
-    color: $text-sub;
+    color: $text-main;
     border: 1px solid $border-main;
 
     &:hover{
@@ -92,7 +97,7 @@ const props = defineProps({
 }
 
 .text{
-    color: $text-sub;
+    color: $text-main;
 
     &:hover{
         background-color: $overlay-hover;

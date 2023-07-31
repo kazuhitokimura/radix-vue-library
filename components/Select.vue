@@ -56,7 +56,7 @@ const props = defineProps({
 .selectIcon{
     width: 1rem;
     height: 1rem;
-    fill: $text-sub;
+    fill: $text-main;
 }
 .selectContent{
     margin-top: 4px;

@@ -9,7 +9,7 @@
         <p :class="$style.pageCaption">このページに関する説明が入ります。これは必須ではありません。</p>
     </div>
     <Btn size="L">ボタン</Btn>
-    <IconBtn icon="more_horiz" color="neutral" size="L"/>
+    <IconBtn icon="more_horiz" color="neutral" size="L" ariaLabel="その他の操作"/>
     </div>
     <Table />
     <div :class="$style.tableFooter">

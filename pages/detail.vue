@@ -4,7 +4,8 @@
     <NavigationMenu />
     <main :class="$style.main">
     <div :class="$style.pageHeader">
-    <Link />
+    <LinkText text="戻る" :chevronLeft="true" />
+    <Btn size="L">ボタン</Btn>
     </div>
     <div :class="$style.pageContentWrapper">
     <h1 :class="$style.h1">このページのタイトルが入ります</h1>
@@ -23,6 +24,7 @@
   </template>
   
   <script setup>
+
   </script>
   
   <style lang="scss" module>
@@ -58,7 +60,7 @@
     display: flex;
     flex-direction: column;
     width: 840px;
-    padding: 0 120px 32px 32px;
+    padding: 0px 120px 32px 32px;
   }
   
   .h1{

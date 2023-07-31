@@ -12,14 +12,13 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: "RadixVueを使ったUIライブラリ",
+      title: "Radix-Vue-Library",
       htmlAttrs: {
         lang: "ja",
       },
       charset: "utf-8",
       viewport: "width=device-width",
       link: [
-        { rel: "icon", type: "image/png", href: "/favicon.png" },
         {
           rel: "stylesheet",
           href: "https://unpkg.com/destyle.css@3.0.2/destyle.min.css",

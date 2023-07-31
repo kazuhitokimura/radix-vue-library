@@ -2,8 +2,8 @@
     <div :class="$style.tableFooter">
     表示件数:
     <Select triggerText="10" triggerWidth="5rem" contentWidth="5rem"/>
-    <IconBtn icon="chevron_left" color="neutral" size="L"/>
-    <IconBtn icon="chevron_right" color="neutral" size="L"/>
+    <IconBtn icon="chevron_left" color="neutral" size="L" ariaLabel="戻る" />
+    <IconBtn icon="chevron_right" color="neutral" size="L" ariaLabel="次へ"/>
     {{ allPage }} 件中 {{ currentPage }} - {{ lastPage }} 件
     </div>
 </template>

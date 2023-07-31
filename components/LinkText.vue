@@ -1,9 +1,11 @@
 <template>
-    <NuxtLink :to="nuxtLink" :class="$style.nuxtLink">
-    <span v-show="chevronLeft" class="material-icons-outlined" :class="$style.icon">chevron_left</span>
-        <span :class="$style.link"><slot>{{ text }}</slot></span>
-    <span v-show="chevronRight" class="material-icons-outlined" :class="$style.icon">chevron_right</span>
+    <div :class="$style.nuxtLink">
+    <span v-if="chevronLeft" class="material-symbols-outlined" :class="$style.icon">chevron_left</span>
+    <NuxtLink :to="nuxtLink" :class="$style.link">
+        <slot>{{ text }}</slot>
     </NuxtLink>
+    <span v-if="chevronRight" class="material-symbols-outlined" :class="$style.icon">chevron_right</span>
+    </div>
 </template>
 
 <script setup>

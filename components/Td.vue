@@ -1,3 +1,5 @@
+<!-- メモ：tdの中身はslotの方がいいかも　-->
+
 <template>
         <td :class="[$style.td, $style.tdMinWidth, {[$style.truncate]: isTruncate}]" :style="{ minWidth: minWidth }">
         <NuxtLink :to=nuxtLink v-if="isNuxtLink" :class="$style.link">{{ text }}</NuxtLink>

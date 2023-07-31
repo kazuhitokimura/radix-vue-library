@@ -1,4 +1,4 @@
-<!-- NavigationMenuの状態管理をして繰り返し表示にする予定 -->
+<!-- メモ：表示させる内容とpropsを呼び出す時に定義できるようにする -->
 
 <template>
   <nav :class="$style.navigationMenu">

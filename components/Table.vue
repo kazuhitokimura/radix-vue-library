@@ -5,21 +5,18 @@
             <Th text="タイトル"/>
             <Th text="タイトル" />
             <Th text="タイトル" />
-            <Th text="タイトル" />
         </tr>
         </thead>
         <tbody>
         <tr>
-            <Td text="テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト" :isNuxtLink="true" nuxtLink="/detail" minWidth="15rem" />
-            <Td text="テキスト" />
-            <Td text="テキスト" />
-            <Td text="テキスト" />
+            <TdText text="テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト" :isNuxtLink="true" nuxtLink="/detail" minWidth="15rem" caption="説明が入りますこれはtruncate不可です"/>
+            <TdText text="テキスト" />
+            <TdText text="テキスト" />
         </tr>
         <tr>
-            <Td text="テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト" :isNuxtLink="true" nuxtLink="/detail" />
-            <Td text="テキスト" />
-            <Td text="テキスト" />
-            <Td text="テキスト" />
+            <TdText text="テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト" :isNuxtLink="true" nuxtLink="/detail" minWidth="15rem" :isTruncate="false" caption="説明が入りますこれはtruncate不可です"/>
+            <TdText text="テキスト" />
+            <TdText text="テキスト" />
         </tr>
         </tbody>
     </table>
@@ -41,6 +38,21 @@
         border-bottom: 1px solid $border-main;
         color: $text-sub;
         @include text-h4();
+    }
+
+    .nuxtLink{
+        @include link-base();
+    }
+
+    .captionWrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        width: 100%;
+    }
+    .caption{
+        color: $text-sub;
+        @include text-caption();
     }
 
   </style>

@@ -1,11 +1,13 @@
-<!-- メモ：tdの中身はslotの方がいいかも　-->
+<!-- メモ：td、内容の種類によって別のコンポーネントに　-->
 
 <template>
-        <td :class="[$style.td, $style.tdMinWidth, {[$style.truncate]: isTruncate}]" :style="{ minWidth: minWidth }">
-        <NuxtLink :to=nuxtLink v-if="isNuxtLink" :class="$style.link">{{ text }}</NuxtLink>
-        <a :href="href" v-if="isLink" :class="$style.link">{{ text }}</a>
-        <span v-else>{{ text }}</span>
-        </td>
+    <td :class="[$style.td, $style.tdMinWidth, {[$style.truncate]: isTruncate}]" :style="{ minWidth: minWidth }">
+    <div :class="$style.captionWrapper">
+        <NuxtLink v-if="isNuxtLink" :to="nuxtLink" :class="[$style.link, {[$style.truncate]: isTruncate}]">{{ text }}</NuxtLink>
+        <span v-else :class="{[$style.truncate]: isTruncate}">{{ text }}</span>
+        <span :class="$style.caption">{{ caption }}</span>
+    </div>
+    </td>
   </template>
   
   <script setup>
@@ -22,10 +24,6 @@
             type: String,
             default: '5rem',
         },
-        isLink: {
-            type: Boolean,
-            default: false,
-        },
         isNuxtLink: {
             type: Boolean,
             default: false,
@@ -34,10 +32,10 @@
             type: String,
             default: '/',
         },
-        href: {
+        caption: {
             type: String,
-            default: '#',
-        },
+            default: ''
+        }
   })
   </script>
   
@@ -51,6 +49,14 @@
         max-width: 0;
         @include text-body1();
     }
+
+    .captionWrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        width: 100%;
+    }
+
     .truncate{
         overflow: hidden;
         text-overflow: ellipsis;
@@ -59,5 +65,10 @@
 
     .link{
         @include link-base();
+    }
+
+    .caption{
+        color: $text-sub;
+        @include text-body2();
     }
   </style>

@@ -44,7 +44,8 @@ definePageMeta({
 .pageContentWrapper {
   display: flex;
   flex-direction: column;
-  width: 840px;
+  width: 100%;
+  max-width: 920px;
   padding: 0px 120px 32px 32px;
 }
 

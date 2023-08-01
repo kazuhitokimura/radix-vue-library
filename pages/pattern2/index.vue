@@ -6,7 +6,7 @@
         このページに関する説明が入ります。これは必須ではありません。
       </p>
     </div>
-    <Btn label="ボタン" size="L" />
+    <Btn label="登録" size="L" />
   </div>
   <TablePattern2 />
   <div :class="$style.tableFooter">

@@ -2,7 +2,7 @@
   <div :class="$style.pageHeader">
     <LinkText text="戻る" :chevronLeft="true" />
     <div :class="$style.actionWrapper">
-      <Btn label="ボタン" size="L" />
+      <Btn label="アクション" size="L" />
       <Pattern1DetailPageDropDownMenu />
     </div>
   </div>
@@ -56,7 +56,8 @@ definePageMeta({
 .pageContentWrapper {
   display: flex;
   flex-direction: column;
-  width: 840px;
+  width: 100%;
+  max-width: 920px;
   padding: 0px 120px 32px 32px;
 }
 

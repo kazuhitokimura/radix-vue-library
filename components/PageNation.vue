@@ -23,6 +23,8 @@ const props = defineProps({
     default: 10,
   },
 });
+
+import RecordsPerPageSelect from "../components/Sample/RecordsPerPageSelect.vue";
 </script>
 
 <style lang="scss" module>

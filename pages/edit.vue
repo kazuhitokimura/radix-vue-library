@@ -14,6 +14,7 @@
       <InputElement label="内容">
         <Textarea
           placeholder="内容"
+          :rows="15"
           value="このページのタイトルが入ります
 文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。
 

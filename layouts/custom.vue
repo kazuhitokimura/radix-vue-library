@@ -10,7 +10,9 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import NavigationMenuPattern2 from "../components/Sample/NavigationMenuPattern2.vue";
+</script>
 
 <style lang="scss" module>
 .gridWrapper {

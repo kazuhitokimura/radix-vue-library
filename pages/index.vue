@@ -18,6 +18,8 @@
 definePageMeta({
   layout: "default",
 });
+
+import TablePattern1 from "../components/Sample/TablePattern1.vue";
 </script>
 
 <style lang="scss" module>

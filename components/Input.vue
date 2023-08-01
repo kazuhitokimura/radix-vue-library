@@ -1,16 +1,55 @@
 <template>
   <input
-    :class="$style.input"
-    type="text"
-    value="インプット"
-    placeholder="プレースホルダー"
+    :id="id"
+    :type="type"
+    :value="value"
+    :placeholder="placeholder"
+    :class="[$style.input, { [$style.error]: isError }]"
+    :disabled="isDisabled"
   />
 </template>
 
-<script setup></script>
+<script setup>
+const props = defineProps({
+  id: {
+    type: String,
+    default: "",
+  },
+  type: {
+    type: String,
+    default: "text",
+  },
+  value: {
+    type: String,
+    default: "",
+  },
+  placeholder: {
+    type: String,
+    default: "プレースホルダー",
+  },
+  isDisabled: {
+    type: Boolean,
+    default: false,
+  },
+  isError: {
+    type: Boolean,
+    default: false,
+  },
+});
+</script>
 
 <style lang="scss" module>
 .input {
   @include input-base();
+
+  &:disabled {
+    opacity: $opacity-disabled;
+    cursor: not-allowed;
+  }
+}
+
+.error {
+  border-color: $error-main;
+  outline: 2px solid $red-100;
 }
 </style>

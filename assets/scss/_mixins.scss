@@ -19,10 +19,15 @@
   border-radius: $radius-S;
   min-height: 2.75rem;
   width: 100%;
+  color: $text-main;
 
   &:focus-visible {
       border-color: $focus-main;
       outline: 2px solid $blue-100;
+  }
+
+  &::placeholder{
+      color: $text-main-placeholder;
   }
   }
 

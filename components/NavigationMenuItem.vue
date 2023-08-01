@@ -51,6 +51,7 @@ const props = defineProps({
 .current {
   background-color: $surface-sub;
   border-left: 2px solid $primary-main;
+  padding-left: 0.375rem;
 
   &:hover {
     background-color: $gray-100;

@@ -7,6 +7,14 @@
   </div>
   <div :class="$style.pageContentWrapper">
     <h1 :class="$style.h1">編集</h1>
+    <div :class="$style.inputColumn">
+      <InputElement label="タイトル" mandatory="true">
+        <Input placeholder="タイトル" value="このページのタイトルが入ります" />
+      </InputElement>
+      <InputElement label="内容" hint="ヒントが入ります">
+        <Input placeholder="内容" />
+      </InputElement>
+    </div>
   </div>
 </template>
 
@@ -38,6 +46,12 @@ definePageMeta({
   flex-direction: column;
   width: 840px;
   padding: 0px 120px 32px 32px;
+}
+
+.inputColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .h1 {

@@ -1,41 +1,39 @@
 <!-- レイアウトは別ファイルにする -->
 
 <template>
-  <HeaderMenu />
-  <div :class="$style.gridWrapper">
-    <NavigationMenuPattern1 />
-    <main :class="$style.main">
-      <div :class="$style.pageHeader">
-        <LinkText text="戻る" :chevronLeft="true" />
-        <Btn label="ボタン" size="L" />
-      </div>
-      <div :class="$style.pageContentWrapper">
-        <h1 :class="$style.h1">このページのタイトルが入ります</h1>
-        <p>
-          文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。
-        </p>
-        <h2 :class="$style.h2">見出し2が入ります</h2>
-        <p>
-          文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。
-        </p>
-        <h3 :class="$style.h3">見出し3が入ります</h3>
-        <p>
-          文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。
-        </p>
-        <h4 :class="$style.h4">見出し4が入ります</h4>
-        <p>
-          文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。
-        </p>
-        <h5 :class="$style.h5">見出し5が入ります</h5>
-        <p>
-          文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。
-        </p>
-      </div>
-    </main>
+  <div :class="$style.pageHeader">
+    <LinkText text="戻る" :chevronLeft="true" />
+    <Btn label="ボタン" size="L" />
+  </div>
+  <div :class="$style.pageContentWrapper">
+    <h1 :class="$style.h1">このページのタイトルが入ります</h1>
+    <p>
+      文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。
+    </p>
+    <h2 :class="$style.h2">見出し2が入ります</h2>
+    <p>
+      文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。
+    </p>
+    <h3 :class="$style.h3">見出し3が入ります</h3>
+    <p>
+      文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。
+    </p>
+    <h4 :class="$style.h4">見出し4が入ります</h4>
+    <p>
+      文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。
+    </p>
+    <h5 :class="$style.h5">見出し5が入ります</h5>
+    <p>
+      文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。
+    </p>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+definePageMeta({
+  layout: "default",
+});
+</script>
 
 <style lang="scss" module>
 body {

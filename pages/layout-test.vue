@@ -9,7 +9,7 @@
     <Btn label="ボタン" size="L" />
     <IconBtn icon="more_horiz" color="neutral" size="L" ariaLabel="その他の操作" />
   </div>
-  <TablePattern2 />
+  <TablePattern1 />
   <div :class="$style.tableFooter">
     <PageNation />
   </div>
@@ -17,7 +17,7 @@
 
 <script setup>
 definePageMeta({
-  layout: "custom",
+  layout: "default",
 });
 </script>
 
@@ -25,7 +25,6 @@ definePageMeta({
 .pageTitleWrapper {
   display: flex;
   justify-content: space-between;
-  width: 100%;
   gap: 0.5rem;
   margin-bottom: 1.75rem;
 }
@@ -33,20 +32,17 @@ definePageMeta({
 .pageTitle {
   display: flex;
   flex-direction: column;
-  width: 100%;
   gap: 0.25rem;
   flex: 1;
 }
 
 .pageCaption {
   color: $text-sub;
-  width: 100%;
 }
 .tableFooter {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 100%;
   padding: 0.75rem 0;
 }
 </style>

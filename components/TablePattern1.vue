@@ -1,12 +1,12 @@
 <template>
   <Table>
-    <template v-slot:tableHeader>
+    <template #tableHeader>
       <Th text="タイトル" />
       <Th text="タイトル" />
       <Th text="タイトル" />
       <Th text="タイトル" />
     </template>
-    <template v-slot:tableData>
+    <template #tableData>
       <tr>
         <TdText
           text="テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト"
@@ -15,9 +15,9 @@
           minWidth="15rem"
           caption="説明が入りますこれはtruncate不可です"
         />
-        <TdText text="テキストテキストテキストテキスト" />
-        <TdBtn />
-        <TdBtn />
+        <TdText text="テキスト" />
+        <TdText text="テキスト" />
+        <TdText text="テキスト" />
       </tr>
       <tr>
         <TdText
@@ -29,8 +29,8 @@
           caption="説明が入りますこれはtruncate不可です"
         />
         <TdText text="テキスト" />
-        <TdBtn />
-        <TdBtn />
+        <TdText text="テキスト" />
+        <TdText text="テキスト" />
       </tr>
     </template>
   </Table>

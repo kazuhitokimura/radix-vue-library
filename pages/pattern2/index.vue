@@ -1,5 +1,3 @@
-<!-- レイアウトは別ファイルにする -->
-
 <template>
   <HeaderMenu />
   <div :class="$style.gridWrapper">
@@ -15,7 +13,7 @@
         <Btn label="ボタン" size="L" />
         <IconBtn icon="more_horiz" color="neutral" size="L" ariaLabel="その他の操作" />
       </div>
-      <TablePattern1 />
+      <TablePattern2 />
       <div :class="$style.tableFooter">
         <PageNation />
       </div>

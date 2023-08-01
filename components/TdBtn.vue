@@ -1,28 +1,27 @@
 <!-- メモ：td、内容の種類によって別のコンポーネントに　-->
 
 <template>
-    <td :class="[$style.td]" :style="{ minWidth: minWidth }">
-        <Btn color="neutral"/><Btn v-if="secondBtn" color="neutral"/><Btn v-if="thirdBtn" color="neutral"/><Btn v-if="fourthBtn" color="neutral"/>
-        <IconBtn v-if="iconBtn" /><IconBtn v-if="secondIconBtn" /><IconBtn v-if="thirdIconBtn" /><IconBtn v-if="fourthIconBtn" />
-    </td>
-  </template>
-  
-  <script setup>
-  const props = defineProps({
-        minWidth: {
-            type: String,
-            default: '5rem',
-        }
-  })
-  </script>
-  
-  <style lang="scss" module>
+  <td :class="[$style.td]" :style="{ width: width }">
+    <slot></slot>
+  </td>
+</template>
 
-    .td{
-        padding: 16px 12px;
-        text-align: left;
-        border-bottom: 1px solid $border-main;
-        color: $text-main;
-        @include text-body1();
-    }
-  </style>
+<script setup>
+const props = defineProps({
+  width: {
+    type: String,
+    default: "10rem",
+  },
+});
+</script>
+
+<style lang="scss" module>
+.td {
+  width: auto;
+  padding: 16px 12px;
+  text-align: left;
+  border-bottom: 1px solid $border-main;
+  color: $text-main;
+  @include text-body1();
+}
+</style>

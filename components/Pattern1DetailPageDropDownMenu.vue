@@ -2,7 +2,9 @@
 
 <template>
   <IconBtnDropDownMenu size="L">
-    <DropdownMenuItem :class="$style.dropDownItem">編集</DropdownMenuItem>
+    <DropdownMenuItem :class="$style.dropDownItem"
+      ><NuxtLink :class="$style.nuxtLink" to="/edit">編集</NuxtLink></DropdownMenuItem
+    >
     <DropdownMenuItem :class="[$style.dropDownItem, $style.destructive]">
       削除
     </DropdownMenuItem>
@@ -35,6 +37,11 @@ import { DropdownMenuItem } from "radix-vue";
   &:focus-visible {
     outline: 2px solid $focus-main;
   }
+}
+
+.nuxtLink {
+  width: 100%;
+  height: 100%;
 }
 
 .destructive {

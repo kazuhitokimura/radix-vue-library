@@ -1,11 +1,9 @@
-<!-- レイアウトは別ファイルにする -->
-
 <template>
   <div :class="$style.pageHeader">
     <LinkText text="戻る" :chevronLeft="true" />
     <div :class="$style.actionWrapper">
       <Btn label="ボタン" size="L" />
-      <DetailPageDropDownMenu />
+      <Pattern1DetailPageDropDownMenu />
     </div>
   </div>
   <div :class="$style.pageContentWrapper">
@@ -39,24 +37,6 @@ definePageMeta({
 </script>
 
 <style lang="scss" module>
-body {
-  background-color: $bg-main;
-}
-
-.gridWrapper {
-  display: grid;
-  display: grid;
-  grid-template-columns: 13rem 1fr;
-}
-.main {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-}
-
 .pageHeader {
   display: flex;
   flex-direction: row;

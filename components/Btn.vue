@@ -59,51 +59,15 @@ const props = defineProps({
 
 /* color別のスタイル */
 .primary {
-  background-color: $primary-main;
-  color: $text-white;
-
-  &:hover {
-    background-color: $gray-900;
-  }
-  &:active {
-    background-color: darken($gray-900, 20%);
-  }
-  &:disabled {
-    background-color: $primary-main;
-  }
+  @include primary-btn-base();
 }
 
 .neutral {
-  background-color: $surface-main;
-  color: $text-main;
-  border: 1px solid $border-main;
-
-  &:hover {
-    background-color: $gray-50;
-  }
-
-  &:active {
-    background-color: $gray-100;
-  }
-
-  &:disabled {
-    background-color: $surface-main;
-  }
+  @include neutral-btn-base();
 }
 
 .text {
-  color: $text-main;
-
-  &:hover {
-    background-color: $overlay-hover;
-  }
-
-  &:active {
-    background-color: $overlay-active;
-  }
-  &:disabled {
-    background-color: transparent;
-  }
+  @include text-btn-base();
 }
 
 /* size別のスタイル */

@@ -7,7 +7,6 @@
       </p>
     </div>
     <Btn label="ボタン" size="L" />
-    <IconBtn icon="more_horiz" color="neutral" size="L" ariaLabel="その他の操作" />
   </div>
   <TablePattern2 />
   <div :class="$style.tableFooter">

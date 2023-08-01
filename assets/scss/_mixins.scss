@@ -26,7 +26,6 @@
   }
   }
 
-
   /*リンクテキストのスタイルを指定*/
 
   @mixin link-base() {
@@ -46,3 +45,76 @@
         border-radius: $radius-S;
     }
   }
+
+  /*ボタンのカラー別スタイルを指定*/
+
+  @mixin primary-btn-base(){
+    background-color: $primary-main;
+    color: $text-white;
+  
+    &:hover {
+      background-color: $gray-900;
+    }
+    &:active {
+      background-color: darken($gray-900, 20%);
+    }
+    &:disabled {
+      background-color: $primary-main;
+    }
+  }
+
+  @mixin neutral-btn-base(){
+    background-color: $surface-main;
+    color: $text-main;
+    border: 1px solid $border-main;
+  
+    &:hover {
+      background-color: $gray-50;
+    }
+  
+    &:active {
+      background-color: $gray-100;
+    }
+  
+    &:disabled {
+      background-color: $surface-main;
+    }
+  }
+
+  @mixin text-btn-base(){
+    color: $text-main;
+
+    &:hover {
+      background-color: $overlay-hover;
+    }
+  
+    &:active {
+      background-color: $overlay-active;
+    }
+    &:disabled {
+      background-color: transparent;
+    }
+  }
+
+  /*アイコンボタンのスタイルを指定（ドロップダウンメニューで使うため）*/
+
+  @mixin icon-btn-base() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: $radius-S;
+    font-size: $text-XL;
+    line-height: 0;
+  
+    &:focus-visible {
+      outline: 2px solid $focus-main;
+      outline-offset: 2px;
+    }
+  
+    &:disabled {
+      opacity: $opacity-disabled;
+      cursor: not-allowed;
+    }
+  }
+
+  

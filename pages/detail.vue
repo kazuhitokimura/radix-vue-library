@@ -4,12 +4,8 @@
   <div :class="$style.pageHeader">
     <LinkText text="戻る" :chevronLeft="true" />
     <div :class="$style.actionWrapper">
-      <Btn label="ボタン" size="L" /><IconBtn
-        icon="more_horiz"
-        color="neutral"
-        size="L"
-        ariaLabel="その他の操作"
-      />
+      <Btn label="ボタン" size="L" />
+      <DetailPageDropDownMenu />
     </div>
   </div>
   <div :class="$style.pageContentWrapper">

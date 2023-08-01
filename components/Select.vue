@@ -14,6 +14,8 @@
 
 <script setup lang="ts">
 import { Icon } from "@iconify/vue";
+
+/* 一応すべてインポートしておく */
 import {
   SelectContent,
   SelectGroup,

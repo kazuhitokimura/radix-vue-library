@@ -1,7 +1,7 @@
 <template>
   <HeaderMenu />
   <div :class="$style.gridWrapper">
-    <NavigationMenu />
+    <NavigationMenuPattern2 />
     <main :class="$style.main">
       <div :class="$style.pageTitleWrapper">
         <div :class="$style.pageTitle">

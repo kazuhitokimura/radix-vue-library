@@ -3,7 +3,7 @@
 <template>
   <HeaderMenu />
   <div :class="$style.gridWrapper">
-    <NavigationMenu />
+    <NavigationMenuPattern1 />
     <main :class="$style.main">
       <div :class="$style.pageHeader">
         <LinkText text="戻る" :chevronLeft="true" />

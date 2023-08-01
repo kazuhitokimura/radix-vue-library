@@ -7,8 +7,7 @@
       <Icon icon="radix-icons:chevron-down" :class="$style.selectIcon" />
     </SelectTrigger>
     <SelectContent :class="$style.selectContent" :style="{ width: contentWidth }">
-      <SelectItem :class="$style.selectItem" value="1">オプション</SelectItem>
-      <SelectItem :class="$style.selectItem" value="2">オプション</SelectItem>
+      <slot />
     </SelectContent>
   </SelectRoot>
 </template>
@@ -63,26 +62,5 @@ const props = defineProps({
   background-color: $bg-main;
   border-radius: $radius-S;
   box-shadow: $shadow-10;
-}
-.selectItem {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0.5rem 1rem;
-  color: $text-main;
-  width: 100%;
-  cursor: pointer;
-
-  &:hover {
-    background-color: $overlay-hover;
-  }
-
-  &:active {
-    background-color: $overlay-active;
-  }
-
-  &:focus-visible {
-    outline: 2px solid $focus-main;
-  }
 }
 </style>

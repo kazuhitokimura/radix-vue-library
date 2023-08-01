@@ -3,7 +3,14 @@
 <template>
   <div :class="$style.pageHeader">
     <LinkText text="戻る" :chevronLeft="true" />
-    <Btn label="ボタン" size="L" />
+    <div :class="$style.actionWrapper">
+      <Btn label="ボタン" size="L" /><IconBtn
+        icon="more_horiz"
+        color="neutral"
+        size="L"
+        ariaLabel="その他の操作"
+      />
+    </div>
   </div>
   <div :class="$style.pageContentWrapper">
     <h1 :class="$style.h1">このページのタイトルが入ります</h1>
@@ -60,9 +67,16 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem;
 }
 
+.actionWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+}
 .pageContentWrapper {
   display: flex;
   flex-direction: column;

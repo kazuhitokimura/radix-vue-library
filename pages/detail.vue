@@ -73,22 +73,22 @@ body {
 }
 
 .h1 {
-  margin-bottom: 28px;
+  margin-bottom: 1.75rem;
 }
 .h2 {
-  margin-top: 40px;
-  margin-bottom: 24px;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 .h3 {
-  margin-top: 36px;
-  margin-bottom: 20px;
+  margin-top: 2.25rem;
+  margin-bottom: 1.25rem;
 }
 .h4 {
-  margin-top: 32px;
-  margin-bottom: 16px;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
 }
 .h5 {
-  margin-top: 28px;
-  margin-bottom: 12px;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
 }
 </style>

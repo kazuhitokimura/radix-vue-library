@@ -1,4 +1,4 @@
-<!-- レイアウトは別ファイルにする -->
+<!-- ページのタイトルが入ります -->
 
 <template>
   <HeaderMenu />
@@ -40,20 +40,20 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   height: 100%;
-  padding: 32px;
+  padding: 2rem;
 }
 
 .pageTitleWrapper {
   display: flex;
   justify-content: space-between;
-  gap: 8px;
-  margin-bottom: 28px;
+  gap: 0.5rem;
+  margin-bottom: 1.75rem;
 }
 
 .pageTitle {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 0.25rem;
   flex: 1;
 }
 
@@ -64,6 +64,6 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 12px 0;
+  padding: 0.75rem 0;
 }
 </style>

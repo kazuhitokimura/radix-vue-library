@@ -2,7 +2,7 @@
   <Table>
     <template #tableHeader>
       <Th text="タイトル" />
-      <Th text="タイトル" />
+      <Th text="" />
       <Th text="タイトル" />
       <Th text="タイトル" />
     </template>

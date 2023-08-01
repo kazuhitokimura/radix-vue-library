@@ -28,7 +28,7 @@ const props = defineProps({
   align-items: center;
   gap: 0.25rem;
   width: 100%;
-  padding: 8px;
+  padding: 0.5rem;
   color: $text-main;
   background-color: $surface-main;
   text-overflow: ellipsis;

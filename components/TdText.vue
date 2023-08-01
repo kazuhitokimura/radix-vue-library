@@ -1,74 +1,81 @@
 <!-- メモ：td、内容の種類によって別のコンポーネントに　-->
 
 <template>
-    <td :class="[$style.td, {[$style.truncate]: isTruncate}]" :style="{ minWidth: minWidth }">
+  <td
+    :class="[$style.td, { [$style.truncate]: isTruncate }]"
+    :style="{ minWidth: minWidth }"
+  >
     <div :class="$style.captionWrapper">
-        <NuxtLink v-if="isNuxtLink" :to="nuxtLink" :class="[$style.link, {[$style.truncate]: isTruncate}]">{{ text }}</NuxtLink>
-        <span v-else :class="{[$style.truncate]: isTruncate}">{{ text }}</span>
-        <span :class="$style.caption">{{ caption }}</span>
+      <NuxtLink
+        v-if="isNuxtLink"
+        :to="nuxtLink"
+        :class="[$style.link, { [$style.truncate]: isTruncate }]"
+        >{{ text }}</NuxtLink
+      >
+      <span v-else :class="{ [$style.truncate]: isTruncate }">{{ text }}</span>
+      <span :class="$style.caption">{{ caption }}</span>
     </div>
-    </td>
-  </template>
-  
-  <script setup>
-  const props = defineProps({
-      text: {
-          type: String,
-          default: 'テキスト'
-      },
-        isTruncate: {
-            type: Boolean,
-            default: true,
-        },
-        minWidth: {
-            type: String,
-            default: '5rem',
-        },
-        isNuxtLink: {
-            type: Boolean,
-            default: false,
-        },
-        nuxtLink: {
-            type: String,
-            default: '/',
-        },
-        caption: {
-            type: String,
-            default: ''
-        }
-  })
-  </script>
-  
-  <style lang="scss" module>
+  </td>
+</template>
 
-    .td{
-        padding: 16px 12px;
-        text-align: left;
-        border-bottom: 1px solid $border-main;
-        color: $text-main;
-        max-width: 0;
-        @include text-body1();
-    }
+<script setup>
+const props = defineProps({
+  text: {
+    type: String,
+    default: "テキスト",
+  },
+  isTruncate: {
+    type: Boolean,
+    default: true,
+  },
+  minWidth: {
+    type: String,
+    default: "5rem",
+  },
+  isNuxtLink: {
+    type: Boolean,
+    default: false,
+  },
+  nuxtLink: {
+    type: String,
+    default: "/",
+  },
+  caption: {
+    type: String,
+    default: "",
+  },
+});
+</script>
 
-    .captionWrapper{
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-        width: 100%;
-    }
+<style lang="scss" module>
+.td {
+  padding: 1rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid $border-main;
+  color: $text-main;
+  max-width: 0;
+  @include text-body1();
+}
 
-    .truncate{
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
+.captionWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  width: 100%;
+}
 
-    .link{
-        @include link-base();
-    }
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
-    .caption{
-        color: $text-sub;
-        @include text-body2();
-    }
-  </style>
+.link {
+  @include link-base();
+}
+
+.caption {
+  color: $text-sub;
+  @include text-body2();
+}
+</style>

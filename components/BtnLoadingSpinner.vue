@@ -1,36 +1,19 @@
 <template>
-    <div :class="[$style.spinner, $style[btnColor]]"></div>
+  <div :class="[$style.spinner, $style[btnColor]]"></div>
 </template>
 
 <script setup>
 const props = defineProps({
-    btnColor: {
-        type: String,
-        default: 'primary'
-    },
-})
+  btnColor: {
+    type: String,
+    default: "primary",
+  },
+});
 </script>
 
 <style lang="scss" module>
 .spinner {
-  width: 1rem;
-  height: 1rem;
-  border-radius: $radius-full;
-  text-indent: -9999em;
-  border-top: 2px solid;
-  border-right: 2px solid;
-  border-bottom: 2px solid;
-  border-left: 2px solid;
-  animation: animate 0.8s linear infinite;
-}
-
-@keyframes animate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  @include spinner-base();
 }
 
 /* color別のスタイル */

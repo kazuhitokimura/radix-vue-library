@@ -44,8 +44,8 @@ const props = defineProps({
 
   /* selectがデフォルトでreadonly属性付与されているので、共通化せずこちらで指定 */
   &:read-only {
-    background-color: $gray-50;
-    color: $text-sub;
+    opacity: $opacity-disabled;
+    background-color: $surface-sub;
     cursor: not-allowed;
   }
 }

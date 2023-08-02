@@ -42,6 +42,7 @@ definePageMeta({
 </script>
 
 <style lang="scss" module>
+// ページ内のwrapper、containerにあたるようなスタイルは共通化しないでおく
 .pageHeader {
   display: flex;
   flex-direction: row;

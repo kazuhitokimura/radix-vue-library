@@ -53,15 +53,11 @@ const props = defineProps({
 
 /* size別のスタイル */
 .M {
-  padding: 0.625rem;
-  height: 2.5rem;
-  width: 2.5rem;
+  @include icon-btn-size-M();
 }
 
 .L {
-  padding: 0.625rem;
-  height: 2.75rem;
-  width: 2.75rem;
+  @include icon-btn-size-L();
 }
 
 .dropDownContent {

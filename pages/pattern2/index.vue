@@ -23,6 +23,7 @@ import TablePattern2 from "~/components/Sample/TablePattern2.vue";
 </script>
 
 <style lang="scss" module>
+// ページ内のwrapper、containerにあたるようなスタイルは共通化しないでおく
 .pageTitleWrapper {
   display: flex;
   justify-content: space-between;

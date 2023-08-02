@@ -24,6 +24,7 @@ import TablePattern1 from "../components/Sample/TablePattern1.vue";
 </script>
 
 <style lang="scss" module>
+// ページ内のwrapper、containerにあたるようなスタイルは共通化しないでおく
 .pageTitleWrapper {
   display: flex;
   justify-content: space-between;

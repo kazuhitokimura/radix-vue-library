@@ -56,13 +56,11 @@ const props = defineProps({
 
 /* size別のスタイル */
 .M {
-  padding: 0.5rem 0.75rem;
-  height: 2.5rem;
+  @include btn-size-M();
 }
 
 .L {
-  padding: 0.625rem 2rem;
-  height: 2.75rem;
+  @include btn-size-L();
 }
 
 /* isLoadingのスタイル */

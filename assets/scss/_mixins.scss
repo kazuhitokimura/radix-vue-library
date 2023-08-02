@@ -95,6 +95,33 @@
     }
   }
 
+
+  /*ボタンのサイズ別スタイルを指定*/
+
+  @mixin btn-size-M(){
+    padding: 0.5rem 0.75rem;
+    height: 2.5rem;
+  }
+
+  @mixin btn-size-L(){
+    padding: 0.625rem 2rem;
+    height: 2.75rem;
+  }
+
+  
+  /*アイコンボタンのサイズ別スタイルを指定*/
+
+  @mixin icon-btn-size-M(){
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  @mixin icon-btn-size-L(){
+    height: 2.75rem;
+    width: 2.75rem;
+  }
+
+
   /*ボタン・アイコンボタンのカラー別スタイルを指定*/
 
   @mixin primary-btn-base(){

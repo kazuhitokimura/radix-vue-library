@@ -39,6 +39,7 @@ import Pattern1DetailPageDropDownMenu from "../components/Sample/Pattern1DetailP
 </script>
 
 <style lang="scss" module>
+// ページ内のwrapper、containerにあたるようなスタイルは共通化しないでおく
 .pageHeader {
   display: flex;
   flex-direction: row;

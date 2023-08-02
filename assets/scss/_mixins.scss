@@ -35,12 +35,6 @@
     color: $text-sub;
     cursor: not-allowed;
   }
-
-  &:read-only {
-    background-color: $gray-50;
-    color: $text-sub;
-    cursor: not-allowed;
-  }
   }
 
   /*リンクテキストのスタイルを指定*/

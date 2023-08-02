@@ -42,8 +42,10 @@ const props = defineProps({
 .textarea {
   @include input-base();
 
-  &:disabled {
-    opacity: $opacity-disabled;
+  /* selectがデフォルトでreadonly属性付与されているので、共通化せずこちらで指定 */
+  &:read-only {
+    background-color: $gray-50;
+    color: $text-sub;
     cursor: not-allowed;
   }
 }

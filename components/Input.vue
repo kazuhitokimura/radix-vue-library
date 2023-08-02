@@ -46,6 +46,13 @@ const props = defineProps({
 <style lang="scss" module>
 .input {
   @include input-base();
+
+  /* selectがデフォルトでreadonly属性付与されているので、共通化せずこちらで指定 */
+  &:read-only {
+    background-color: $gray-50;
+    color: $text-sub;
+    cursor: not-allowed;
+  }
 }
 
 .error {

@@ -7,7 +7,7 @@
     </div>
   </div>
   <div :class="$style.pageContentWrapper">
-    <h1 :class="$style.h1">このページのタイトルが入ります</h1>
+    <h1 :class="$style.h1">タイトルタイトルタイトルタイトル</h1>
     <p>
       文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。
     </p>

@@ -24,8 +24,7 @@
           >
             <template #drawerBody>
               <InputElement label="タイトル" :mandatory="true"
-                ><Input
-                  value="テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト"
+                ><Input value="タイトルタイトルタイトルタイトル"
               /></InputElement>
               <InputElement label="タイトル"><Input value="テキスト" /></InputElement>
               <InputElement label="タイトル"><Input value="テキスト" /></InputElement>
@@ -57,8 +56,7 @@
           >
             <template #drawerBody>
               <InputElement label="タイトル" :mandatory="true"
-                ><Input
-                  value="テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト"
+                ><Input value="タイトルタイトルタイトルタイトル"
               /></InputElement>
               <InputElement label="タイトル"><Input value="テキスト" /></InputElement>
               <InputElement label="タイトル"><Input value="テキスト" /></InputElement>

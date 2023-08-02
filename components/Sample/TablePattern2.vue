@@ -5,12 +5,14 @@
       <Th text="" />
       <Th text="項目" />
       <Th text="項目" />
+      <Th text="項目" />
     </template>
     <template #tableData>
       <tr>
         <TdText
-          text="テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト"
-          caption="キャプション"
+          text="タイトルタイトルタイトルタイトル"
+          caption="これはキャプションです。この列はminWidth指定しています。"
+          minWidth="15rem"
         />
         <TdBtn>
           <BtnDrawer
@@ -38,11 +40,13 @@
         </TdBtn>
         <TdText text="テキスト" />
         <TdText text="テキスト" />
+        <TdText text="テキスト" />
       </tr>
       <tr>
         <TdText
-          text="テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト"
-          caption="キャプション"
+          text="タイトルタイトルタイトルタイトル"
+          caption="これはキャプションです。この列はminWidth指定しています。"
+          minWidth="15rem"
         />
         <TdBtn>
           <BtnDrawer
@@ -67,6 +71,7 @@
             </template>
           </BtnDrawer>
         </TdBtn>
+        <TdText text="テキスト" />
         <TdText text="テキスト" />
         <TdText text="テキスト" />
       </tr>

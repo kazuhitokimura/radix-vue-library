@@ -2,18 +2,18 @@
   <Table>
     <template #tableHeader>
       <Th text="タイトル" />
-      <Th text="タイトル" />
-      <Th text="タイトル" />
-      <Th text="タイトル" />
+      <Th text="項目" />
+      <Th text="項目" />
+      <Th text="項目" />
     </template>
     <template #tableData>
       <tr>
         <TdText
-          text="テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト"
+          text="タイトルタイトルタイトルタイトル"
           :isNuxtLink="true"
           nuxtLink="/detail"
           minWidth="15rem"
-          caption="説明が入りますこれはtruncate不可です"
+          caption="これはキャプションです。この列はminWidth指定しています。"
         />
         <TdText text="テキスト" />
         <TdText text="テキスト" />
@@ -21,12 +21,12 @@
       </tr>
       <tr>
         <TdText
-          text="テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト"
+          text="タイトルタイトルタイトルタイトル"
           :isNuxtLink="true"
           nuxtLink="/detail"
           minWidth="15rem"
           :isTruncate="false"
-          caption="説明が入りますこれはtruncate不可です"
+          caption="これはキャプションです。この列はminWidth指定しています。"
         />
         <TdText text="テキスト" />
         <TdText text="テキスト" />

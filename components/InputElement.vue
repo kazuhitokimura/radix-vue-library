@@ -49,7 +49,7 @@ const props = defineProps({
   flex-direction: row;
   align-items: center;
   margin-bottom: 0.5rem;
-  @include text-h4();
+  @include text-h5();
   color: $text-sub;
 }
 

@@ -1,5 +1,10 @@
 <template>
-  <Btn :label="triggerText" :color="triggerBtnColor" :size="size" @click="toggleDrawer" />
+  <Btn
+    :label="triggerLabel"
+    :color="triggerBtnColor"
+    :size="size"
+    @click="toggleDrawer"
+  />
   <DrawerContent
     v-if="drawerIsOpen"
     :class="$style.drawerContent"
@@ -16,10 +21,10 @@
       />
     </div>
     <div :class="$style.drawerBody">
-      <slot name="drawerContent" />
+      <slot name="drawerBody"></slot>
     </div>
     <div :class="$style.drawerFooter">
-      <Btn text="閉じる" color="text" size="L" @click="toggleDrawer" />
+      <slot name="drawerFooter"></slot>
     </div>
   </DrawerContent>
 </template>
@@ -32,7 +37,7 @@ const toggleDrawer = () => {
 };
 
 const props = defineProps({
-  triggerText: {
+  triggerLabel: {
     type: String,
     default: "ドロワーを開く",
   },
@@ -67,16 +72,20 @@ const props = defineProps({
 }
 
 .drawerBody {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   padding: 1rem;
+  gap: 1.5rem;
   flex: 1;
 }
 
 .drawerFooter {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+  gap: 0.5rem;
   padding: 1rem;
   width: 100%;
 }

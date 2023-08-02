@@ -63,6 +63,14 @@ const props = defineProps({
   @include text-btn-base();
 }
 
+.destructive {
+  @include destructive-btn-base();
+}
+
+.high-destructive {
+  @include high-destructive-btn-base();
+}
+
 /* size別のスタイル */
 .M {
   @include icon-btn-size-M();

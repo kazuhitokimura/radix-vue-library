@@ -5,6 +5,7 @@
     :value="value"
     :placeholder="placeholder"
     :class="[$style.input, { [$style.error]: isError }]"
+    :readonly="isReadonly"
     :disabled="isDisabled"
   />
 </template>
@@ -31,6 +32,10 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  isReadonly: {
+    type: Boolean,
+    default: false,
+  },
   isError: {
     type: Boolean,
     default: false,
@@ -41,11 +46,6 @@ const props = defineProps({
 <style lang="scss" module>
 .input {
   @include input-base();
-
-  &:disabled {
-    opacity: $opacity-disabled;
-    cursor: not-allowed;
-  }
 }
 
 .error {

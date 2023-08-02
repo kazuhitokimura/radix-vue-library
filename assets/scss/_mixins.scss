@@ -29,6 +29,18 @@
   &::placeholder{
       color: $text-main-placeholder;
   }
+
+  &:disabled {
+    background-color: $gray-50;
+    color: $text-sub;
+    cursor: not-allowed;
+  }
+
+  &:read-only {
+    background-color: $gray-50;
+    color: $text-sub;
+    cursor: not-allowed;
+  }
   }
 
   /*リンクテキストのスタイルを指定*/
@@ -99,11 +111,13 @@
   /*ボタンのサイズ別スタイルを指定*/
 
   @mixin btn-size-M(){
+    width: fit-content;
     padding: 0.5rem 0.75rem;
     height: 2.5rem;
   }
 
   @mixin btn-size-L(){
+    width: fit-content;
     padding: 0.625rem 2rem;
     height: 2.75rem;
   }
@@ -172,4 +186,34 @@
     }
   }
 
+  @mixin destructive-btn-base(){
+    background-color: $surface-main;
+    color: $error-main;
+    border: 1px solid $border-main;
+
+    &:hover {
+      background-color: $overlay-hover;
+    }
   
+    &:active {
+      background-color: $overlay-active;
+    }
+    &:disabled {
+      background-color: transparent;
+    }
+  }
+  
+  @mixin high-destructive-btn-base(){
+    background-color: $error-main;
+    color: $text-white;
+  
+    &:hover {
+      background-color: $gray-900;
+    }
+    &:active {
+      background-color: darken($gray-900, 20%);
+    }
+    &:disabled {
+      background-color: $primary-main;
+    }
+  }

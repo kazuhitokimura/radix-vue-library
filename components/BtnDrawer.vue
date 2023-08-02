@@ -11,7 +11,7 @@
     :style="{ width: contentWidth }"
   >
     <div :class="$style.drawerHeader">
-      <h2>タイトル</h2>
+      <h2>{{ contentTitle }}</h2>
       <IconBtn
         icon="close"
         ariaLabel="閉じる"
@@ -48,6 +48,10 @@ const props = defineProps({
   size: {
     type: String,
     default: "L",
+  },
+  contentTitle: {
+    type: String,
+    default: "タイトル",
   },
   contentWidth: {
     type: String,

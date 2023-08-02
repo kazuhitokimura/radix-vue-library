@@ -17,6 +17,7 @@
             triggerLabel="詳細表示"
             color="neutral"
             size="M"
+            contentTitle="詳細表示"
             contentWidth="30rem"
           >
             <template #drawerBody>

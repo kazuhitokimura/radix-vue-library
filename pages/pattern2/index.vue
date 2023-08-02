@@ -13,14 +13,17 @@
       contentWidth="30rem"
     >
       <template #drawerBody>
-        <InputElement label="タイトル" :mandatory="true"><Input /></InputElement>
-        <InputElement label="タイトル"><Input /></InputElement>
-        <InputElement label="タイトル"><Input /></InputElement>
-        <InputElement label="タイトル"><Input /></InputElement>
+        <InputElement label="タイトル" :mandatory="true"
+          ><Input placeholder="タイトル"
+        /></InputElement>
+        <InputElement label="項目"><Input placeholder="項目" /></InputElement>
+        <InputElement label="項目"><Input placeholder="項目" /></InputElement>
+        <InputElement label="項目"><Input placeholder="項目" /></InputElement>
+        <InputElement label="項目"><Input placeholder="項目" /></InputElement>
       </template>
       <template #drawerFooter>
         <Btn label="キャンセル" color="text" size="L" />
-        <Btn label="保存" color="primary" size="L" />
+        <Btn label="この内容で登録" color="primary" size="L" />
       </template>
     </BtnDrawer>
   </div>

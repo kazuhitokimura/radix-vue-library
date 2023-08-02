@@ -29,6 +29,7 @@
               <InputElement label="項目"><Input value="テキスト" /></InputElement>
               <InputElement label="項目"><Input value="テキスト" /></InputElement>
               <InputElement label="項目"><Input value="テキスト" /></InputElement>
+              <InputElement label="項目"><Input value="テキスト" /></InputElement>
               <Btn label="削除" color="destructive" size="M" />
             </template>
             <template #drawerFooter>
@@ -62,6 +63,7 @@
               <InputElement label="タイトル"><Input value="テキスト" /></InputElement>
               <InputElement label="タイトル"><Input value="テキスト" /></InputElement>
               <InputElement label="タイトル"><Input value="テキスト" /></InputElement>
+              <InputElement label="項目"><Input value="テキスト" /></InputElement>
               <Btn label="削除" color="destructive" size="M" />
             </template>
             <template #drawerFooter>

@@ -11,9 +11,9 @@
       <InputElement label="タイトル" mandatory="true">
         <Input placeholder="タイトル" value="このページのタイトルが入ります" />
       </InputElement>
-      <InputElement label="内容">
+      <InputElement label="項目">
         <Textarea
-          placeholder="内容"
+          placeholder="項目"
           :rows="15"
           value="このページのタイトルが入ります
 文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。

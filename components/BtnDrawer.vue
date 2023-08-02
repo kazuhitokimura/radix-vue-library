@@ -92,6 +92,7 @@ const props = defineProps({
   padding: 1rem;
   gap: 1.5rem;
   flex: 1;
+  overflow-y: scroll;
 }
 
 .drawerFooter {
@@ -102,5 +103,6 @@ const props = defineProps({
   gap: 0.5rem;
   padding: 1rem;
   width: 100%;
+  z-index: $z-index-30;
 }
 </style>

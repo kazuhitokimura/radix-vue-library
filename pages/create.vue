@@ -11,8 +11,8 @@
       <InputElement label="タイトル" mandatory="true">
         <Input placeholder="タイトル" value="" />
       </InputElement>
-      <InputElement label="内容">
-        <Textarea placeholder="内容" :rows="15" value="" />
+      <InputElement label="項目">
+        <Textarea placeholder="項目" :rows="15" value="" />
       </InputElement>
     </div>
   </div>

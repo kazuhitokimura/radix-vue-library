@@ -1,5 +1,13 @@
 <template>
+  <NuxtLink
+    v-if="isNuxtLink"
+    :to="nuxtLink"
+    :class="[$style.btn, $style[color], $style[size], { [$style.loading]: isLoading }]"
+    :disabled="isDisabled"
+    >{{ label }}</NuxtLink
+  >
   <button
+    v-else
     :class="[$style.btn, $style[color], $style[size], { [$style.loading]: isLoading }]"
     :disabled="isDisabled"
   >
@@ -31,6 +39,14 @@ const props = defineProps({
   isLoading: {
     type: Boolean,
     default: false,
+  },
+  isNuxtLink: {
+    type: Boolean,
+    default: false,
+  },
+  nuxtLink: {
+    type: String,
+    default: null,
   },
 });
 </script>

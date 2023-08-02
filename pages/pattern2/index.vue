@@ -6,7 +6,23 @@
         このページに関する説明が入ります。これは必須ではありません。
       </p>
     </div>
-    <Btn label="登録" color="primary" size="L" />
+    <BtnDrawer
+      triggerLabel="登録"
+      triggerBtnColor="primary"
+      contentTitle="登録"
+      contentWidth="30rem"
+    >
+      <template #drawerBody>
+        <InputElement label="タイトル" :mandatory="true"><Input /></InputElement>
+        <InputElement label="タイトル"><Input /></InputElement>
+        <InputElement label="タイトル"><Input /></InputElement>
+        <InputElement label="タイトル"><Input /></InputElement>
+      </template>
+      <template #drawerFooter>
+        <Btn label="キャンセル" color="text" size="L" />
+        <Btn label="保存" color="primary" size="L" />
+      </template>
+    </BtnDrawer>
   </div>
   <TablePattern2 />
   <div :class="$style.tableFooter">

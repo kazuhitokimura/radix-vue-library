@@ -2,7 +2,7 @@
   <Btn
     :label="triggerLabel"
     :color="triggerBtnColor"
-    :size="size"
+    :size="triggerBtnSize"
     @click="toggleDrawer"
   />
   <DrawerContent
@@ -46,7 +46,7 @@ const props = defineProps({
     type: String,
     default: "neutral",
   },
-  size: {
+  triggerBtnSize: {
     type: String,
     default: "L",
   },

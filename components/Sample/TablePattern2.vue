@@ -17,8 +17,8 @@
         <TdBtn>
           <BtnDrawer
             triggerLabel="詳細表示"
-            color="neutral"
-            size="M"
+            triggerBtnColor="neutral"
+            triggerBtnSize="M"
             contentTitle="詳細表示"
             contentWidth="30rem"
           >
@@ -50,8 +50,9 @@
         <TdBtn>
           <BtnDrawer
             triggerLabel="詳細表示"
-            color="neutral"
-            size="M"
+            triggerBtnColor="neutral"
+            triggerBtnSize="M"
+            contentTitle="詳細表示"
             contentWidth="30rem"
           >
             <template #drawerBody>

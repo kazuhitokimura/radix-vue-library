@@ -5,7 +5,7 @@
 @import "./_spacing";
 @import "./_typography";
 
-/*インプットフィールドのスタイルを指定*/
+/*インプットフィールドのスタイルを指定（セレクトやテキストエリアにも使用する）*/
 
 @mixin input-base() {
   display: flex;
@@ -51,7 +51,51 @@
     }
   }
 
-  /*ボタンのカラー別スタイルを指定*/
+  /*ボタンの共通スタイルを指定（ドロップダウンメニュー等のトリガーで使用する想定）*/
+
+  @mixin btn-base(){
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    border-radius: $radius-S;
+    font-size: $text-M;
+  
+    &:focus-visible {
+      outline: 2px solid $focus-main;
+      outline-offset: 2px;
+    }
+  
+    &:disabled {
+      opacity: $opacity-disabled;
+      cursor: not-allowed;
+    }
+  }
+
+
+  /*アイコンボタンの共通スタイルを指定（ドロップダウンメニュー等のトリガー使用する想定）*/
+
+  @mixin icon-btn-base() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: $radius-S;
+    font-size: $text-XL;
+    line-height: 0;
+  
+    &:focus-visible {
+      outline: 2px solid $focus-main;
+      outline-offset: 2px;
+    }
+  
+    &:disabled {
+      opacity: $opacity-disabled;
+      cursor: not-allowed;
+    }
+  }
+
+  /*ボタン・アイコンボタンのカラー別スタイルを指定*/
 
   @mixin primary-btn-base(){
     background-color: $primary-main;
@@ -98,27 +142,6 @@
     }
     &:disabled {
       background-color: transparent;
-    }
-  }
-
-  /*アイコンボタンのスタイルを指定（ドロップダウンメニューで使うため）*/
-
-  @mixin icon-btn-base() {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: $radius-S;
-    font-size: $text-XL;
-    line-height: 0;
-  
-    &:focus-visible {
-      outline: 2px solid $focus-main;
-      outline-offset: 2px;
-    }
-  
-    &:disabled {
-      opacity: $opacity-disabled;
-      cursor: not-allowed;
     }
   }
 

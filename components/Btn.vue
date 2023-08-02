@@ -38,23 +38,7 @@ const props = defineProps({
 <style lang="scss" module>
 /* 共通のスタイル */
 .btn {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 0.25rem;
-  border-radius: $radius-S;
-  font-size: $text-M;
-
-  &:focus-visible {
-    outline: 2px solid $focus-main;
-    outline-offset: 2px;
-  }
-
-  &:disabled {
-    opacity: $opacity-disabled;
-    cursor: not-allowed;
-  }
+  @include btn-base();
 }
 
 /* color別のスタイル */

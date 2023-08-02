@@ -7,6 +7,7 @@
       </p>
     </div>
     <Btn label="登録" size="L" />
+    <Drawer />
   </div>
   <TablePattern1 />
   <div :class="$style.tableFooter">

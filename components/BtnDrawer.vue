@@ -11,7 +11,8 @@
     :style="{ width: contentWidth }"
   >
     <div :class="$style.drawerHeader">
-      <h2>{{ contentTitle }}</h2>
+      <LoadingSpinner v-if="isLoading" />
+      <h2 :class="$style.contentTitle">{{ contentTitle }}</h2>
       <IconBtn
         icon="close"
         ariaLabel="閉じる"
@@ -57,6 +58,10 @@ const props = defineProps({
     type: String,
     default: "40rem",
   },
+  isLoading: {
+    type: Boolean,
+    default: false,
+  },
 });
 </script>
 
@@ -66,7 +71,12 @@ const props = defineProps({
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  gap: 0.5rem;
   width: 100%;
+}
+
+.contentTitle {
+  flex: 1;
 }
 
 .drawerContent {

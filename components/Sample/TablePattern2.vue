@@ -15,20 +15,17 @@
           minWidth="15rem"
         />
         <TdBtn>
-          <BtnDrawer
-            triggerLabel="詳細表示"
-            triggerBtnColor="neutral"
-            triggerBtnSize="M"
-            contentTitle="詳細表示"
-            contentWidth="30rem"
-          >
+          <Drawer contentTitle="詳細表示" contentWidth="30rem">
+            <template #drawerTrigger>
+              <Btn label="詳細表示" color="neutral" size="M" />
+            </template>
             <template #drawerBody>
               <InputElement label="タイトル" :mandatory="true"
                 ><Input value="タイトルタイトルタイトルタイトル"
               /></InputElement>
-              <InputElement label="項目"><Input value="テキスト" /></InputElement>
-              <InputElement label="項目"><Input value="テキスト" /></InputElement>
-              <InputElement label="項目"><Input value="テキスト" /></InputElement>
+              <InputElement label="タイトル"><Input value="テキスト" /></InputElement>
+              <InputElement label="タイトル"><Input value="テキスト" /></InputElement>
+              <InputElement label="タイトル"><Input value="テキスト" /></InputElement>
               <InputElement label="項目"><Input value="テキスト" /></InputElement>
               <Btn label="削除" color="destructive" size="M" />
             </template>
@@ -36,7 +33,7 @@
               <Btn label="キャンセル" color="text" size="L" />
               <Btn label="保存" color="primary" size="L" />
             </template>
-          </BtnDrawer>
+          </Drawer>
         </TdBtn>
         <TdText text="テキスト" />
         <TdText text="テキスト" />
@@ -49,13 +46,10 @@
           minWidth="15rem"
         />
         <TdBtn>
-          <BtnDrawer
-            triggerLabel="詳細表示"
-            triggerBtnColor="neutral"
-            triggerBtnSize="M"
-            contentTitle="詳細表示"
-            contentWidth="30rem"
-          >
+          <Drawer contentTitle="詳細表示" contentWidth="30rem">
+            <template #drawerTrigger>
+              <Btn label="詳細表示" color="neutral" size="M" />
+            </template>
             <template #drawerBody>
               <InputElement label="タイトル" :mandatory="true"
                 ><Input value="タイトルタイトルタイトルタイトル"
@@ -70,7 +64,7 @@
               <Btn label="キャンセル" color="text" size="L" />
               <Btn label="保存" color="primary" size="L" />
             </template>
-          </BtnDrawer>
+          </Drawer>
         </TdBtn>
         <TdText text="テキスト" />
         <TdText text="テキスト" />

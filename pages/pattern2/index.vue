@@ -6,12 +6,10 @@
         このページに関する説明が入ります。これは必須ではありません。
       </p>
     </div>
-    <BtnDrawer
-      triggerLabel="登録"
-      triggerBtnColor="primary"
-      contentTitle="登録"
-      contentWidth="30rem"
-    >
+    <Drawer contentTitle="登録" contentWidth="30rem">
+      <template #drawerTrigger>
+        <btn label="登録" size="L" />
+      </template>
       <template #drawerBody>
         <InputElement label="タイトル" :mandatory="true"
           ><Input placeholder="タイトル"
@@ -25,7 +23,7 @@
         <Btn label="キャンセル" color="text" size="L" />
         <Btn label="この内容で登録" color="primary" size="L" />
       </template>
-    </BtnDrawer>
+    </Drawer>
   </div>
   <TablePattern2 />
   <div :class="$style.tableFooter">

@@ -11,13 +11,15 @@
         <btn label="登録" size="L" />
       </template>
       <template #drawerBody>
-        <InputElement label="タイトル" :mandatory="true"
-          ><Input placeholder="タイトル"
-        /></InputElement>
-        <InputElement label="項目"><Input placeholder="項目" /></InputElement>
-        <InputElement label="項目"><Input placeholder="項目" /></InputElement>
-        <InputElement label="項目"><Input placeholder="項目" /></InputElement>
-        <InputElement label="項目"><Input placeholder="項目" /></InputElement>
+        <div :class="$style.inputColumn">
+          <InputElement label="タイトル" :mandatory="true"
+            ><Input placeholder="タイトル"
+          /></InputElement>
+          <InputElement label="項目"><Input placeholder="項目" /></InputElement>
+          <InputElement label="項目"><Input placeholder="項目" /></InputElement>
+          <InputElement label="項目"><Input placeholder="項目" /></InputElement>
+          <InputElement label="項目"><Input placeholder="項目" /></InputElement>
+        </div>
       </template>
       <template #drawerFooter>
         <Btn label="キャンセル" color="text" size="L" />
@@ -55,6 +57,12 @@ import TablePattern2 from "~/components/Sample/TablePattern2.vue";
   width: 100%;
   gap: 0.25rem;
   flex: 1;
+}
+
+.inputColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .pageCaption {

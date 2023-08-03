@@ -65,7 +65,7 @@ const props = defineProps({
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   gap: 0.5rem;
   width: 100%;
 }
@@ -84,8 +84,7 @@ const props = defineProps({
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 1rem;
-  gap: 1.5rem;
+  padding: 1rem 1.5rem;
   flex: 1;
   overflow-y: scroll;
 }
@@ -96,7 +95,7 @@ const props = defineProps({
   justify-content: flex-start;
   align-items: center;
   gap: 0.5rem;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   width: 100%;
   z-index: $z-index-30;
 }

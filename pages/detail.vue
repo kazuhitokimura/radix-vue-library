@@ -61,7 +61,7 @@ import Pattern1DetailPageDropDownMenu from "../components/Sample/Pattern1DetailP
   flex-direction: column;
   width: 100%;
   max-width: 920px;
-  padding: 0px 120px 32px 32px;
+  padding: 1rem 7.5rem 2rem 2rem;
 }
 
 .h1 {

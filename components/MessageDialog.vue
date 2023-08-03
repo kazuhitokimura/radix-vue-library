@@ -62,7 +62,6 @@ const props = defineProps({
   position: fixed;
   inset: 0;
   background-color: $overlay-modal;
-  z-index: $z-index-30;
 }
 
 .dialogTrigger {
@@ -72,7 +71,7 @@ const props = defineProps({
 
 .dialogContent {
   position: fixed;
-  top: 10%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -85,7 +84,6 @@ const props = defineProps({
   background-color: $surface-main;
   border-radius: $radius-M;
   box-shadow: $shadow-40;
-  z-index: $z-index-40;
 }
 
 .dialogTitle {

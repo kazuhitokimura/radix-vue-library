@@ -14,6 +14,11 @@
           <span :class="[$style.dropDownItem, $style.destructive]">削除 </span>
         </template>
         <template #dialogTitle> 削除します。よろしいですか？ </template>
+        <template #dialogDescription
+          ><p>
+            （要修正）トリガーをドロップダウンに入れると、ダイアログ自体をクリックしたら閉じてしまう。
+          </p></template
+        >
         <template #dialogAction><Btn label="削除" color="high-destructive" /></template>
       </MessageDialog>
     </template>

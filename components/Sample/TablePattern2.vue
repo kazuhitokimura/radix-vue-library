@@ -27,7 +27,18 @@
               <InputElement label="タイトル"><Input value="テキスト" /></InputElement>
               <InputElement label="タイトル"><Input value="テキスト" /></InputElement>
               <InputElement label="項目"><Input value="テキスト" /></InputElement>
-              <Btn label="削除" color="destructive" size="M" />
+              <MessageDialog>
+                <template #dialogTrigger
+                  ><Btn label="削除" color="destructive" size="M"
+                /></template>
+                <template #dialogTitle>削除します。よろしいですか？</template>
+                <template #dialogDescription>
+                  メッセージダイアログのコンポーネントをRadix以外のコンポーネントから呼び出すと正常に動作する。
+                </template>
+                <template #dialogAction
+                  ><Btn label="削除" color="high-destructive"
+                /></template>
+              </MessageDialog>
             </template>
             <template #drawerFooter>
               <Btn label="キャンセル" color="text" size="L" />
@@ -58,7 +69,18 @@
               <InputElement label="タイトル"><Input value="テキスト" /></InputElement>
               <InputElement label="タイトル"><Input value="テキスト" /></InputElement>
               <InputElement label="項目"><Input value="テキスト" /></InputElement>
-              <Btn label="削除" color="destructive" size="M" />
+              <MessageDialog>
+                <template #dialogTrigger
+                  ><Btn label="削除" color="destructive" size="M"
+                /></template>
+                <template #dialogTitle>削除します。よろしいですか？</template>
+                <template #dialogDescription>
+                  メッセージダイアログのコンポーネントをRadix以外のコンポーネントから呼び出すと正常に動作する。
+                </template>
+                <template #dialogAction
+                  ><Btn label="削除" color="high-destructive"
+                /></template>
+              </MessageDialog>
             </template>
             <template #drawerFooter>
               <Btn label="キャンセル" color="text" size="L" />

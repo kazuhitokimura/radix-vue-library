@@ -16,7 +16,9 @@
           ><slot name="dialogDescription"
         /></DialogDescription>
         <div :class="$style.dialogAction">
-          <DialogClose><Btn :label="closeLabel" color="text" /></DialogClose>
+          <DialogClose :class="$style.dialogClose"
+            ><Btn :label="closeLabel" color="text"
+          /></DialogClose>
           <slot name="dialogAction" />
         </div>
       </DialogContent>
@@ -62,11 +64,17 @@ const props = defineProps({
   position: fixed;
   inset: 0;
   background-color: $overlay-modal;
+  z-index: $z-index-30;
 }
 
 .dialogTrigger {
   width: fit-content;
   height: fit-content;
+
+  /*フォーカス時のスタイルがslotと2重で当たらないようにする*/
+  &:focus {
+    outline: none;
+  }
 }
 
 .dialogContent {
@@ -84,6 +92,7 @@ const props = defineProps({
   background-color: $surface-main;
   border-radius: $radius-M;
   box-shadow: $shadow-40;
+  z-index: $z-index-40;
 }
 
 .dialogTitle {
@@ -101,5 +110,12 @@ const props = defineProps({
   align-items: center;
   gap: 0.5rem;
   width: 100%;
+}
+
+.dialogClose {
+  /*フォーカス時のスタイルがslotと2重で当たらないようにする*/
+  &:focus {
+    outline: none;
+  }
 }
 </style>

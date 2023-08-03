@@ -39,6 +39,11 @@ import {
 .dropDownTrigger {
   height: fit-content;
   width: fit-content;
+
+  /*フォーカス時のスタイルがslotと2重で当たらないようにする*/
+  &:focus {
+    outline: none;
+  }
 }
 
 .dropDownContent {

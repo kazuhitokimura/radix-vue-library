@@ -1,9 +1,9 @@
 <template>
-    <Drawer>
-        <DrawerContent>
-        <Btn text="閉じるボタン" color="neutral" size="L" @click="toggleDrawer" />
-        </DrawerContent>
-    </Drawer>
+  <Drawer>
+    <DrawerContent>
+      <Btn text="閉じるボタン" color="neutral" size="L" @click="toggleDrawer" />
+    </DrawerContent>
+  </Drawer>
 </template>
 
 <script setup></script>

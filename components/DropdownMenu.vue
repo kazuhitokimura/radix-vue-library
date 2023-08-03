@@ -1,12 +1,13 @@
 <!-- Radix Vueを使用 -->
+<!-- Triggerをslotにしてみる -->
 
 <template>
   <DropdownMenuRoot>
-    <DropdownMenuTrigger :class="[$style.dropDownTrigger, $style[size]]">
-      <span class="material-symbols-outlined">{{ icon }}</span>
+    <DropdownMenuTrigger :class="$style.dropDownTrigger">
+      <slot name="dropDownTrigger" />
     </DropdownMenuTrigger>
     <DropdownMenuContent :class="$style.dropDownContent">
-      <slot />
+      <slot name="dropDownContent" />
     </DropdownMenuContent>
   </DropdownMenuRoot>
 </template>
@@ -31,33 +32,13 @@ import {
   DropdownMenuArrow,
   DropdownMenuSeparator,
 } from "radix-vue";
-
-const props = defineProps({
-  icon: {
-    type: String,
-    default: "more_horiz",
-  },
-  size: {
-    type: String,
-    default: "M",
-  },
-});
 </script>
 
 <style lang="scss" module>
 /* 共通のスタイル */
 .dropDownTrigger {
-  @include icon-btn-base();
-  @include neutral-btn-base();
-}
-
-/* size別のスタイル */
-.M {
-  @include icon-btn-size-M();
-}
-
-.L {
-  @include icon-btn-size-L();
+  height: fit-content;
+  width: fit-content;
 }
 
 .dropDownContent {

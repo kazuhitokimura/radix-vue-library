@@ -1,18 +1,25 @@
 <!-- Radix Vueを使用 -->
 
 <template>
-  <IconBtnDropDownMenu size="L">
-    <DropdownMenuItem :class="$style.dropDownItem"
-      ><NuxtLink :class="$style.nuxtLink" to="/edit">編集</NuxtLink></DropdownMenuItem
-    >
-    <DropdownMenuItem :class="[$style.dropDownItem, $style.destructive]">
-      削除
-    </DropdownMenuItem>
-  </IconBtnDropDownMenu>
+  <DropdownMenu>
+    <template #dropDownTrigger>
+      <IconBtn icon="more_horiz" color="neutral" size="L" />
+    </template>
+    <template #dropDownContent>
+      <DropdownMenuItem :class="$style.dropDownItem"
+        ><NuxtLink :class="$style.nuxtLink" to="/edit">編集</NuxtLink></DropdownMenuItem
+      >
+      <DropdownMenuItem :class="[$style.dropDownItem, $style.destructive]">
+        削除
+      </DropdownMenuItem>
+    </template>
+  </DropdownMenu>
 </template>
 
 <script setup lang="ts">
 import { DropdownMenuItem } from "radix-vue";
+import IconBtn from "../IconBtn.vue";
+import DropdownMenu from "../DropdownMenu.vue";
 </script>
 
 <style lang="scss" module>

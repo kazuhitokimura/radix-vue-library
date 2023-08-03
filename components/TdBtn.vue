@@ -17,7 +17,6 @@ const props = defineProps({
 
 <style lang="scss" module>
 .td {
-  width: auto;
   padding: 1rem 0.75rem;
   text-align: left;
   border-bottom: 1px solid $border-main;

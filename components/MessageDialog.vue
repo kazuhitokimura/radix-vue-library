@@ -17,8 +17,8 @@
         /></DialogDescription>
         <div :class="$style.dialogAction">
           <DialogClose><Btn :label="closeLabel" color="text" /></DialogClose>
+          <slot name="dialogAction" />
         </div>
-        <slot />
       </DialogContent>
     </DialogPortal>
   </DialogRoot>
@@ -72,7 +72,7 @@ const props = defineProps({
 
 .dialogContent {
   position: fixed;
-  top: 40%;
+  top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;

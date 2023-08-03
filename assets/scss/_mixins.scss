@@ -186,14 +186,15 @@
     border: 1px solid $border-main;
 
     &:hover {
-      background-color: $overlay-hover;
+      background-color: $gray-50;
     }
   
     &:active {
-      background-color: $overlay-active;
+      background-color: $gray-100;
     }
+  
     &:disabled {
-      background-color: transparent;
+      background-color: $surface-main;
     }
   }
   
@@ -202,13 +203,13 @@
     color: $text-white;
   
     &:hover {
-      background-color: $gray-900;
+      background-color: $red-600;
     }
     &:active {
-      background-color: darken($gray-900, 20%);
+      background-color: $red-700;
     }
     &:disabled {
-      background-color: $primary-main;
+      background-color: $error-main;
     }
   }
 

@@ -9,9 +9,13 @@
       <DropdownMenuItem :class="$style.dropDownItem"
         ><NuxtLink :class="$style.nuxtLink" to="/edit">編集</NuxtLink></DropdownMenuItem
       >
-      <DropdownMenuItem :class="[$style.dropDownItem, $style.destructive]">
-        削除
-      </DropdownMenuItem>
+      <MessageDialog>
+        <template #dialogTrigger>
+          <span :class="[$style.dropDownItem, $style.destructive]">削除 </span>
+        </template>
+        <template #dialogTitle> 削除します。よろしいですか？ </template>
+        <template #dialogAction><Btn label="削除" color="high-destructive" /></template>
+      </MessageDialog>
     </template>
   </DropdownMenu>
 </template>
@@ -20,6 +24,7 @@
 import { DropdownMenuItem } from "radix-vue";
 import IconBtn from "../IconBtn.vue";
 import DropdownMenu from "../DropdownMenu.vue";
+import MessageDialog from "../MessageDialog.vue";
 </script>
 
 <style lang="scss" module>

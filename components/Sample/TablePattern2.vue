@@ -48,7 +48,7 @@
             </template>
           </Drawer>
         </TdBtn>
-        <TdText text="テキスト" />
+        <TdStatus />
         <TdText text="テキスト" />
         <TdText text="テキスト" />
       </tr>

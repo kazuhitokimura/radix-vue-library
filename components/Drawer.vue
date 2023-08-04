@@ -41,7 +41,7 @@ const props = defineProps({
   },
   contentWidth: {
     type: String,
-    default: "40rem",
+    default: "25rem",
   },
   isLoading: {
     type: Boolean,

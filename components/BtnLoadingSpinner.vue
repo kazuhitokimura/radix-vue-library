@@ -16,25 +16,39 @@ const props = defineProps({
   @include spinner-base();
 }
 
-/* color別のスタイル */
+/* ボタンのcolor別のスタイル */
 .primary {
-  border-top-color: transparent;
-  border-right-color: transparent;
-  border-bottom-color: transparent;
-  border-left-color: $text-white;
+  border-top-color: $text-white;
+  border-right-color: $text-white;
+  border-bottom-color: $text-white;
+  border-left-color: transparent;
 }
 
 .neutral {
-  border-top-color: transparent;
-  border-right-color: transparent;
-  border-bottom-color: transparent;
-  border-left-color: $text-main;
+  border-top-color: $text-main;
+  border-right-color: $text-main;
+  border-bottom-color: $text-main;
+  border-left-color: transparent;
 }
 
 .text {
-  border-top-color: transparent;
-  border-right-color: transparent;
-  border-bottom-color: transparent;
-  border-left-color: $text-main;
+  border-top-color: $text-main;
+  border-right-color: $text-main;
+  border-bottom-color: $text-main;
+  border-left-color: transparent;
+}
+
+.destructive {
+  border-top-color: $error-main;
+  border-right-color: $error-main;
+  border-bottom-color: $error-main;
+  border-left-color: transparent;
+}
+
+.high-destructive {
+  border-top-color: $text-white;
+  border-right-color: $text-white;
+  border-bottom-color: $text-white;
+  border-left-color: transparent;
 }
 </style>

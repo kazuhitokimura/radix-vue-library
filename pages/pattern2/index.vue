@@ -4,7 +4,7 @@
       <div :class="$style.pageTitle">
         <h1>ページのタイトルが入ります</h1>
         <p :class="$style.pageCaption">
-          このページに関する説明が入ります。これは必須ではありません。
+          このページに関する説明が入ります。これは必須ではありません。これは詳細ページへ遷移しないパターンです。
         </p>
       </div>
       <Drawer contentTitle="登録" contentWidth="30rem">
@@ -49,7 +49,7 @@ import TablePattern2 from "~/components/Sample/TablePattern2.vue";
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 2rem;
+  padding: 3rem 2rem;
 }
 .pageTitleWrapper {
   display: flex;

@@ -4,7 +4,7 @@
       <div :class="$style.pageTitle">
         <h1>ページのタイトルが入ります</h1>
         <p :class="$style.pageCaption">
-          このページに関する説明が入ります。これは必須ではありません。
+          このページに関する説明が入ります。これは必須ではありません。これは詳細ページへ遷移するパターンです。
         </p>
       </div>
       <Btn label="登録" size="L" :isNuxtLink="true" nuxtLink="/create" />
@@ -30,7 +30,7 @@ import TablePattern1 from "../components/Sample/TablePattern1.vue";
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 2rem;
+  padding: 3rem 2rem;
 }
 .pageTitleWrapper {
   display: flex;

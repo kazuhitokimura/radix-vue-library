@@ -17,6 +17,6 @@
   min-height: calc(100vh - 3.75rem);
   height: 100%;
   width: 13rem;
-  background-color: $surface-main;
+  background-color: $gray-50;
 }
 </style>

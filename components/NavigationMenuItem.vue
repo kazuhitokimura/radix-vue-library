@@ -45,7 +45,7 @@ const props = defineProps({
   width: 100%;
   padding: 0.5rem;
   color: $text-main;
-  background-color: $surface-main;
+  background-color: $gray-50;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -72,7 +72,7 @@ const props = defineProps({
   width: 100%;
   padding: 0.5rem;
   color: $text-main;
-  background-color: $surface-main;
+  background-color: $gray-50;
 
   &:hover {
     background-color: $gray-50;
@@ -95,7 +95,7 @@ const props = defineProps({
   padding: 0.5rem;
   @include text-h5();
   color: $text-sub;
-  background-color: $surface-main;
+  background-color: $gray-50;
 }
 
 .current {

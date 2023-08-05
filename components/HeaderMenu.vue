@@ -21,6 +21,7 @@
   height: 3.75rem;
   width: 100%;
   background-color: $surface-main;
+  border-bottom: 1px solid $gray-100;
 }
 
 .logo {

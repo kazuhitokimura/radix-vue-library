@@ -9,7 +9,7 @@
   <div :class="$style.pageContentWrapper">
     <h1 :class="$style.h1">今週のグッドデザインを紹介します（7/31〜8/4）</h1>
     <div :class="$style.chipWrapper">
-      <Chip />
+      <Chip text="カテゴリ" />
     </div>
     <p :class="$style.p">
       今週からいよいよ8月。今日は、8月1週（7/31〜8/4）にアップした、とれたてグッドデザイン5点をまとめてご紹介します！

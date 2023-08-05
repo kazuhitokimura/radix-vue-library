@@ -15,32 +15,32 @@
       今週からいよいよ8月。今日は、8月1週（7/31〜8/4）にアップした、とれたてグッドデザイン5点をまとめてご紹介します！
     </p>
     <h2 :class="$style.h2">7/31 クレヨン[海のクレヨン]</h2>
+    <p :class="$style.p">宇宙から見た地球の色のクレヨン。</p>
+    <h3 :class="$style.h3">デザインの解説</h3>
     <p :class="$style.p">
-      宇宙から見た地球の色のクレヨン。
-      <br />
-      宇宙から撮影した衛星写真に写る、地球上に実存する海の色から抽出して作られた12色のクレヨン。QRコードから特設サイトへアクセスすることで、衛星写真、地図、テキスト、音声によって、海の場所や色の理由を学ぶことができます。子どもから大人まで「海＝青」ではない、地球の美しさや色の豊かさに触れてほしいという想いが込められています。
+      宇宙から撮影した衛星写真に写る、地球上に実存する海の色から抽出して作られた12色のクレヨン。QRコードから特設サイトへアクセスすることで、衛星写真、地図、テキスト、音声によって、海の場所や色の理由を学ぶことができます。
+    </p>
+    <h4 :class="$style.h4">ポイント</h4>
+    <p :class="$style.p">
+      子どもから大人まで「海＝青」ではない、地球の美しさや色の豊かさに触れてほしいという想いが込められています。
     </p>
     <h2 :class="$style.h2">8/1 住宅・ワーキングスペース・シェアキッチン[母の家]</h2>
     <p :class="$style.p">
       設計者の「母の家」の一部をまちに開き、ニュータウンの課題解決を目指したプロジェクト。
-      <br />
-      東京郊外のニュータウンにある住宅の一部を、住民が交流できるシェアキッチンやワーキングスペースへと改修。高齢化や子どもの自立による空き家化が進む地域で、住民同士がつながり生き生きとした時間を過ごせる拠点となっています。各地のニュータウンが潜在的に持つ課題を解決する、未来への重要なアクションを示す好例です。
     </p>
-    <!--
-    <h3 :class="$style.h3">見出し3が入ります</h3>
+    <h3 :class="$style.h3">デザインの解説</h3>
     <p :class="$style.p">
-      文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。
+      東京郊外のニュータウンにある住宅の一部を、住民が交流できるシェアキッチンやワーキングスペースへと改修。高齢化や子どもの自立による空き家化が進む地域で、住民同士がつながり生き生きとした時間を過ごせる拠点となっています。
     </p>
-    <h4 :class="$style.h4">見出し4が入ります</h4>
+    <h4 :class="$style.h4">ポイント</h4>
     <p :class="$style.p">
-      文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。
+      各地のニュータウンが潜在的に持つ課題を解決する、未来への重要なアクションを示す好例です。
     </p>
-    <h5 :class="$style.h5">見出し5が入ります</h5>
+    <h2 :class="$style.h2">まとめ</h2>
     <p :class="$style.p">
-      文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。
+      これらの斬新なデザインは、単なる視覚的な美しさだけでなく、私たちの生活や社会に対する深い洞察と課題解決の取り組みを反映しています。海の多様な色彩を探求するクレヨンから、地域社会のつながりを強化する共有スペースへの改修まで、それぞれが私たちに新しい視点と感動を提供してくれるでしょう。
     </p>
-    -->
-    <h2 :class="$style.h2">見出し2が入ります</h2>
+    <h2 :class="$style.h2">詳細</h2>
     <TablePattern1Detail />
   </div>
 </template>
@@ -62,7 +62,7 @@ import TablePattern1Detail from "../components/Sample/TablePattern1Detail.vue";
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 .actionWrapper {
@@ -81,6 +81,7 @@ import TablePattern1Detail from "../components/Sample/TablePattern1Detail.vue";
 }
 
 /* タイポグラフィは要調整 */
+/* 左メニューが白いので文章が右に寄っているのが気になる */
 
 .h1 {
   margin-bottom: 1rem;
@@ -90,20 +91,21 @@ import TablePattern1Detail from "../components/Sample/TablePattern1Detail.vue";
   display: flex;
   flex-direction: row;
   gap: 0.25rem;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .h2 {
   margin-top: 3rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 .h3 {
   margin-top: 2.5rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
 }
 .h4 {
+  font-size: 1.1rem;
   margin-top: 2.25rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 .h5 {
   margin-top: 2rem;
@@ -111,7 +113,7 @@ import TablePattern1Detail from "../components/Sample/TablePattern1Detail.vue";
 }
 
 .p {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   line-height: 2.2;
   color: $gray-700;
 }

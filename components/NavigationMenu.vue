@@ -14,7 +14,8 @@
   flex-direction: column;
   align-items: center;
   padding: 4px;
-  height: calc(100vh - 3.75rem);
+  min-height: calc(100vh - 3.75rem);
+  height: 100%;
   width: 13rem;
   background-color: $surface-main;
 }

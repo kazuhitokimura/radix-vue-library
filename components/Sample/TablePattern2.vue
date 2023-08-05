@@ -48,7 +48,7 @@
             </template>
           </Drawer>
         </TdBtn>
-        <TdStatus />
+        <TdStatus text="ステータスが入ります" />
         <TdText text="テキスト" />
         <TdText text="テキスト" />
       </tr>
@@ -92,7 +92,7 @@
             </template>
           </Drawer>
         </TdBtn>
-        <TdText text="テキスト" />
+        <TdStatus text="ステータスが入ります" />
         <TdText text="テキスト" />
         <TdText text="テキスト" />
       </tr>

@@ -8,6 +8,9 @@
   </div>
   <div :class="$style.pageContentWrapper">
     <h1 :class="$style.h1">タイトルタイトルタイトルタイトル</h1>
+    <div :class="$style.chipWrapper">
+      <Chip />
+    </div>
     <p>
       文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。
     </p>
@@ -27,6 +30,8 @@
     <p>
       文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。
     </p>
+    <h2 :class="$style.h2">見出し2が入ります</h2>
+    <TablePattern1Detail />
   </div>
 </template>
 
@@ -36,6 +41,7 @@ definePageMeta({
 });
 
 import Pattern1DetailPageDropDownMenu from "../components/Sample/Pattern1DetailPageDropDownMenu.vue";
+import TablePattern1Detail from "../components/Sample/TablePattern1Detail.vue";
 </script>
 
 <style lang="scss" module>
@@ -60,27 +66,35 @@ import Pattern1DetailPageDropDownMenu from "../components/Sample/Pattern1DetailP
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 920px;
+  max-width: 840px;
   padding: 1rem 7.5rem 2rem 2rem;
 }
 
 .h1 {
+  margin-bottom: 1rem;
+}
+
+.chipWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 0.25rem;
   margin-bottom: 1.75rem;
 }
+
 .h2 {
-  margin-top: 2.5rem;
+  margin-top: 3rem;
   margin-bottom: 1.5rem;
 }
 .h3 {
-  margin-top: 2.25rem;
+  margin-top: 2.5rem;
   margin-bottom: 1.25rem;
 }
 .h4 {
-  margin-top: 2rem;
+  margin-top: 2.25rem;
   margin-bottom: 0.5rem;
 }
 .h5 {
-  margin-top: 1.75rem;
+  margin-top: 2rem;
   margin-bottom: 0.75rem;
 }
 </style>

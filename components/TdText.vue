@@ -12,7 +12,11 @@
         :class="[$style.link, { [$style.truncate]: isTruncate }]"
         >{{ text }}</NuxtLink
       >
-      <span v-else :class="{ [$style.truncate]: isTruncate }">{{ text }}</span>
+      <span
+        v-else
+        :class="[{ [$style.truncate]: isTruncate }, { [$style.rowTitle]: isRowTitle }]"
+        >{{ text }}</span
+      >
       <span :class="$style.caption">{{ caption }}</span>
     </div>
   </td>
@@ -43,6 +47,10 @@ const props = defineProps({
   caption: {
     type: String,
     default: "",
+  },
+  isRowTitle: {
+    type: Boolean,
+    default: false,
   },
 });
 </script>
@@ -77,5 +85,10 @@ const props = defineProps({
 .caption {
   color: $text-sub;
   @include text-body2();
+}
+
+.rowTitle {
+  @include text-h5();
+  color: $text-sub;
 }
 </style>

@@ -63,7 +63,7 @@ definePageMeta({
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 920px;
+  max-width: 840px;
   padding: 1rem 7.5rem 2rem 2rem;
 }
 

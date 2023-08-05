@@ -114,7 +114,7 @@ import TablePattern1Detail from "../components/Sample/TablePattern1Detail.vue";
 
 .p {
   font-size: 1.05rem;
-  line-height: 2.2;
+  line-height: 2;
   color: $gray-700;
 }
 </style>

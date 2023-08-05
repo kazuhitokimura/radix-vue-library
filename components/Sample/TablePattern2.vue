@@ -44,7 +44,7 @@
             </template>
             <template #drawerFooter>
               <Btn label="キャンセル" color="text" size="L" />
-              <Btn label="保存" color="primary" size="L" />
+              <Btn label="この内容で保存" color="primary" size="L" />
             </template>
           </Drawer>
         </TdBtn>
@@ -88,7 +88,7 @@
             </template>
             <template #drawerFooter>
               <Btn label="キャンセル" color="text" size="L" />
-              <Btn label="保存" color="primary" size="L" />
+              <Btn label="この内容で保存" color="primary" size="L" />
             </template>
           </Drawer>
         </TdBtn>

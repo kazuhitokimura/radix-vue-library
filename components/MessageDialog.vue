@@ -101,6 +101,7 @@ const props = defineProps({
 
 .dialogDescription {
   width: 100%;
+  color: $text-sub;
 }
 
 .dialogAction {

@@ -1,16 +1,18 @@
 <template>
-  <div :class="$style.pageTitleWrapper">
-    <div :class="$style.pageTitle">
-      <h1>ページのタイトルが入ります</h1>
-      <p :class="$style.pageCaption">
-        このページに関する説明が入ります。これは必須ではありません。
-      </p>
+  <div :class="$style.collectionWrapper">
+    <div :class="$style.pageTitleWrapper">
+      <div :class="$style.pageTitle">
+        <h1>ページのタイトルが入ります</h1>
+        <p :class="$style.pageCaption">
+          このページに関する説明が入ります。これは必須ではありません。
+        </p>
+      </div>
+      <Btn label="登録" size="L" :isNuxtLink="true" nuxtLink="/create" />
     </div>
-    <Btn label="登録" size="L" :isNuxtLink="true" nuxtLink="/create" />
-  </div>
-  <TablePattern1 />
-  <div :class="$style.tableFooter">
-    <PageNation />
+    <TablePattern1 />
+    <div :class="$style.tableFooter">
+      <PageNation />
+    </div>
   </div>
 </template>
 
@@ -24,6 +26,12 @@ import TablePattern1 from "../components/Sample/TablePattern1.vue";
 
 <style lang="scss" module>
 // ページ内のwrapper、containerにあたるようなスタイルは共通化しないでおく
+.collectionWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 2rem;
+}
 .pageTitleWrapper {
   display: flex;
   justify-content: space-between;

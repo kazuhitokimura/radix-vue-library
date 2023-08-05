@@ -26,6 +26,7 @@
       <br />
       東京郊外のニュータウンにある住宅の一部を、住民が交流できるシェアキッチンやワーキングスペースへと改修。高齢化や子どもの自立による空き家化が進む地域で、住民同士がつながり生き生きとした時間を過ごせる拠点となっています。各地のニュータウンが潜在的に持つ課題を解決する、未来への重要なアクションを示す好例です。
     </p>
+    <!--
     <h3 :class="$style.h3">見出し3が入ります</h3>
     <p :class="$style.p">
       文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。
@@ -38,6 +39,7 @@
     <p :class="$style.p">
       文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。
     </p>
+    -->
     <h2 :class="$style.h2">見出し2が入ります</h2>
     <TablePattern1Detail />
   </div>
@@ -111,6 +113,6 @@ import TablePattern1Detail from "../components/Sample/TablePattern1Detail.vue";
 .p {
   font-size: 1.1rem;
   line-height: 2.2;
-  color: $gray-600;
+  color: $gray-700;
 }
 </style>

@@ -1,35 +1,37 @@
 <template>
-  <div :class="$style.pageTitleWrapper">
-    <div :class="$style.pageTitle">
-      <h1>ページのタイトルが入ります</h1>
-      <p :class="$style.pageCaption">
-        このページに関する説明が入ります。これは必須ではありません。
-      </p>
+  <div :class="$style.collectionWrapper">
+    <div :class="$style.pageTitleWrapper">
+      <div :class="$style.pageTitle">
+        <h1>ページのタイトルが入ります</h1>
+        <p :class="$style.pageCaption">
+          このページに関する説明が入ります。これは必須ではありません。
+        </p>
+      </div>
+      <Drawer contentTitle="登録" contentWidth="30rem">
+        <template #drawerTrigger>
+          <btn label="登録" size="L" />
+        </template>
+        <template #drawerBody>
+          <div :class="$style.inputColumn">
+            <InputElement label="タイトル" :mandatory="true"
+              ><Input placeholder="タイトル"
+            /></InputElement>
+            <InputElement label="項目"><Input placeholder="項目" /></InputElement>
+            <InputElement label="項目"><Input placeholder="項目" /></InputElement>
+            <InputElement label="項目"><Input placeholder="項目" /></InputElement>
+            <InputElement label="項目"><Input placeholder="項目" /></InputElement>
+          </div>
+        </template>
+        <template #drawerFooter>
+          <Btn label="キャンセル" color="text" size="L" />
+          <Btn label="この内容で登録" color="primary" size="L" />
+        </template>
+      </Drawer>
     </div>
-    <Drawer contentTitle="登録" contentWidth="30rem">
-      <template #drawerTrigger>
-        <btn label="登録" size="L" />
-      </template>
-      <template #drawerBody>
-        <div :class="$style.inputColumn">
-          <InputElement label="タイトル" :mandatory="true"
-            ><Input placeholder="タイトル"
-          /></InputElement>
-          <InputElement label="項目"><Input placeholder="項目" /></InputElement>
-          <InputElement label="項目"><Input placeholder="項目" /></InputElement>
-          <InputElement label="項目"><Input placeholder="項目" /></InputElement>
-          <InputElement label="項目"><Input placeholder="項目" /></InputElement>
-        </div>
-      </template>
-      <template #drawerFooter>
-        <Btn label="キャンセル" color="text" size="L" />
-        <Btn label="この内容で登録" color="primary" size="L" />
-      </template>
-    </Drawer>
-  </div>
-  <TablePattern2 />
-  <div :class="$style.tableFooter">
-    <PageNation />
+    <TablePattern2 />
+    <div :class="$style.tableFooter">
+      <PageNation />
+    </div>
   </div>
 </template>
 
@@ -43,6 +45,12 @@ import TablePattern2 from "~/components/Sample/TablePattern2.vue";
 
 <style lang="scss" module>
 // ページ内のwrapper、containerにあたるようなスタイルは共通化しないでおく
+.collectionWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 2rem;
+}
 .pageTitleWrapper {
   display: flex;
   justify-content: space-between;

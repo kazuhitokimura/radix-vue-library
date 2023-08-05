@@ -28,6 +28,5 @@ import NavigationMenuPattern2 from "../components/Sample/NavigationMenuPattern2.
   align-items: center;
   width: 100%;
   height: 100%;
-  padding: 2rem;
 }
 </style>

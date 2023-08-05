@@ -45,11 +45,6 @@ h6 {
   color: $text-main;
 }
 
-p {
-  @include text-body1();
-  color: $text-main;
-}
-
 button {
   cursor: pointer;
 }

@@ -48,6 +48,7 @@
 /*ボタンのサイズ別スタイルを指定*/
 /*アイコンボタンのサイズ別スタイルを指定*/
 /*ボタン・アイコンボタンのカラー別スタイルを指定*/
+/*ローディングスピナーの共通スタイルを指定*/
 /*グローバルスタイルを指定*/
 html {
   font-family: system-ui, sans-serif;
@@ -88,12 +89,6 @@ h5 {
 h6 {
   font-size: 0.75rem;
   font-weight: 600;
-  color: #32383F;
-}
-
-p {
-  font-size: 1rem;
-  font-weight: 300;
   color: #32383F;
 }
 

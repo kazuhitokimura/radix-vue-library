@@ -11,6 +11,9 @@
       <InputElement label="タイトル" mandatory="true">
         <Input placeholder="タイトル" value="" />
       </InputElement>
+      <InputElement label="タイトル">
+        <Select triggerText="カテゴリを選択" />
+      </InputElement>
       <InputElement label="項目">
         <Textarea placeholder="項目" :rows="15" value="" />
       </InputElement>

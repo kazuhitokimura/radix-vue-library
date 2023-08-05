@@ -1,5 +1,14 @@
 <template>
-  <NuxtLink :to="nuxtLink" :class="[$style.navMenuItem, { [$style.current]: current }]">
+  <div v-if="isSubheader" :class="$style.nabMenuSubheader">{{ label }}</div>
+  <NuxtLink v-else-if="isTransition" :to="nuxtLink" :class="$style.navMenuTransition">
+    <span class="material-symbols-outlined" :class="$style.icon">chevron_left</span>
+    {{ label }}
+  </NuxtLink>
+  <NuxtLink
+    v-else
+    :to="nuxtLink"
+    :class="[$style.navMenuItem, { [$style.current]: current }]"
+  >
     {{ label }}
   </NuxtLink>
 </template>
@@ -18,14 +27,20 @@ const props = defineProps({
     type: String,
     default: "/",
   },
+  isSubheader: {
+    type: Boolean,
+    default: false,
+  },
+  isTransition: {
+    type: Boolean,
+    default: false,
+  },
 });
 </script>
 
 <style lang="scss" module>
 .navMenuItem {
   display: block;
-  flex-direction: row;
-  align-items: center;
   gap: 0.25rem;
   width: 100%;
   padding: 0.5rem;
@@ -48,6 +63,41 @@ const props = defineProps({
   }
 }
 
+.navMenuTransition {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.25rem;
+  width: 100%;
+  padding: 0.5rem;
+  color: $text-main;
+  background-color: $surface-main;
+
+  &:hover {
+    background-color: $gray-50;
+  }
+
+  &:active {
+    background-color: $gray-100;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $focus-main;
+  }
+}
+
+.nabMenuSubheader {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem;
+  @include text-h5();
+  color: $text-sub;
+  background-color: $surface-main;
+}
+
 .current {
   background-color: $surface-sub;
   border-left: 2px solid $primary-main;
@@ -60,5 +110,10 @@ const props = defineProps({
   &:active {
     background-color: $gray-200;
   }
+}
+
+.icon {
+  @include text-body1();
+  line-height: 0;
 }
 </style>

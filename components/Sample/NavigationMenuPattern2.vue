@@ -2,6 +2,9 @@
   <NavigationMenu>
     <ul :class="$style.itemUl">
       <li :class="$style.itemLi">
+        <NavigationMenuItem label="UIのパターン" :isSubheader="true" />
+      </li>
+      <li :class="$style.itemLi">
         <NavigationMenuItem label="パターン1" nuxtLink="/" />
       </li>
       <li :class="$style.itemLi">

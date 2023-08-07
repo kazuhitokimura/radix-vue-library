@@ -40,6 +40,7 @@ definePageMeta({
   layout: "custom",
 });
 
+import TablePattern2Test from "~/components/Sample/TablePattern2Test.vue";
 import TablePattern2 from "~/components/Sample/TablePattern2.vue";
 </script>
 

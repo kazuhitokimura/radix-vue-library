@@ -76,7 +76,7 @@ import TablePattern1Detail from "../components/Sample/TablePattern1Detail.vue";
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 840px;
+  max-width: 880px;
   padding: 1rem 7.5rem 2rem 2rem;
 }
 
@@ -113,8 +113,8 @@ import TablePattern1Detail from "../components/Sample/TablePattern1Detail.vue";
 }
 
 .p {
-  font-size: 1.05rem;
-  line-height: 2;
+  font-size: 1rem;
+  line-height: 1.8;
   color: $gray-700;
 }
 </style>

@@ -23,7 +23,7 @@
         <TdText
           text="タイトルタイトルタイトルタイトル"
           :isNuxtLink="true"
-          nuxtLink="/detail"
+          nuxtLink="/detailFullWidth"
           minWidth="15rem"
           :isTruncate="false"
           caption="これはキャプションです。この列はminWidth指定しています。"

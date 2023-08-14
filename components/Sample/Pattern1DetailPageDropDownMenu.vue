@@ -27,33 +27,11 @@
 
 <script setup lang="ts">
 import { DropdownMenuItem } from "radix-vue";
-import IconBtn from "../IconBtn.vue";
-import DropdownMenu from "../DropdownMenu.vue";
-import MessageDialog from "../MessageDialog.vue";
 </script>
 
 <style lang="scss" module>
 .dropDownItem {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0.5rem 1rem;
-  color: $text-main;
-  @include text-body1();
-  width: 100%;
-  cursor: pointer;
-
-  &:hover {
-    background-color: $overlay-hover;
-  }
-
-  &:active {
-    background-color: $overlay-active;
-  }
-
-  &:focus-visible {
-    outline: 2px solid $focus-main;
-  }
+  @include dropdown-menu-item-base();
 }
 
 .nuxtLink {

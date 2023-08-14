@@ -14,25 +14,6 @@ import { SelectItem } from "radix-vue";
 
 <style lang="scss" module>
 .selectItem {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0.5rem 1rem;
-  color: $text-main;
-  @include text-body1();
-  width: 100%;
-  cursor: pointer;
-
-  &:hover {
-    background-color: $overlay-hover;
-  }
-
-  &:active {
-    background-color: $overlay-active;
-  }
-
-  &:focus-visible {
-    outline: 2px solid $focus-main;
-  }
+  @include select-item-base();
 }
 </style>

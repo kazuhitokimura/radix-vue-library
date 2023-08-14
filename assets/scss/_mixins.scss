@@ -235,3 +235,53 @@
       }
     }
   }
+
+  /*ドロップダウンメニューアイテムの共通スタイルを指定*/
+
+  @mixin dropdown-menu-item-base() {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    color: $text-main;
+    @include text-body1();
+    width: 100%;
+    cursor: pointer;
+  
+    &:hover {
+      background-color: $overlay-hover;
+    }
+  
+    &:active {
+      background-color: $overlay-active;
+    }
+  
+    &:focus-visible {
+      outline: 2px solid $focus-main;
+    }
+  }
+
+  /*セレクトアイテムの共通スタイルを指定*/
+
+  @mixin select-item-base() {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    color: $text-main;
+    @include text-body1();
+    width: 100%;
+    cursor: pointer;
+  
+    &:hover {
+      background-color: $overlay-hover;
+    }
+  
+    &:active {
+      background-color: $overlay-active;
+    }
+  
+    &:focus-visible {
+      outline: 2px solid $focus-main;
+    }
+  }

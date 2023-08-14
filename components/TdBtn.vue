@@ -1,4 +1,4 @@
-<!-- メモ：td、内容の種類によって別のコンポーネントに　-->
+<!-- td、内容の種類によって別のコンポーネントに　-->
 
 <template>
   <td :class="[$style.td]" :style="{ width: width }">

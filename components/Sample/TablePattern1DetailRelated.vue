@@ -1,0 +1,31 @@
+<template>
+  <Table>
+    <template #tableHeader>
+      <Th text="名称/説明" />
+      <Th text="" />
+      <Th text="登録日" />
+    </template>
+    <template #tableData>
+      <tr>
+        <TdImg :empty="true" width="6.5rem" imgWidth="4rem" imgHeight="3rem" />
+        <TdText
+          text="クレヨン[海のクレヨン]"
+          minWidth="15rem"
+          caption="宇宙から見た地球の色のクレヨン。"
+        />
+        <TdText text="2023/07/31" />
+      </tr>
+      <tr>
+        <TdImg :empty="true" width="6.5rem" imgWidth="4rem" imgHeight="3rem" />
+        <TdText
+          text="住宅・ワーキングスペース・シェアキッチン[母の家]"
+          minWidth="15rem"
+          caption="設計者の「母の家」の一部をまちに開き、ニュータウンの課題解決を目指したプロジェクト。"
+        />
+        <TdText text="2023/08/01" />
+      </tr>
+    </template>
+  </Table>
+</template>
+
+<script setup></script>

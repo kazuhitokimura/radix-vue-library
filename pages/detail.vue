@@ -13,6 +13,8 @@
     </div>
     <p :class="$style.p">
       今週からいよいよ8月。今日は、8月1週（7/31〜8/4）にアップした、とれたてグッドデザイン5点をまとめてご紹介します！
+      <br />
+      このページはコンテンツにmax-widthを指定しています。コンテンツの説明がテキストになっています。
     </p>
     <h2 :class="$style.h2">7/31 クレヨン[海のクレヨン]</h2>
     <p :class="$style.p">宇宙から見た地球の色のクレヨン。</p>
@@ -78,7 +80,7 @@ import TablePattern1Detail from "../components/Sample/TablePattern1Detail.vue";
   width: 100%;
   padding: 1rem 2rem 4rem 2rem;
   max-width: 880px;
-  padding: 1rem 7.5rem 2rem 2rem;
+  padding: 1rem 7.5rem 4rem 2rem;
 }
 
 /* タイポグラフィは要調整 */
@@ -116,6 +118,6 @@ import TablePattern1Detail from "../components/Sample/TablePattern1Detail.vue";
 .p {
   font-size: 1rem;
   line-height: 1.75rem;
-  color: $gray-700;
+  color: $gray-600;
 }
 </style>

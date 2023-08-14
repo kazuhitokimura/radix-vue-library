@@ -1,7 +1,7 @@
 <template>
   <Table>
     <template #tableHeader>
-      <Th text="タイトル" />
+      <Th text="ページレイアウトのパターン" />
       <Th text="項目" />
       <Th text="項目" />
       <Th text="項目" />
@@ -9,7 +9,7 @@
     <template #tableData>
       <tr>
         <TdText
-          text="タイトルタイトルタイトルタイトル"
+          text="パターン1"
           :isNuxtLink="true"
           nuxtLink="/detail"
           minWidth="15rem"
@@ -21,7 +21,7 @@
       </tr>
       <tr>
         <TdText
-          text="タイトルタイトルタイトルタイトル"
+          text="パターン2"
           :isNuxtLink="true"
           nuxtLink="/detailFullWidth"
           minWidth="15rem"

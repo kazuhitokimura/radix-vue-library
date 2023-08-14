@@ -1,3 +1,5 @@
+<!-- tr、th、tdをfor文で表示させるテスト -->
+
 <template>
   <table>
     <thead>

@@ -7,7 +7,13 @@
     </template>
     <template #tableData>
       <tr>
-        <TdImg :empty="true" width="6.5rem" imgWidth="4rem" imgHeight="3rem" />
+        <TdImg
+          src="/public/sea-clayon.png"
+          alt="サムネイル画像"
+          width="6.5rem"
+          imgWidth="4rem"
+          imgHeight="3rem"
+        />
         <TdText
           text="クレヨン[海のクレヨン]"
           minWidth="15rem"
@@ -16,7 +22,13 @@
         <TdText text="2023/07/31" />
       </tr>
       <tr>
-        <TdImg :empty="true" width="6.5rem" imgWidth="4rem" imgHeight="3rem" />
+        <TdImg
+          src="/public/workspace-kitchen.png"
+          alt="サムネイル画像"
+          width="6.5rem"
+          imgWidth="4rem"
+          imgHeight="3rem"
+        />
         <TdText
           text="住宅・ワーキングスペース・シェアキッチン[母の家]"
           minWidth="15rem"

@@ -10,7 +10,13 @@
         :alt="alt"
         :style="{ width: imgWidth, height: imgHeight }"
       />
-      <img v-else :class="$style.tdImg" src="" alt="" />
+      <img
+        v-else
+        :class="$style.tdImg"
+        :src="src"
+        :alt="alt"
+        :style="{ width: imgWidth, height: imgHeight }"
+      />
     </div>
   </td>
 </template>

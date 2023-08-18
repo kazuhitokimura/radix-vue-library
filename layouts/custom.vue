@@ -2,7 +2,7 @@
   <div>
     <HeaderMenu />
     <div :class="$style.gridWrapper">
-      <NavigationMenuPattern2 />
+      <NavigationMenu :items="menuItems" />
       <main :class="$style.main">
         <slot />
       </main>
@@ -11,7 +11,24 @@
 </template>
 
 <script setup>
-import NavigationMenuPattern2 from "../components/Sample/NavigationMenuPattern2.vue";
+import { ref } from "vue";
+
+const menuItems = ref([
+  {
+    label: "UIのパターン",
+    isSubheader: true,
+  },
+  {
+    label: "パターン1",
+    current: false,
+    nuxtLink: "/",
+  },
+  {
+    label: "パターン2",
+    current: true,
+    nuxtLink: "/pattern2",
+  },
+]);
 </script>
 
 <style lang="scss" module>

@@ -11,8 +11,8 @@
           src="/public/sea-clayon.png"
           alt="サムネイル画像"
           width="6.5rem"
-          imgWidth="4rem"
-          imgHeight="3rem"
+          imgWidth="80px"
+          imgHeight="45px"
         />
         <TdText
           text="クレヨン[海のクレヨン]"
@@ -26,8 +26,8 @@
           src="/public/workspace-kitchen.png"
           alt="サムネイル画像"
           width="6.5rem"
-          imgWidth="4rem"
-          imgHeight="3rem"
+          imgWidth="80px"
+          imgHeight="45px"
         />
         <TdText
           text="住宅・ワーキングスペース・シェアキッチン[母の家]"

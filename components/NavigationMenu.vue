@@ -1,18 +1,31 @@
-<!-- メモ：slotで中身を変更できるようにする -->
-
 <template>
   <nav :class="$style.navigationMenu">
-    <slot></slot>
+    <NavigationMenuItem
+      v-for="item in items"
+      :key="item.label"
+      :label="item.label"
+      :isSubheader="item.isSubheader"
+      :current="item.current"
+      :nuxtLink="item.nuxtLink"
+    />
   </nav>
 </template>
 
-<script setup></script>
+<script setup>
+const props = defineProps({
+  items: {
+    type: Array,
+    required: true,
+  },
+});
+</script>
 
 <style lang="scss" module>
 .navigationMenu {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0.25rem;
   padding: 4px;
   min-height: calc(100vh - 3.75rem);
   height: 100%;

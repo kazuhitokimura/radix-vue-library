@@ -17,7 +17,17 @@
 </template>
 
 <script setup>
-import SelectTest from "../SelectTest.vue";
+import {
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectItemIndicator,
+  SelectLabel,
+  SelectPortal,
+  SelectRoot,
+  SelectSeparator,
+  SelectTrigger,
+} from "radix-vue";
 import { ref } from "vue";
 
 const selectOption = ref(["1", "2"]);

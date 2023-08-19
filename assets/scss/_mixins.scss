@@ -246,6 +246,7 @@
     color: $text-main;
     @include text-body1();
     width: 100%;
+    height: fit-content;
     cursor: pointer;
   
     &:hover {
@@ -271,14 +272,17 @@
     color: $text-main;
     @include text-body1();
     width: 100%;
+    height: fit-content;
     cursor: pointer;
   
     &:hover {
       background-color: $overlay-hover;
+      outline: none;
     }
   
     &:active {
       background-color: $overlay-active;
+      outline: none;
     }
   
     &:focus-visible {

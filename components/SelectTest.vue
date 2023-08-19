@@ -7,7 +7,14 @@
       <Icon icon="radix-icons:chevron-down" :class="$style.selectIcon" />
     </SelectTrigger>
     <SelectContent :class="$style.selectContent" :style="{ width: contentWidth }">
-      <slot />
+      <SelectItem
+        v-for="(option, index) in options"
+        :key="index"
+        :value="option"
+        :class="$style.selectItem"
+      >
+        {{ option }}
+      </SelectItem>
     </SelectContent>
   </SelectRoot>
 </template>
@@ -41,6 +48,10 @@ const props = defineProps({
     type: String,
     default: "100%",
   },
+  options: {
+    type: Array as () => string[],
+    default: () => ["選択肢1", "選択肢2", "選択肢3"],
+  },
 });
 </script>
 
@@ -64,5 +75,9 @@ const props = defineProps({
   background-color: $bg-main;
   border-radius: $radius-S;
   box-shadow: $shadow-10;
+}
+
+.selectItem {
+  @include select-item-base();
 }
 </style>

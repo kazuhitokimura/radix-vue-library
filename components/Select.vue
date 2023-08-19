@@ -6,7 +6,11 @@
       <span :class="$style.selectTriggerText">{{ triggerText }}</span>
       <Icon icon="radix-icons:chevron-down" :class="$style.selectIcon" />
     </SelectTrigger>
-    <SelectContent :class="$style.selectContent" :style="{ width: contentWidth }">
+    <SelectContent
+      :class="$style.selectContent"
+      :style="{ width: contentWidth }"
+      :position="'popper'"
+    >
       <slot />
     </SelectContent>
   </SelectRoot>

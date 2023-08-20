@@ -1,34 +1,43 @@
 <!-- Radix Vueを使用しoptionをfor文にするテスト -->
 
 <template>
-  <SelectRoot>
-    <SelectTrigger :class="$style.selectTrigger" :style="{ width: triggerWidth }">
-      <Icon icon="radix-icons:chevron-down" :class="$style.selectIcon" />
-      <SelectValue placeholder="選択してください" :class="$style.selectTriggerText">
-      </SelectValue>
-    </SelectTrigger>
-    <SelectContent
-      :class="$style.selectContent"
-      :style="{ width: contentWidth }"
-      :position="'popper'"
-    >
-      <SelectItem
-        v-for="(option, index) in options"
-        :key="index"
-        :value="option"
-        :class="$style.selectItem"
+  <div :class="$style.selectTrigger" :style="{ width: triggerWidth }">
+    <SelectRoot v-model="selectOption">
+      <SelectTrigger aria-label="select" :class="$style.selectBox">
+        <SelectValue :placeholder="placeholder"></SelectValue>
+        <Icon icon="radix-icons:chevron-down" :class="$style.selectIcon" />
+      </SelectTrigger>
+      <SelectContent
+        :class="$style.selectContent"
+        :style="{ width: contentWidth }"
+        :position="'popper'"
       >
-        <SelectItemIndicator :class="$style.selectItemIndicator"
-          ><Icon icon="radix-icons:check"
-        /></SelectItemIndicator>
-        {{ option }}
-      </SelectItem>
-    </SelectContent>
-  </SelectRoot>
+        <SelectGroup v-if="clearable">
+          <button @click="clearSelection" :class="$style.selectItem">
+            {{ placeholder }}
+          </button>
+        </SelectGroup>
+        <SelectGroup>
+          <SelectItem
+            v-for="(option, index) in options"
+            :key="index"
+            :value="option"
+            :class="$style.selectItem"
+          >
+            <SelectItemIndicator :class="$style.selectItemIndicator"
+              ><Icon icon="radix-icons:check" :class="$style.selectIcon"
+            /></SelectItemIndicator>
+            {{ option }}
+          </SelectItem>
+        </SelectGroup>
+      </SelectContent>
+    </SelectRoot>
+  </div>
 </template>
 
 <script setup lang="ts">
 import { Icon } from "@iconify/vue";
+import { ref } from "vue";
 
 /* 一応すべてインポートしておく */
 import {
@@ -41,13 +50,12 @@ import {
   SelectRoot,
   SelectSeparator,
   SelectTrigger,
+  SelectValue,
 } from "radix-vue";
 
+const selectOption = ref();
+
 const props = defineProps({
-  triggerText: {
-    type: String,
-    default: "選択してください",
-  },
   triggerWidth: {
     type: String,
     default: "100%",
@@ -60,24 +68,52 @@ const props = defineProps({
     type: Array as () => string[],
     default: () => ["選択肢1", "選択肢2", "選択肢3"],
   },
+  placeholder: {
+    type: String,
+    default: "選択してください",
+  },
+  clearable: {
+    type: Boolean,
+    default: true,
+  },
 });
+
+const clearSelection = () => {
+  selectOption.value = "";
+};
 </script>
 
 <style lang="scss" module>
-.selectTrigger {
+.selectBox {
   @include input-base();
-}
-.selectTriggerText {
   flex: 1;
-  @include text-body1();
+}
+
+.selectTrigger {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.25rem;
+  height: fit-content;
+}
+
+.SelectValue[data-placeholder] {
   color: $text-main;
 }
+
 .selectIcon {
   width: 1rem;
   height: 1rem;
   fill: $text-main;
 }
 
+.selectContent {
+  margin-top: 0.25rem;
+  padding: 0.25rem 0;
+  background-color: $bg-main;
+  border-radius: $radius-S;
+  box-shadow: $shadow-10;
+}
 .selectItem {
   @include select-item-base();
 }
@@ -89,12 +125,5 @@ const props = defineProps({
   fill: $text-white;
   position: absolute;
   left: 0.5rem;
-}
-.selectContent {
-  margin-top: 0.25rem;
-  padding: 0.25rem 0;
-  background-color: $bg-main;
-  border-radius: $radius-S;
-  box-shadow: $shadow-10;
 }
 </style>

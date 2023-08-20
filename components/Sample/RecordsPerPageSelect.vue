@@ -1,11 +1,12 @@
 <!-- Radix Vueを使用 -->
-<!-- selectのoptionをslotで切り替えるテスト -->
+<!--実際はplaceholderではなくoption-->
 
 <template>
   <SelectTest
     triggerText="10"
     triggerWidth="5rem"
     contentWidth="5rem"
+    placeholder="10"
     :options="selectOption"
   />
 </template>

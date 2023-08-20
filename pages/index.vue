@@ -8,6 +8,7 @@
         </p>
       </div>
       <Btn label="登録" size="L" :isNuxtLink="true" nuxtLink="/create" />
+      <SelectTest triggerWidth="15rem" contentWidth="15rem" :showPlaceholder="true" />
     </div>
     <TablePattern1 />
     <div :class="$style.tableFooter">

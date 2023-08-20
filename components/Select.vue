@@ -3,7 +3,12 @@
 <template>
   <SelectRoot>
     <SelectTrigger :class="$style.selectTrigger" :style="{ width: triggerWidth }">
-      <span :class="$style.selectTriggerText">{{ triggerText }}</span>
+      <SelectValue v-if="showPlaceholder" :placeholder="placeholder">{{
+        placeholder
+      }}</SelectValue>
+      <SelectValue v-else :class="$style.selectTriggerText">{{
+        triggerText
+      }}</SelectValue>
       <Icon icon="radix-icons:chevron-down" :class="$style.selectIcon" />
     </SelectTrigger>
     <SelectContent
@@ -44,6 +49,14 @@ const props = defineProps({
   contentWidth: {
     type: String,
     default: "100%",
+  },
+  showPlaceholder: {
+    type: Boolean,
+    default: false,
+  },
+  placeholder: {
+    type: String,
+    default: "プレースホルダー",
   },
 });
 </script>

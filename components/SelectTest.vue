@@ -3,8 +3,9 @@
 <template>
   <SelectRoot>
     <SelectTrigger :class="$style.selectTrigger" :style="{ width: triggerWidth }">
-      <span :class="$style.selectTriggerText">{{ triggerText }}</span>
       <Icon icon="radix-icons:chevron-down" :class="$style.selectIcon" />
+      <SelectValue placeholder="選択してください" :class="$style.selectTriggerText">
+      </SelectValue>
     </SelectTrigger>
     <SelectContent
       :class="$style.selectContent"
@@ -17,6 +18,9 @@
         :value="option"
         :class="$style.selectItem"
       >
+        <SelectItemIndicator :class="$style.selectItemIndicator"
+          ><Icon icon="radix-icons:check"
+        /></SelectItemIndicator>
         {{ option }}
       </SelectItem>
     </SelectContent>
@@ -73,15 +77,24 @@ const props = defineProps({
   height: 1rem;
   fill: $text-main;
 }
+
+.selectItem {
+  @include select-item-base();
+}
+
+.selectItemIndicator {
+  width: 1rem;
+  height: 1rem;
+  line-height: 0px;
+  fill: $text-white;
+  position: absolute;
+  left: 0.5rem;
+}
 .selectContent {
   margin-top: 0.25rem;
   padding: 0.25rem 0;
   background-color: $bg-main;
   border-radius: $radius-S;
   box-shadow: $shadow-10;
-}
-
-.selectItem {
-  @include select-item-base();
 }
 </style>

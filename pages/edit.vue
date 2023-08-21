@@ -14,6 +14,9 @@
           value="今週のグッドデザインを紹介します（7/31〜8/4）"
         />
       </InputElement>
+      <InputElement label="カテゴリ">
+        <Select :options="selectOption" />
+      </InputElement>
       <InputElement label="項目">
         <Textarea
           placeholder="項目"
@@ -46,6 +49,14 @@
 definePageMeta({
   layout: "default",
 });
+
+import { ref } from "vue";
+
+const selectOption = ref([
+  "カテゴリ1が入ります",
+  "カテゴリ2が入ります",
+  "カテゴリ3が入ります",
+]);
 </script>
 
 <style lang="scss" module>

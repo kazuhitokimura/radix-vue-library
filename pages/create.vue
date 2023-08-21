@@ -11,8 +11,8 @@
       <InputElement label="タイトル" mandatory="true">
         <Input placeholder="タイトル" value="" />
       </InputElement>
-      <InputElement label="タイトル">
-        <Select triggerText="カテゴリを選択" />
+      <InputElement label="カテゴリ">
+        <Select :options="selectOption" />
       </InputElement>
       <InputElement label="項目">
         <Textarea placeholder="項目" :rows="15" value="" />
@@ -25,6 +25,14 @@
 definePageMeta({
   layout: "default",
 });
+
+import { ref } from "vue";
+
+const selectOption = ref([
+  "カテゴリ1が入ります",
+  "カテゴリ2が入ります",
+  "カテゴリ3が入ります",
+]);
 </script>
 
 <style lang="scss" module>

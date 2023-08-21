@@ -2,7 +2,7 @@
 <!--実際はplaceholderではなくoption-->
 
 <template>
-  <SelectTest
+  <Select
     triggerText="10"
     triggerWidth="5rem"
     contentWidth="5rem"

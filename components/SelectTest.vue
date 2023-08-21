@@ -12,11 +12,6 @@
         :style="{ width: contentWidth }"
         :position="'popper'"
       >
-        <SelectGroup v-if="clearable">
-          <button @click="clearSelection" :class="$style.selectItem">
-            {{ placeholder }}
-          </button>
-        </SelectGroup>
         <SelectGroup>
           <SelectItem
             v-for="(option, index) in options"
@@ -29,6 +24,10 @@
             /></SelectItemIndicator>
             {{ option }}
           </SelectItem>
+        </SelectGroup>
+        <SelectSeparator v-if="clearable" :class="$style.SelectSeparator" />
+        <SelectGroup v-if="clearable" :class="$style.clearBtnWrapper">
+          <button @click="clearSelection" :class="$style.clearBtn">クリア</button>
         </SelectGroup>
       </SelectContent>
     </SelectRoot>
@@ -125,5 +124,27 @@ const clearSelection = () => {
   fill: $text-white;
   position: absolute;
   left: 0.5rem;
+}
+
+.clearBtnWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0.25rem 1.5rem;
+}
+
+.clearBtn {
+  @include btn-base();
+  @include destructive-btn-base();
+  border: none;
+  width: fit-content;
+  padding: 0.25rem 0.5rem;
+  height: 2rem;
+}
+
+.SelectSeparator {
+  width: 100%;
+  height: 1px;
+  background-color: $border-main;
 }
 </style>

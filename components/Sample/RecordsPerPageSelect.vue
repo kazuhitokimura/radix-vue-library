@@ -8,6 +8,7 @@
     contentWidth="5rem"
     placeholder="10"
     :options="selectOption"
+    :clearable="false"
   />
 </template>
 

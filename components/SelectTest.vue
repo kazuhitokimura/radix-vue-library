@@ -97,7 +97,7 @@ const clearSelection = () => {
 }
 
 .SelectValue[data-placeholder] {
-  color: $text-main;
+  color: $text-main-placeholder; // placeholderの色、変更できないかも
 }
 
 .selectIcon {

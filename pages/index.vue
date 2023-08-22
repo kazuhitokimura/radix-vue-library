@@ -8,6 +8,7 @@
         </p>
       </div>
       <Btn label="登録" size="L" :isNuxtLink="true" nuxtLink="/create" />
+      <IconBtnDropDownMenuUsage />
     </div>
     <TablePattern1 />
     <div :class="$style.tableFooter">
@@ -22,6 +23,44 @@ definePageMeta({
 });
 
 import TablePattern1 from "../components/Sample/TablePattern1.vue";
+import IconBtnDropDownMenuUsage from "../components/Sample/IconBtnDropDownMenuUsage.vue";
+
+import { ref } from "vue";
+
+const dropdownItems = ref([
+  { id: "1", label: "テスト1" },
+  { id: "2", label: "テスト2" },
+  { id: "3", label: "テスト3" },
+]);
+
+const handleClick = (item) => {
+  switch (item.id) {
+    case "1":
+      handleTest1();
+      break;
+    case "2":
+      handleTest2();
+      break;
+    case "3":
+      handleTest3();
+      break;
+  }
+};
+
+const handleTest1 = () => {
+  alert("テスト1の機能を実行");
+  // ここでテスト1の機能を実行します。
+};
+
+const handleTest2 = () => {
+  alert("テスト2の機能を実行");
+  // ここでテスト2の機能を実行します。
+};
+
+const handleTest3 = () => {
+  alert("テスト3の機能を実行");
+  // ここでテスト3の機能を実行します。
+};
 </script>
 
 <style lang="scss" module>

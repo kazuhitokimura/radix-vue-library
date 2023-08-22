@@ -1,5 +1,4 @@
 <!-- Radix Vueを使用 -->
-<!-- Triggerはボタンが2重になるのでslotにしないが、DropdowmContentの中身は入る内容が予測できないのでslotにするのがいいかも -->
 
 <template>
   <DropdownMenuRoot>
@@ -10,8 +9,8 @@
       <DropdownMenuItem
         v-for="item in items"
         :key="item.id"
-        :class="$style.dropDownItem"
-        @click="() => handleItemClick(item)"
+        :class="$style[item.color]"
+        @click="$emit('click', item)"
         >{{ item.label }}</DropdownMenuItem
       >
     </DropdownMenuContent>
@@ -42,6 +41,7 @@ import {
 type DropdownMenuItem = {
   id: string;
   label: string;
+  color: string;
 };
 
 const props = defineProps({
@@ -55,16 +55,13 @@ const props = defineProps({
   },
   items: {
     type: Array as () => DropdownMenuItem[],
-    required: true,
-    default: () => [],
+    default: () => [
+      { id: "1", label: "メニュー1", color: "default" },
+      { id: "2", label: "メニュー2", color: "default" },
+      { id: "3", label: "メニュー3", color: "default" },
+    ],
   },
 });
-
-const handleItemClick = (item: DropdownMenuItem) => {
-  emit("item-click", item);
-};
-
-const emit = defineEmits(["item-click"]);
 </script>
 
 <style lang="scss" module>
@@ -83,15 +80,40 @@ const emit = defineEmits(["item-click"]);
   @include icon-btn-size-L();
 }
 
+/* color別のスタイル */
+.default {
+  @include dropdown-menu-item-base("default");
+}
+
+.destructive {
+  @include dropdown-menu-item-base("destructive");
+}
+
 .dropDownContent {
   margin-top: 0.25rem;
   padding: 0.25rem 0;
   background-color: $bg-main;
   border-radius: $radius-S;
   box-shadow: $shadow-10;
+  &:hover {
+    outline: none;
+  }
+
+  &:active {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
 }
 
 .dropDownItem {
-  @include dropdown-menu-item-base();
+  @include dropdown-menu-item-base("default");
+}
+
+.dropDownItem[data-highlighted] {
+  background-color: $focus-main;
+  color: $text-white;
 }
 </style>

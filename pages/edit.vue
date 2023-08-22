@@ -8,7 +8,7 @@
   <div :class="$style.pageContentWrapper">
     <h1 :class="$style.h1">編集</h1>
     <div :class="$style.inputColumn">
-      <InputElement label="タイトル" mandatory="true">
+      <InputElement label="タイトル" :mandatory="true">
         <Input
           placeholder="タイトル"
           value="今週のグッドデザインを紹介します（7/31〜8/4）"

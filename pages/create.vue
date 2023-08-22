@@ -8,7 +8,7 @@
   <div :class="$style.pageContentWrapper">
     <h1 :class="$style.h1">登録</h1>
     <div :class="$style.inputColumn">
-      <InputElement label="タイトル" mandatory="true">
+      <InputElement label="タイトル" :mandatory="true">
         <Input placeholder="タイトル" value="" />
       </InputElement>
       <InputElement label="カテゴリ">

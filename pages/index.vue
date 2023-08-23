@@ -8,7 +8,6 @@
         </p>
       </div>
       <Btn label="登録" size="L" :isNuxtLink="true" nuxtLink="/create" />
-      <IconBtnDropDownMenuUsage />
     </div>
     <TablePattern1 />
     <div :class="$style.tableFooter">

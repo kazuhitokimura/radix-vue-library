@@ -4,7 +4,12 @@
   <table>
     <thead>
       <tr>
-        <Th v-for="header in headers" :key="header" />
+        <component
+          v-for="(header, index) in headers"
+          :key="index"
+          :is="header.component"
+          v-bind="header.props"
+        />
       </tr>
     </thead>
     <tbody>
@@ -23,11 +28,11 @@ import { defineProps } from "vue";
 const props = defineProps({
   headers: {
     type: Array,
-    default: () => [],
+    default: () => [{ component: "Th" }, { props: { header: "header" } }],
   },
   rows: {
     type: Array,
-    default: () => [],
+    default: () => [{ component: "TdText" }, { props: { text: "text" } }],
   },
 });
 </script>

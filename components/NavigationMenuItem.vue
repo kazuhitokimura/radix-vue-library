@@ -92,7 +92,7 @@ const props = defineProps({
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  padding: 0.5rem;
+  padding: 1.25rem 0.5rem 0.5rem 0.5rem;
   @include text-h5();
   color: $text-sub;
   background-color: $gray-50;

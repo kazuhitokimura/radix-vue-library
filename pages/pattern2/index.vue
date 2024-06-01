@@ -1,10 +1,10 @@
 <template>
   <div :class="$style.collectionWrapper">
-    <div :class="$style.pageTitleWrapper">
-      <div :class="$style.pageTitle">
+    <div :class="$style.collectionPageTitleWrapper">
+      <div :class="$style.collectionPageTitle">
         <h1>ページのタイトルが入ります</h1>
-        <p :class="$style.pageCaption">
-          このページに関する説明が入ります。これは必須ではありません。これは詳細ページへ遷移しないパターンです。
+        <p :class="$style.collectionPageCaption">
+          これは詳細ページへ遷移しないパターンです。
         </p>
       </div>
       <Drawer contentTitle="登録" contentWidth="30rem">
@@ -47,36 +47,25 @@ import TablePattern2 from "~/components/Sample/TablePattern2.vue";
 <style lang="scss" module>
 // ページ内のwrapper、containerにあたるようなスタイルは共通化しないでおく
 .collectionWrapper {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 3rem 2rem;
-}
-.pageTitleWrapper {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  gap: 0.5rem;
-  margin-bottom: 1.75rem;
+  @include collection-wrapper();
 }
 
-.pageTitle {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 0.25rem;
-  flex: 1;
+.collectionPageTitleWrapper {
+  @include collection-page-title-wrapper();
+}
+
+.collectionPageTitle {
+  @include collection-page-title();
+}
+
+.collectionPageCaption {
+  @include collection-page-caption();
 }
 
 .inputColumn {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-}
-
-.pageCaption {
-  color: $text-sub;
-  width: 100%;
 }
 .tableFooter {
   display: flex;

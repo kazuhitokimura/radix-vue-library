@@ -138,6 +138,6 @@ const clearSelection = () => {
   width: 100%;
   height: 1px;
   margin-top: 0.25rem;
-  background-color: $border-main;
+  background-color: $border-interactive;
 }
 </style>

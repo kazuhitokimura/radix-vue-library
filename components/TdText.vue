@@ -59,7 +59,7 @@ const props = defineProps({
 .td {
   padding: 1rem 0.75rem;
   text-align: left;
-  border-bottom: 1px solid $border-main;
+  border-bottom: 1px solid $border-divider;
   color: $text-main;
   max-width: 0;
   @include text-body1();

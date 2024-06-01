@@ -63,8 +63,10 @@ $bg-main: #FFFFFF;
 $bg-sub: $gray-100;
 $surface-main: #FFFFFF;
 $surface-sub: $gray-100;
-$border-main: $gray-200;
+$border-main: $gray-200; /*廃止したい*/
 $border-white: #FFFFFF;
+$border-interactive: $gray-200;
+$border-divider: $gray-100;
 $text-main: $gray-800;
 $text-sub: $gray-500;
 $text-main-placeholder: $gray-400;

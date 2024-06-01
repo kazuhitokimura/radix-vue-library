@@ -15,7 +15,7 @@
   flex-wrap: wrap;
   gap: 0.5rem;
   padding: 0.625rem 0.5rem;
-  border: 1px solid $border-main;
+  border: 1px solid $border-interactive;
   border-radius: $radius-S;
   min-height: 2.75rem;
   width: 100%;
@@ -23,12 +23,12 @@
   color: $text-main;
 
   &:focus-visible {
-      border-color: $focus-main;
-      outline: 2px solid $blue-100;
+    border-color: $focus-main;
+    outline: 2px solid $blue-100;
   }
 
-  &::placeholder{
-      color: $text-main-placeholder;
+  &::placeholder {
+    color: $text-main-placeholder;
   }
 
   &:disabled {
@@ -36,279 +36,241 @@
     background-color: $surface-sub;
     cursor: not-allowed;
   }
+}
+
+/*リンクテキストのスタイルを指定*/
+
+@mixin link-base() {
+  color: $text-link;
+  text-decoration: underline;
+
+  &:hover {
+    color: $blue-700;
   }
 
-  /*リンクテキストのスタイルを指定*/
-
-  @mixin link-base() {
-    color: $text-link;
-    text-decoration: underline;
-
-    &:hover{
-        color: $blue-700;
-    }
-
-    &:active{
-        color: $blue-800;
-    }
-
-    &:focus-visible{
-        outline : 2px solid $focus-main;
-        border-radius: $radius-S;
-    }
+  &:active {
+    color: $blue-800;
   }
 
-  /*ボタンの共通スタイルを指定（ドロップダウンメニュー等のトリガーで使用する想定）*/
-
-  @mixin btn-base(){
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 0.25rem;
+  &:focus-visible {
+    outline: 2px solid $focus-main;
     border-radius: $radius-S;
-    font-size: $text-M;
-    height: fit-content;
-  
-    &:focus-visible {
-      outline: 2px solid $focus-main;
-      outline-offset: 2px;
-    }
-  
-    &:disabled {
-      opacity: $opacity-disabled;
-      cursor: not-allowed;
-    }
+  }
+}
+
+/*ボタンの共通スタイルを指定（ドロップダウンメニュー等のトリガーで使用する想定）*/
+
+@mixin btn-base() {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  border-radius: $radius-S;
+  font-size: $text-M;
+  height: fit-content;
+
+  &:focus-visible {
+    outline: 2px solid $focus-main;
+    outline-offset: 2px;
   }
 
+  &:disabled {
+    opacity: $opacity-disabled;
+    cursor: not-allowed;
+  }
+}
 
-  /*アイコンボタンの共通スタイルを指定（ドロップダウンメニュー等のトリガー使用する想定）*/
+/*アイコンボタンの共通スタイルを指定（ドロップダウンメニュー等のトリガー使用する想定）*/
 
-  @mixin icon-btn-base() {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: $radius-S;
-    font-size: $text-XL;
-    line-height: 0;
-  
-    &:focus-visible {
-      outline: 2px solid $focus-main;
-      outline-offset: 2px;
-    }
-  
-    &:disabled {
-      opacity: $opacity-disabled;
-      cursor: not-allowed;
-    }
+@mixin icon-btn-base() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: $radius-S;
+  font-size: $text-XL;
+  line-height: 0;
+
+  &:focus-visible {
+    outline: 2px solid $focus-main;
+    outline-offset: 2px;
   }
 
-
-  /*ボタンのサイズ別スタイルを指定*/
-
-  @mixin btn-size-M(){
-    width: fit-content;
-    padding: 0.5rem 0.75rem;
-    height: 2.5rem;
+  &:disabled {
+    opacity: $opacity-disabled;
+    cursor: not-allowed;
   }
+}
 
-  @mixin btn-size-L(){
-    width: fit-content;
-    padding: 0.625rem 2rem;
-    height: 2.75rem;
+/*ボタンのサイズ別スタイルを指定*/
+
+@mixin btn-size-M() {
+  width: fit-content;
+  padding: 0.5rem 0.75rem;
+  height: 2.5rem;
+}
+
+@mixin btn-size-L() {
+  width: fit-content;
+  padding: 0.625rem 2rem;
+  height: 2.75rem;
+}
+
+/*アイコンボタンのサイズ別スタイルを指定*/
+
+@mixin icon-btn-size-M() {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+@mixin icon-btn-size-L() {
+  height: 2.75rem;
+  width: 2.75rem;
+}
+
+/*ボタン・アイコンボタンのカラー別スタイルを指定*/
+
+@mixin primary-btn-base() {
+  background-color: $primary-main;
+  color: $text-white;
+
+  &:hover {
+    background-color: $gray-900;
   }
-
-  
-  /*アイコンボタンのサイズ別スタイルを指定*/
-
-  @mixin icon-btn-size-M(){
-    height: 2.5rem;
-    width: 2.5rem;
+  &:active {
+    background-color: darken($gray-900, 20%);
   }
-
-  @mixin icon-btn-size-L(){
-    height: 2.75rem;
-    width: 2.75rem;
-  }
-
-
-  /*ボタン・アイコンボタンのカラー別スタイルを指定*/
-
-  @mixin primary-btn-base(){
+  &:disabled {
     background-color: $primary-main;
-    color: $text-white;
-  
-    &:hover {
-      background-color: $gray-900;
-    }
-    &:active {
-      background-color: darken($gray-900, 20%);
-    }
-    &:disabled {
-      background-color: $primary-main;
-    }
+  }
+}
+
+@mixin neutral-btn-base() {
+  background-color: $surface-main;
+  color: $text-main;
+  border: 1px solid $border-interactive;
+
+  &:hover {
+    background-color: $gray-50;
   }
 
-  @mixin neutral-btn-base(){
+  &:active {
+    background-color: $gray-100;
+  }
+
+  &:disabled {
     background-color: $surface-main;
-    color: $text-main;
-    border: 1px solid $border-main;
-  
-    &:hover {
-      background-color: $gray-50;
-    }
-  
-    &:active {
-      background-color: $gray-100;
-    }
-  
-    &:disabled {
-      background-color: $surface-main;
-    }
+  }
+}
+
+@mixin text-btn-base() {
+  color: $text-main;
+
+  &:hover {
+    background-color: $overlay-hover;
   }
 
-  @mixin text-btn-base(){
-    color: $text-main;
+  &:active {
+    background-color: $overlay-active;
+  }
+  &:disabled {
+    background-color: transparent;
+  }
+}
 
-    &:hover {
-      background-color: $overlay-hover;
-    }
-  
-    &:active {
-      background-color: $overlay-active;
-    }
-    &:disabled {
-      background-color: transparent;
-    }
+@mixin destructive-btn-base() {
+  background-color: $surface-main;
+  color: $error-main;
+  border: 1px solid $border-interactive;
+
+  &:hover {
+    background-color: $gray-50;
   }
 
-  @mixin destructive-btn-base(){
+  &:active {
+    background-color: $gray-100;
+  }
+
+  &:disabled {
     background-color: $surface-main;
-    color: $error-main;
-    border: 1px solid $border-main;
-
-    &:hover {
-      background-color: $gray-50;
-    }
-  
-    &:active {
-      background-color: $gray-100;
-    }
-  
-    &:disabled {
-      background-color: $surface-main;
-    }
   }
-  
-  @mixin high-destructive-btn-base(){
+}
+
+@mixin high-destructive-btn-base() {
+  background-color: $error-main;
+  color: $text-white;
+
+  &:hover {
+    background-color: $red-600;
+  }
+  &:active {
+    background-color: $red-700;
+  }
+  &:disabled {
     background-color: $error-main;
-    color: $text-white;
-  
+  }
+}
+
+/*ローディングスピナーの共通スタイルを指定*/
+
+@mixin spinner-base() {
+  width: 1rem;
+  height: 1rem;
+  border-radius: $radius-full;
+  text-indent: -9999em;
+  border-top: 2px solid;
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  animation: animate 0.8s linear infinite;
+
+  @keyframes animate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+/*ドロップダウンメニューアイテムの共通スタイルを指定*/
+
+@mixin dropdown-menu-item-base($type: "default") {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.25rem 1rem;
+  width: 100%;
+  height: fit-content;
+  cursor: pointer;
+
+  @if $type == "default" {
+    color: $text-main;
+
     &:hover {
-      background-color: $red-600;
+      background-color: $focus-main;
+      color: $text-white;
+      outline: none;
     }
+
     &:active {
-      background-color: $red-700;
+      background-color: $focus-main;
+      color: $text-white;
+      outline: none;
     }
-    &:disabled {
-      background-color: $error-main;
-    }
-  }
 
-  /*ローディングスピナーの共通スタイルを指定*/
-
-  @mixin spinner-base() {
-    width: 1rem;
-    height: 1rem;
-    border-radius: $radius-full;
-    text-indent: -9999em;
-    border-top: 2px solid;
-    border-right: 2px solid;
-    border-bottom: 2px solid;
-    border-left: 2px solid;
-    animation: animate 0.8s linear infinite;
-  
-    @keyframes animate {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
+    &:focus-visible {
+      background-color: $focus-main;
+      color: $text-white;
+      outline: none;
     }
   }
 
-  /*ドロップダウンメニューアイテムの共通スタイルを指定*/
-
-  @mixin dropdown-menu-item-base($type: "default") {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0.25rem 1rem;
-    width: 100%;
-    height: fit-content;
-    cursor: pointer;
-  
-    @if $type == "default" {
-      color: $text-main;
-      
-      &:hover {
-        background-color: $focus-main;
-        color: $text-white;
-        outline: none;
-      }
-  
-      &:active {
-        background-color: $focus-main;
-        color: $text-white;
-        outline: none;
-      }
-  
-      &:focus-visible {
-        background-color: $focus-main;
-        color: $text-white;
-        outline: none;
-      }
-    }
-    
   /*ドロップダウンメニューアイテムのdestructiveスタイルを指定*/
 
-    @if $type == "destructive" {
-      color: $error-main;
-  
-      &:hover {
-        background-color: $focus-main;
-        color: $text-white;
-        outline: none;
-      }
-  
-      &:active {
-        background-color: $focus-main;
-        color: $text-white;
-        outline: none;
-      }
-  
-      &:focus-visible {
-        background-color: $focus-main;
-        color: $text-white;
-        outline: none;
-      }
-    }
-  }
-
-  /*セレクトアイテムの共通スタイルを指定*/
-
-  @mixin select-item-base() {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0.25rem 1rem 0.25rem 1.75rem;
-    gap: 0.25rem;
-    color: $text-main;
-    @include text-body1();
-    width: 100%;
-    height: fit-content;
-    cursor: pointer;
+  @if $type == "destructive" {
+    color: $error-main;
 
     &:hover {
       background-color: $focus-main;
@@ -321,10 +283,74 @@
       color: $text-white;
       outline: none;
     }
-  
+
     &:focus-visible {
       background-color: $focus-main;
       color: $text-white;
       outline: none;
     }
   }
+}
+
+/*セレクトアイテムの共通スタイルを指定*/
+
+@mixin select-item-base() {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.25rem 1rem 0.25rem 1.75rem;
+  gap: 0.25rem;
+  color: $text-main;
+  @include text-body1();
+  width: 100%;
+  height: fit-content;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $focus-main;
+    color: $text-white;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $focus-main;
+    color: $text-white;
+    outline: none;
+  }
+
+  &:focus-visible {
+    background-color: $focus-main;
+    color: $text-white;
+    outline: none;
+  }
+}
+
+/*一覧ページのコンテンツラッパーを指定*/
+
+@mixin collection-wrapper() {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 2rem;
+}
+
+@mixin collection-page-title-wrapper() {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 0.5rem;
+  margin-bottom: 1.75rem;
+}
+
+@mixin collection-page-title() {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+@mixin collection-page-caption() {
+  color: $text-sub;
+  width: 100%;
+}

@@ -31,5 +31,6 @@ const props = defineProps({
   height: 100%;
   width: 13rem;
   background-color: $gray-50;
+  border-right: 1px solid $gray-100;
 }
 </style>

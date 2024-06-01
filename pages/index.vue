@@ -1,10 +1,10 @@
 <template>
   <div :class="$style.collectionWrapper">
-    <div :class="$style.pageTitleWrapper">
-      <div :class="$style.pageTitle">
+    <div :class="$style.collectionPageTitleWrapper">
+      <div :class="$style.collectionPageTitle">
         <h1>ページのタイトルが入ります</h1>
-        <p :class="$style.pageCaption">
-          このページに関する説明が入ります。これは必須ではありません。これは詳細ページへ遷移するパターンです。
+        <p :class="$style.collectionPageCaption">
+          これは詳細ページへ遷移するパターンです。
         </p>
       </div>
       <Btn label="登録" size="L" :isNuxtLink="true" nuxtLink="/create" />
@@ -65,31 +65,21 @@ const handleTest3 = () => {
 <style lang="scss" module>
 // ページ内のwrapper、containerにあたるようなスタイルは共通化しないでおく
 .collectionWrapper {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 3rem 2rem;
-}
-.pageTitleWrapper {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  gap: 0.5rem;
-  margin-bottom: 1.75rem;
+  @include collection-wrapper();
 }
 
-.pageTitle {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 0.25rem;
-  flex: 1;
+.collectionPageTitleWrapper {
+  @include collection-page-title-wrapper();
 }
 
-.pageCaption {
-  color: $text-sub;
-  width: 100%;
+.collectionPageTitle {
+  @include collection-page-title();
 }
+
+.collectionPageCaption {
+  @include collection-page-caption();
+}
+
 .tableFooter {
   display: flex;
   justify-content: flex-end;

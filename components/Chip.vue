@@ -19,7 +19,7 @@ const props = defineProps({
   padding: 0.25rem 0.75rem;
   border-radius: 9999px;
   color: $text-sub;
-  border: 1px solid $border-main;
+  border: 1px solid $border-divider;
   width: fit-content;
   height: fit-content;
 }

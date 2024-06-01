@@ -7,7 +7,7 @@
           これは詳細ページへ遷移しないパターンです。
         </p>
       </div>
-      <Drawer contentTitle="登録" contentWidth="30rem">
+      <ActionDrawer contentTitle="登録" contentWidth="30rem">
         <template #drawerTrigger>
           <btn label="登録" size="L" />
         </template>
@@ -26,7 +26,7 @@
           <Btn label="キャンセル" color="text" size="L" />
           <Btn label="この内容で登録" color="primary" size="L" />
         </template>
-      </Drawer>
+      </ActionDrawer>
     </div>
     <TablePattern2 />
     <div :class="$style.tableFooter">

@@ -68,6 +68,7 @@ const props = defineProps({
   padding: 1rem 1.5rem;
   gap: 0.5rem;
   width: 100%;
+  border-bottom: 1px solid $border-divider;
 }
 
 .contentTitle {
@@ -84,7 +85,7 @@ const props = defineProps({
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem;
   flex: 1;
   overflow-y: scroll;
 }
@@ -98,5 +99,6 @@ const props = defineProps({
   padding: 1rem 1.5rem;
   width: 100%;
   z-index: $z-index-30;
+  border-top: 1px solid $border-divider;
 }
 </style>

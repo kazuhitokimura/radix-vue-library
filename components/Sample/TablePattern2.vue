@@ -15,7 +15,7 @@
           minWidth="15rem"
         />
         <TdBtn>
-          <Drawer contentTitle="詳細表示" contentWidth="30rem">
+          <ActionDrawer contentTitle="詳細表示" contentWidth="30rem">
             <template #drawerTrigger>
               <Btn label="詳細表示" color="neutral" size="M" />
             </template>
@@ -46,7 +46,7 @@
               <Btn label="キャンセル" color="text" size="L" />
               <Btn label="この内容で保存" color="primary" size="L" />
             </template>
-          </Drawer>
+          </ActionDrawer>
         </TdBtn>
         <TdStatus text="ステータスが入ります" />
         <TdText text="テキスト" />
@@ -59,7 +59,7 @@
           minWidth="15rem"
         />
         <TdBtn>
-          <Drawer contentTitle="詳細表示" contentWidth="30rem">
+          <ActionDrawer contentTitle="詳細表示" contentWidth="30rem">
             <template #drawerTrigger>
               <Btn label="詳細表示" color="neutral" size="M" />
             </template>
@@ -90,7 +90,7 @@
               <Btn label="キャンセル" color="text" size="L" />
               <Btn label="この内容で保存" color="primary" size="L" />
             </template>
-          </Drawer>
+          </ActionDrawer>
         </TdBtn>
         <TdStatus text="ステータスが入ります" />
         <TdText text="テキスト" />

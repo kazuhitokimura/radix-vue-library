@@ -24,6 +24,22 @@
           <Btn label="この内容で登録" color="primary" size="L" />
         </template>
       </ActionDialog>
+      <ActionDialog contentTitle="登録" size="fullScreen">
+        <template #dialogTrigger>
+          <Btn label="登録" size="L" />
+        </template>
+        <template #dialogBody>
+          <div :class="$style.inputColumn">
+            <InputElement label="タイトル" :mandatory="true"
+              ><Input placeholder="タイトル"
+            /></InputElement>
+          </div>
+        </template>
+        <template #dialogFooter>
+          <Btn label="キャンセル" color="neutral" size="L" />
+          <Btn label="この内容で登録" color="primary" size="L" />
+        </template>
+      </ActionDialog>
     </div>
     <TablePattern1 />
     <div :class="$style.tableFooter">

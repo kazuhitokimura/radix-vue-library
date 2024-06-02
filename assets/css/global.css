@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /*primitive-color*/
 /*semantic-color*/
+/*廃止したい*/
 /*定義したが使っていない*/
 /*4px*/
 /*8px*/
@@ -13,7 +14,7 @@
 /*64px*/
 /*80px*/
 /*font-sizeを指定*/
-/*32px*/
+/*28px*/
 /*24px*/
 /*20px*/
 /*16px*/
@@ -22,6 +23,7 @@
 /*見出しのサイズを指定*/
 /*primitive-color*/
 /*semantic-color*/
+/*廃止したい*/
 /*定義したが使っていない*/
 /*4px*/
 /*8px*/
@@ -34,7 +36,7 @@
 /*64px*/
 /*80px*/
 /*font-sizeを指定*/
-/*32px*/
+/*28px*/
 /*24px*/
 /*20px*/
 /*16px*/
@@ -48,9 +50,12 @@
 /*ボタンのサイズ別スタイルを指定*/
 /*アイコンボタンのサイズ別スタイルを指定*/
 /*ボタン・アイコンボタンのカラー別スタイルを指定*/
+/*IconBtnはtext-linkではなくtext-subを使用する*/
 /*ローディングスピナーの共通スタイルを指定*/
 /*ドロップダウンメニューアイテムの共通スタイルを指定*/
 /*セレクトアイテムの共通スタイルを指定*/
+/*一覧ページのコンテンツラッパーを指定*/
+/*1カラムの詳細ページのコンテンツラッパーを指定*/
 /*グローバルスタイルを指定*/
 html {
   font-family: system-ui, sans-serif;
@@ -58,40 +63,44 @@ html {
   line-height: 1.5;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 h1 {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 600;
-  color: #32383F;
+  color: #32383f;
 }
 
 h2 {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #32383F;
+  color: #32383f;
 }
 
 h3 {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #32383F;
+  color: #32383f;
 }
 
 h4 {
   font-size: 1rem;
   font-weight: 600;
-  color: #32383F;
+  color: #32383f;
 }
 
 h5 {
   font-size: 0.875rem;
   font-weight: 600;
-  color: #32383F;
+  color: #32383f;
 }
 
 h6 {
   font-size: 0.75rem;
   font-weight: 600;
-  color: #32383F;
+  color: #32383f;
 }
 
 button {

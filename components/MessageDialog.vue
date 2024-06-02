@@ -7,21 +7,25 @@
       ><slot name="dialogTrigger"
     /></DialogTrigger>
     <DialogPortal>
-      <DialogOverlay :class="$style.dialogOverlay" />
-      <DialogContent :class="$style.dialogContent">
-        <DialogTitle
-          ><h2><slot name="dialogTitle" /></h2
-        ></DialogTitle>
-        <DialogDescription :class="$style.dialogDescription"
-          ><slot name="dialogDescription"
-        /></DialogDescription>
-        <div :class="$style.dialogAction">
-          <DialogClose :class="$style.dialogClose"
-            ><Btn :label="closeLabel" color="neutral"
-          /></DialogClose>
-          <slot name="dialogAction" />
-        </div>
-      </DialogContent>
+      <Transition name="up">
+        <DialogOverlay :class="$style.dialogOverlay" />
+      </Transition>
+      <Transition name="up">
+        <DialogContent :class="$style.dialogContent">
+          <DialogTitle
+            ><h2><slot name="dialogTitle" /></h2
+          ></DialogTitle>
+          <DialogDescription :class="$style.dialogDescription"
+            ><slot name="dialogDescription"
+          /></DialogDescription>
+          <div :class="$style.dialogAction">
+            <DialogClose :class="$style.dialogClose"
+              ><Btn :label="closeLabel" color="neutral"
+            /></DialogClose>
+            <slot name="dialogAction" />
+          </div>
+        </DialogContent>
+      </Transition>
     </DialogPortal>
   </DialogRoot>
 </template>
@@ -81,12 +85,12 @@ const props = defineProps({
   position: fixed;
   top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); /*ダイアログを左右中央寄せに*/
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.75rem;
   width: 100%;
-  max-width: 30rem;
+  max-width: 25rem;
   max-height: 80vh;
   padding: 1rem;
   background-color: $surface-main;
@@ -118,5 +122,18 @@ const props = defineProps({
   &:focus {
     outline: none;
   }
+}
+
+/*アニメーション、動いていない*/
+.up-enter-active,
+.up-leave-active {
+  transition: opacity 0.3s ease;
+  transform: translateY(0);
+}
+
+.up-enter-from,
+.up-leave-to {
+  opacity: 0;
+  transform: translateY(20px);
 }
 </style>

@@ -8,6 +8,22 @@
         </p>
       </div>
       <Btn label="登録" size="L" :isNuxtLink="true" nuxtLink="/create" />
+      <ActionDialog contentTitle="登録">
+        <template #dialogTrigger>
+          <Btn label="登録" size="L" />
+        </template>
+        <template #dialogBody>
+          <div :class="$style.inputColumn">
+            <InputElement label="タイトル" :mandatory="true"
+              ><Input placeholder="タイトル"
+            /></InputElement>
+          </div>
+        </template>
+        <template #dialogFooter>
+          <Btn label="キャンセル" color="neutral" size="L" />
+          <Btn label="この内容で登録" color="primary" size="L" />
+        </template>
+      </ActionDialog>
     </div>
     <TablePattern1 />
     <div :class="$style.tableFooter">
@@ -22,7 +38,7 @@ definePageMeta({
 });
 
 import TablePattern1 from "../components/Sample/TablePattern1.vue";
-import IconBtnDropDownMenuUsage from "../components/Sample/IconBtnDropDownMenuUsage.vue";
+import ActionDialog from "../components/ActionDialog .vue";
 
 import { ref } from "vue";
 

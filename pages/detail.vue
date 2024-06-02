@@ -2,7 +2,7 @@
   <div :class="$style.pageHeader">
     <LinkText text="戻る" :chevronLeft="true" />
     <div :class="$style.actionWrapper">
-      <Btn label="アクション" size="L" />
+      <Btn label="アクション" size="M" />
       <Pattern1DetailPageDropDownMenu />
     </div>
   </div>

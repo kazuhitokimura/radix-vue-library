@@ -89,13 +89,14 @@ const props = defineProps({
   transform: translateX(100%);
 
   transition: transform 120ms ease-in;
-  opacity: 0;
+  visibility: hidden;
   pointer-events: none;
 
   /*drawerIsOpenがtrueになったら付与する*/
   &.open {
+    width: fit-content;
     transform: translateX(0);
-    opacity: 1;
+    visibility: visible;
     pointer-events: auto;
   }
 }

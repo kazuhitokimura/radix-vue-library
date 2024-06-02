@@ -1,6 +1,6 @@
 <!-- Radix Vueを使用 -->
 <template>
-  <IconBtnDropDownMenu size="L" :items="dropdownItems" @click="handleClick" />
+  <IconBtnDropDownMenu size="M" :items="dropdownItems" @click="handleClick" />
 </template>
 
 <!--

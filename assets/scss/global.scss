@@ -15,6 +15,10 @@ html {
   line-height: 1.5;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 h1 {
   @include text-h1();
   color: $text-main;

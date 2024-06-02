@@ -44,6 +44,12 @@ import TablePattern2Test from "~/components/Sample/TablePattern2Test.vue";
 import TablePattern2 from "~/components/Sample/TablePattern2.vue";
 </script>
 
+<style scoped>
+body {
+  overflow-x: hidden;
+}
+</style>
+
 <style lang="scss" module>
 // ページ内のwrapper、containerにあたるようなスタイルは共通化しないでおく
 .collectionWrapper {

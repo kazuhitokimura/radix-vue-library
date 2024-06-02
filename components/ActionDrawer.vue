@@ -3,8 +3,7 @@
     <slot name="drawerTrigger" />
   </button>
   <DrawerContent
-    v-if="drawerIsOpen"
-    :class="$style.drawerContent"
+    :class="[$style.drawerContent, { [$style.open]: drawerIsOpen }]"
     :style="{ width: contentWidth }"
   >
     <div :class="$style.drawerHeader">
@@ -56,7 +55,6 @@ const props = defineProps({
   height: fit-content;
 
   /*フォーカス時のスタイルがslotと2重で当たらないようにする*/
-
   &:focus {
     outline: none;
   }
@@ -76,9 +74,28 @@ const props = defineProps({
 }
 
 .drawerContent {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  max-height: 100vh;
+  background-color: $surface-main;
+  z-index: $z-index-20;
+  box-shadow: $shadow-20;
+
+  /*要素をその幅の100%分だけ右に移動させた状態にしておく*/
+  transform: translateX(100%);
+
+  transition: transform 120ms ease-in;
+  opacity: 0;
+  pointer-events: none;
+
+  /*drawerIsOpenがtrueになったら付与する*/
+  &.open {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
 }
 
 .drawerBody {

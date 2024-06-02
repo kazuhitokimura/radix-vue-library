@@ -5,7 +5,7 @@
       <Btn label="この内容で登録" size="L" />
     </div>
   </div>
-  <div :class="$style.pageContentWrapper">
+  <div :class="$style.singleColumnPageContentWrapper">
     <h1 :class="$style.h1">登録</h1>
     <div :class="$style.inputColumn">
       <InputElement label="タイトル" :mandatory="true">
@@ -53,12 +53,8 @@ const selectOption = ref([
   align-items: center;
   gap: 0.5rem;
 }
-.pageContentWrapper {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 880px;
-  padding: 0px 120px 32px 32px;
+.singleColumnPageContentWrapper {
+  @include single-column-page-contents-wrapper();
 }
 
 .inputColumn {

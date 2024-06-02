@@ -1,76 +1,74 @@
 /*primitive-color*/
 
-$gray-900: #24292F;
-$gray-800: #32383F;
-$gray-700: #424A53;
-$gray-600: #57606A;
-$gray-500: #6E7781;
-$gray-400: #8C959F;
-$gray-300: #AFB8C1;
-$gray-200: #D0D7DE;
-$gray-100: #EAEEF2;
-$gray-50: #F6F8FA;
+$gray-900: #24292f;
+$gray-800: #32383f;
+$gray-700: #424a53;
+$gray-600: #57606a;
+$gray-500: #6e7781;
+$gray-400: #8c959f;
+$gray-300: #afb8c1;
+$gray-200: #d0d7de;
+$gray-100: #eaeef2;
+$gray-50: #f6f8fa;
 
 $blue-900: #002155;
-$blue-800: #0A3069;
-$blue-700: #033D8B;
-$blue-600: #0550AE;
-$blue-500: #0969DA;
-$blue-400: #218BFF;
-$blue-300: #54AEFF;
-$blue-200: #80CCFF;
-$blue-100: #B6E3FF;
-$blue-50: #DDF4FF;
+$blue-800: #0a3069;
+$blue-700: #033d8b;
+$blue-600: #0550ae;
+$blue-500: #0969da;
+$blue-400: #218bff;
+$blue-300: #54aeff;
+$blue-200: #80ccff;
+$blue-100: #b6e3ff;
+$blue-50: #ddf4ff;
 
-$green-900: #002D11;
-$green-800: #003D16;
-$green-700: #044F1E;
+$green-900: #002d11;
+$green-800: #003d16;
+$green-700: #044f1e;
 $green-600: #116329;
-$green-500: #1A7F37;
-$green-400: #2DA44E;
-$green-300: #4AC26B;
-$green-200: #6FDD8B;
-$green-100: #ACEEBB;
-$green-50: #DAFBE1;
+$green-500: #1a7f37;
+$green-400: #2da44e;
+$green-300: #4ac26b;
+$green-200: #6fdd8b;
+$green-100: #aceebb;
+$green-50: #dafbe1;
 
+$yellow-900: #3b2300;
+$yellow-800: #4d2d00;
+$yellow-700: #633c01;
+$yellow-600: #7d4e00;
+$yellow-500: #9a6700;
+$yellow-400: #bf8700;
+$yellow-00: #d4a72c;
+$yellow-200: #eac54f;
+$yellow-100: #fae17d;
+$yellow-50: #fff8c5;
 
-$yellow-900: #3B2300;
-$yellow-800: #4D2D00;
-$yellow-700: #633C01;
-$yellow-600: #7D4E00;
-$yellow-500: #9A6700;
-$yellow-400: #BF8700;
-$yellow-00: #D4A72C;
-$yellow-200: #EAC54F;
-$yellow-100: #FAE17D;
-$yellow-50: #FFF8C5;
-
-$red-900: #4C0014;
+$red-900: #4c0014;
 $red-800: #660018;
-$red-700: #82071E;
-$red-600: #A40E26;
-$red-500: #CF222E;
-$red-400: #FA4549;
-$red-300: #FF8182;
-$red-200: #FFABA8;
-$red-100: #FFCECB;
-$red-50: #FFEBE9;
-
+$red-700: #82071e;
+$red-600: #a40e26;
+$red-500: #cf222e;
+$red-400: #fa4549;
+$red-300: #ff8182;
+$red-200: #ffaba8;
+$red-100: #ffcecb;
+$red-50: #ffebe9;
 
 /*semantic-color*/
 
-$bg-main: #FFFFFF;
+$bg-main: #ffffff;
 $bg-sub: $gray-100;
-$surface-main: #FFFFFF;
+$surface-main: #ffffff;
 $surface-sub: $gray-100;
 $border-main: $gray-200; /*廃止したい*/
-$border-white: #FFFFFF;
+$border-white: #ffffff;
 $border-interactive: $gray-200;
 $border-divider: $gray-100;
 $text-main: $gray-800;
 $text-sub: $gray-500;
 $text-main-placeholder: $gray-400;
-$text-white: #FFFFFF;
+$text-white: #ffffff;
 $text-link: $blue-600;
 $primary-main: $gray-800;
 $focus-main: $blue-400;

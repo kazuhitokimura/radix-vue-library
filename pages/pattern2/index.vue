@@ -23,7 +23,7 @@
           </div>
         </template>
         <template #drawerFooter>
-          <Btn label="キャンセル" color="text" size="L" />
+          <Btn label="キャンセル" color="neutral" size="L" />
           <Btn label="この内容で登録" color="primary" size="L" />
         </template>
       </ActionDrawer>

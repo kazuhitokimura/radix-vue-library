@@ -122,22 +122,16 @@ const clearSelection = () => {
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 0.25rem 1.5rem;
 }
 
 .clearBtn {
-  @include btn-base();
-  @include text-btn-base();
-  border: none;
-  width: fit-content;
-  padding: 0.25rem 0.5rem;
-  height: 2rem;
+  @include select-item-delete-base();
 }
 
 .SelectSeparator {
   width: 100%;
   height: 1px;
-  margin-top: 0.25rem;
+  margin: 0.25rem 0;
   background-color: $border-interactive;
 }
 </style>

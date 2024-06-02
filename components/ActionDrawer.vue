@@ -63,7 +63,7 @@ const props = defineProps({
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.5rem;
+  padding: 0.75rem 1.5rem;
   gap: 0.5rem;
   width: 100%;
   border-bottom: 1px solid $border-divider;
@@ -74,6 +74,8 @@ const props = defineProps({
 }
 
 .drawerContent {
+  display: flex;
+  flex-direction: column;
   position: absolute;
   top: 0;
   right: 0;
@@ -113,7 +115,7 @@ const props = defineProps({
   justify-content: flex-start;
   align-items: center;
   gap: 0.5rem;
-  padding: 1rem 1.5rem;
+  padding: 0.75rem 1.5rem;
   width: 100%;
   z-index: $z-index-30;
   border-top: 1px solid $border-divider;

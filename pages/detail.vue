@@ -6,7 +6,7 @@
       <Pattern1DetailPageDropDownMenu />
     </div>
   </div>
-  <div :class="$style.pageContentWrapper">
+  <div :class="$style.singleColumnPageContentWrapper">
     <h1 :class="$style.h1">今週のグッドデザインを紹介します（7/31〜8/4）</h1>
     <div :class="$style.chipWrapper">
       <Chip text="カテゴリ" />
@@ -74,13 +74,8 @@ import TablePattern1Detail from "../components/Sample/TablePattern1Detail.vue";
   align-items: center;
   gap: 0.5rem;
 }
-.pageContentWrapper {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 1rem 2rem 4rem 2rem;
-  max-width: 880px;
-  padding: 1rem 7.5rem 4rem 2rem;
+.singleColumnPageContentWrapper {
+  @include single-column-page-contents-wrapper();
 }
 
 /* タイポグラフィは要調整 */

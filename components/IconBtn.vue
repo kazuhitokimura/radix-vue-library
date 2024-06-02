@@ -60,7 +60,7 @@ const props = defineProps({
 }
 
 .text {
-  @include text-btn-base();
+  @include text-icon-btn-base();
 }
 
 .destructive {

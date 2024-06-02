@@ -17,7 +17,7 @@
         /></DialogDescription>
         <div :class="$style.dialogAction">
           <DialogClose :class="$style.dialogClose"
-            ><Btn :label="closeLabel" color="text"
+            ><Btn :label="closeLabel" color="neutral"
           /></DialogClose>
           <slot name="dialogAction" />
         </div>

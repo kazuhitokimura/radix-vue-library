@@ -111,8 +111,6 @@ const props = defineProps({
 
 .dialogContent {
   position: fixed;
-  top: 40%;
-  left: 50%;
   transform: translate(-50%, -50%) translateY(20px); /*要素を20pxだけ下に移動させた状態にしておく*/
   z-index: $z-index-40;
   box-shadow: $shadow-40;
@@ -153,12 +151,20 @@ const props = defineProps({
 
 /* size別のスタイル */
 .M {
+  top: 40%;
+  left: 50%;
   max-width: 50rem;
   border-radius: $radius-M;
 }
 
 .fullScreen {
+  top: 50%;
+  left: 50%;
   min-height: 100vh;
   min-width: 100vw;
+
+  .dialogFooter {
+    justify-content: center;
+  }
 }
 </style>

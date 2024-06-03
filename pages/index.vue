@@ -7,7 +7,9 @@
           これは詳細ページへ遷移するパターンです。
         </p>
       </div>
+      <!-- ページ遷移で登録 -->
       <Btn label="登録" size="L" :isNuxtLink="true" nuxtLink="/create" />
+      <!-- ダイアログで登録 -->
       <ActionDialog contentTitle="登録">
         <template #dialogTrigger>
           <Btn label="登録" size="L" />
@@ -24,15 +26,18 @@
           <Btn label="この内容で登録" color="primary" size="L" />
         </template>
       </ActionDialog>
+      <!-- フルスクリーンダイアログで登録 -->
       <ActionDialog contentTitle="登録" size="fullScreen">
         <template #dialogTrigger>
           <Btn label="登録" size="L" />
         </template>
         <template #dialogBody>
-          <div :class="$style.inputColumn">
-            <InputElement label="タイトル" :mandatory="true"
-              ><Input placeholder="タイトル"
-            /></InputElement>
+          <div :class="$style.fullScreenCreateFormElement">
+            <div :class="$style.inputColumn">
+              <InputElement label="タイトル" :mandatory="true"
+                ><Input placeholder="タイトル"
+              /></InputElement>
+            </div>
           </div>
         </template>
         <template #dialogFooter>
@@ -118,5 +123,20 @@ const handleTest3 = () => {
   align-items: center;
   width: 100%;
   padding: 0.75rem 0;
+}
+
+.inputColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.fullScreenCreateFormElement {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 480px;
 }
 </style>

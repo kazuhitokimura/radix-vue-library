@@ -23,8 +23,8 @@
   color: $text-main;
 
   &:focus-visible {
-    border-color: $focus-main;
-    outline: 2px solid $blue-100;
+    border: 1px solid $focus-main;
+    outline: 1px solid $focus-main;
   }
 
   &::placeholder {

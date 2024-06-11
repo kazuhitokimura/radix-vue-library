@@ -116,7 +116,7 @@ const props = defineProps({
   justify-content: flex-start;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
+  padding: 1rem 1.5rem;
   width: 100%;
   z-index: $z-index-30;
   border-top: 1px solid $border-divider;

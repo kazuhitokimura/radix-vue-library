@@ -45,11 +45,11 @@
   text-decoration: underline;
 
   &:hover {
-    color: $blue-700;
+    color: color-mix(in srgb, #000 40%, $text-link);
   }
 
   &:active {
-    color: $blue-800;
+    color: color-mix(in srgb, #000 80%, $text-link);
   }
 
   &:focus-visible {
@@ -135,13 +135,15 @@
   color: $text-white;
 
   &:hover {
-    background-color: $gray-900;
+    background-color: color-mix(in srgb, #000 40%, $primary-main);
   }
+
   &:active {
-    background-color: darken($gray-900, 20%);
+    background-color: color-mix(in srgb, #000 80%, $primary-main);
   }
+
   &:disabled {
-    background-color: $primary-main;
+    background-color: transparent;
   }
 }
 
@@ -151,15 +153,15 @@
   border: 1px solid $border-interactive;
 
   &:hover {
-    background-color: $gray-50;
+    background-color: color-mix(in srgb, #000 4%, $surface-main);
   }
 
   &:active {
-    background-color: $gray-100;
+    background-color: color-mix(in srgb, #000 8%, $surface-main);
   }
 
   &:disabled {
-    background-color: $surface-main;
+    background-color: transparent;
   }
 }
 
@@ -173,6 +175,7 @@
   &:active {
     background-color: $overlay-active;
   }
+
   &:disabled {
     background-color: transparent;
   }
@@ -200,11 +203,11 @@
   border: 1px solid $border-interactive;
 
   &:hover {
-    background-color: $gray-50;
+    background-color: color-mix(in srgb, #000 4%, $surface-main);
   }
 
   &:active {
-    background-color: $gray-100;
+    background-color: color-mix(in srgb, #000 8%, $surface-main);
   }
 
   &:disabled {
@@ -217,11 +220,13 @@
   color: $text-white;
 
   &:hover {
-    background-color: $red-600;
+    background-color: color-mix(in srgb, #000 20%, $error-main);
   }
+
   &:active {
-    background-color: $red-700;
+    background-color: color-mix(in srgb, #000 40%, $error-main);
   }
+
   &:disabled {
     background-color: $error-main;
   }

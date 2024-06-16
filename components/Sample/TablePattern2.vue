@@ -32,7 +32,7 @@
                   <template #dialogTrigger
                     ><Btn label="削除" color="destructive" size="M"
                   /></template>
-                  <template #dialogTitle>削除します。</template>
+                  <template #dialogTitle>削除します</template>
                   <template #dialogDescription>
                     削除すると取り消すことができません。よろしいですか？
                   </template>

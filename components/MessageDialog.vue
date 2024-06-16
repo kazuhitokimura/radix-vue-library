@@ -69,7 +69,7 @@ const props = defineProps({
   inset: 0;
   background-color: $overlay-modal;
   z-index: $z-index-30;
-  animation: overlayShow 0.2s ease-out;
+  animation: overlayShow 0.2s ease-out; /*overlayShowのアニメーション付与*/
 }
 
 .dialogTrigger {
@@ -81,7 +81,7 @@ const props = defineProps({
   position: fixed;
   top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%); /*要素を20pxだけ下に移動させた状態にしておく*/
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -93,7 +93,7 @@ const props = defineProps({
   border-radius: $radius-M;
   box-shadow: $shadow-40;
   z-index: $z-index-40;
-  animation: contentShow 0.2s ease-out;
+  animation: contentShow 0.2s ease-out; /*contentShowのアニメーション付与*/
 }
 
 .dialogTitle {
@@ -114,6 +114,7 @@ const props = defineProps({
   width: 100%;
 }
 
+/* overlayShowアニメーションの定義 */
 @keyframes overlayShow {
   from {
     opacity: 0;
@@ -123,6 +124,7 @@ const props = defineProps({
   }
 }
 
+/* contentShowアニメーションの定義 */
 @keyframes contentShow {
   from {
     transform: translate(-50%, -50%) translateY(20px);

@@ -84,11 +84,11 @@ const props = defineProps({
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
   width: 100%;
   max-width: 25rem;
   max-height: 80vh;
-  padding: 1rem;
+  padding: 1.5rem;
+  gap: 0.75rem;
   background-color: $surface-main;
   border-radius: $radius-M;
   box-shadow: $shadow-40;

@@ -32,9 +32,9 @@
                   <template #dialogTrigger
                     ><Btn label="削除" color="destructive" size="M"
                   /></template>
-                  <template #dialogTitle>削除します。よろしいですか？</template>
+                  <template #dialogTitle>削除します。</template>
                   <template #dialogDescription>
-                    メッセージダイアログのコンポーネントをRadix以外のコンポーネントから呼び出すと正常に動作する。
+                    削除すると取り消すことができません。
                   </template>
                   <template #dialogAction
                     ><Btn label="削除" color="high-destructive"

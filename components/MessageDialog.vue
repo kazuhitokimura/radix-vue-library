@@ -88,7 +88,7 @@ const props = defineProps({
   max-width: 25rem;
   max-height: 80vh;
   padding: 1.5rem;
-  gap: 0.75rem;
+  gap: 1.25rem;
   background-color: $surface-main;
   border-radius: $radius-M;
   box-shadow: $shadow-40;

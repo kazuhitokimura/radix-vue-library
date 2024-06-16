@@ -34,7 +34,7 @@
                   /></template>
                   <template #dialogTitle>削除します。</template>
                   <template #dialogDescription>
-                    削除すると取り消すことができません。
+                    削除すると取り消すことができません。よろしいですか？
                   </template>
                   <template #dialogAction
                     ><Btn label="削除" color="high-destructive"

@@ -3,7 +3,7 @@
 
 <template>
   <DialogRoot>
-    <DialogTrigger :class="$style.dialogTrigger"
+    <DialogTrigger :class="$style.dialogTrigger" tabindex="-1"
       ><slot name="dialogTrigger"
     /></DialogTrigger>
     <DialogPortal>
@@ -19,7 +19,7 @@
             ><slot name="dialogDescription"
           /></DialogDescription>
           <div :class="$style.dialogAction">
-            <DialogClose :class="$style.dialogClose"
+            <DialogClose tabindex="-1"
               ><Btn :label="closeLabel" color="neutral"
             /></DialogClose>
             <slot name="dialogAction" />
@@ -69,23 +69,19 @@ const props = defineProps({
   inset: 0;
   background-color: $overlay-modal;
   z-index: $z-index-30;
+  animation: overlayShow 0.2s ease-out;
 }
 
 .dialogTrigger {
   width: fit-content;
   height: fit-content;
-
-  /*フォーカス時のスタイルがslotと2重で当たらないようにする*/
-  &:focus {
-    outline: none;
-  }
 }
 
 .dialogContent {
   position: fixed;
   top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%); /*ダイアログを左右中央寄せに*/
+  transform: translate(-50%, -50%); /*要素を20pxだけ下に移動させた状態にしておく*/
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -97,6 +93,7 @@ const props = defineProps({
   border-radius: $radius-M;
   box-shadow: $shadow-40;
   z-index: $z-index-40;
+  animation: contentShow 0.2s ease-out;
 }
 
 .dialogTitle {
@@ -117,23 +114,21 @@ const props = defineProps({
   width: 100%;
 }
 
-.dialogClose {
-  /*フォーカス時のスタイルがslotと2重で当たらないようにする*/
-  &:focus {
-    outline: none;
+@keyframes overlayShow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
-/*アニメーション、動いていない*/
-.up-enter-active,
-.up-leave-active {
-  transition: opacity 0.3s ease;
-  transform: translateY(0);
-}
-
-.up-enter-from,
-.up-leave-to {
-  opacity: 0;
-  transform: translateY(20px);
+@keyframes contentShow {
+  from {
+    transform: translate(-50%, -50%) translateY(20px);
+  }
+  to {
+    transform: translate(-50%, -50%);
+  }
 }
 </style>

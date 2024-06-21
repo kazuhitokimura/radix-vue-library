@@ -19,12 +19,12 @@ const menuItems = ref([
     isSubheader: true,
   },
   {
-    label: "パターン1",
+    label: "テーブルとページ",
     current: true,
     nuxtLink: "/",
   },
   {
-    label: "パターン2",
+    label: "テーブルとドロワー",
     current: false,
     nuxtLink: "/pattern2",
   },

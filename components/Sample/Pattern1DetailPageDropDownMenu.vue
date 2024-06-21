@@ -3,33 +3,6 @@
   <IconBtnDropDownMenu size="M" :items="dropdownItems" @click="handleClick" />
 </template>
 
-<!--
-<template>
-  <DropdownMenu>
-    <template #dropDownTrigger>
-      <IconBtn icon="more_horiz" color="neutral" size="L" />
-    </template>
-    <template #dropDownContent>
-      <DropdownMenuItem :class="$style.dropDownItem"
-        ><NuxtLink :class="$style.nuxtLink" to="/edit">編集</NuxtLink></DropdownMenuItem
-      >
-      <MessageDialog>
-        <template #dialogTrigger>
-          <span :class="[$style.dropDownItem, $style.destructive]">削除 </span>
-        </template>
-        <template #dialogTitle> 削除します。よろしいですか？ </template>
-        <template #dialogDescription
-          ><p>
-            （要修正）トリガーをRadixのドロップダウンに入れると、ダイアログ自体をクリックしたら閉じてしまう。
-          </p></template
-        >
-        <template #dialogAction><Btn label="削除" color="high-destructive" /></template>
-      </MessageDialog>
-    </template>
-  </DropdownMenu>
-</template>
--->
-
 <script setup>
 import IconBtnDropDownMenu from "../IconBtnDropDownMenu.vue";
 

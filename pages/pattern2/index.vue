@@ -4,7 +4,7 @@
       <div :class="$style.collectionPageTitle">
         <h1>ページのタイトルが入ります</h1>
         <p :class="$style.collectionPageCaption">
-          これは詳細ページへ遷移しないパターンです。
+          これはテーブルからドロワーを表示するパターンです。
         </p>
       </div>
       <ActionDrawer contentTitle="登録" contentWidth="30rem">

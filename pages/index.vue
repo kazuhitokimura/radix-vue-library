@@ -4,7 +4,7 @@
       <div :class="$style.collectionPageTitle">
         <h1>ページのタイトルが入ります</h1>
         <p :class="$style.collectionPageCaption">
-          これは詳細ページへ遷移するパターンです。
+          これはテーブルからページへ遷移するパターンです。
         </p>
       </div>
       <!-- ページ遷移で登録 -->

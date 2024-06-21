@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.pageHeader">
-    <LinkText text="保存せず戻る" nuxtLink="/detail" :chevronLeft="true" />
+    <LinkText text="戻る" nuxtLink="/page-view/detail" :chevronLeft="true" />
     <div :class="$style.actionWrapper">
       <Btn label="この内容で保存" size="L" />
     </div>

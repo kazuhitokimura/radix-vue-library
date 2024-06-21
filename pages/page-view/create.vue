@@ -1,3 +1,4 @@
+<!-- 使わない -->
 <template>
   <div :class="$style.pageHeader">
     <LinkText text="戻る" nuxtLink="/" :chevronLeft="true" />

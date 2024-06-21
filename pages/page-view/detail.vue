@@ -52,8 +52,8 @@ definePageMeta({
   layout: "default",
 });
 
-import Pattern1DetailPageDropDownMenu from "../components/Sample/Pattern1DetailPageDropDownMenu.vue";
-import TablePattern1Detail from "../components/Sample/TablePattern1Detail.vue";
+import Pattern1DetailPageDropDownMenu from "/components/Sample/Pattern1DetailPageDropDownMenu.vue";
+import TablePattern1Detail from "/components/Sample/TablePattern1Detail.vue";
 </script>
 
 <style lang="scss" module>

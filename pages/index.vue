@@ -7,25 +7,6 @@
           これはテーブルからページへ遷移するパターンです。
         </p>
       </div>
-      <!-- ページ遷移で登録 -->
-      <Btn label="登録" size="L" :isNuxtLink="true" nuxtLink="/create" />
-      <!-- ダイアログで登録 -->
-      <ActionDialog contentTitle="登録">
-        <template #dialogTrigger>
-          <Btn label="登録" size="L" />
-        </template>
-        <template #dialogBody>
-          <div :class="$style.inputColumn">
-            <InputElement label="タイトル" :mandatory="true"
-              ><Input placeholder="タイトル"
-            /></InputElement>
-          </div>
-        </template>
-        <template #dialogFooter>
-          <Btn label="キャンセル" color="neutral" size="L" />
-          <Btn label="この内容で登録" color="primary" size="L" />
-        </template>
-      </ActionDialog>
       <!-- フルスクリーンダイアログで登録 -->
       <ActionDialog contentTitle="登録" size="fullScreen">
         <template #dialogTrigger>
@@ -58,7 +39,7 @@ definePageMeta({
   layout: "default",
 });
 
-import TablePattern1 from "../components/Sample/TablePattern1.vue";
+import TablePattern1 from "../components/Sample/PageView/CollectionTable.vue";
 import ActionDialog from "../components/ActionDialog .vue";
 
 import { ref } from "vue";

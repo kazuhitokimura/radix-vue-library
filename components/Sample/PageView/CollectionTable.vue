@@ -11,7 +11,7 @@
         <TdText
           text="パターン1"
           :isNuxtLink="true"
-          nuxtLink="/detail"
+          nuxtLink="/page-view/detail"
           minWidth="15rem"
           caption="これはキャプションです。この列はminWidth指定しています。"
         />
@@ -23,7 +23,7 @@
         <TdText
           text="パターン2"
           :isNuxtLink="true"
-          nuxtLink="/detailTableViewFullWidth"
+          nuxtLink="/page-view/detailTableViewFullWidth"
           minWidth="15rem"
           :isTruncate="false"
           caption="これはキャプションです。この列はminWidth指定しています。"
@@ -36,7 +36,7 @@
         <TdText
           text="パターン3"
           :isNuxtLink="true"
-          nuxtLink="/detailTableView"
+          nuxtLink="/page-view/detailTableView"
           minWidth="15rem"
           :isTruncate="false"
           caption="これはキャプションです。この列はminWidth指定しています。"

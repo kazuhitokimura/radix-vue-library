@@ -29,7 +29,7 @@ const handleClick = (item) => {
 };
 
 const editPattern1 = () => {
-  router.push("/edit");
+  router.push("/page-view/edit");
 };
 
 const deletePattern1 = () => {

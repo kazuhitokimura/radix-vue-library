@@ -2,8 +2,8 @@
   <div :class="$style.pageHeader">
     <LinkText text="戻る" :chevronLeft="true" />
     <div :class="$style.actionWrapper">
-      <Btn label="アクション" size="L" />
-      <IconBtn icon="more_horiz" size="L" />
+      <Btn label="アクション" size="M" />
+      <IconBtn icon="more_horiz" size="M" />
     </div>
   </div>
   <div :class="$style.pageContentWrapper">
@@ -40,7 +40,7 @@ import TablePattern1Detail from "../components/Sample/TablePattern1Detail.vue";
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 1rem;
+  padding: 8px 16px;
 }
 
 .actionWrapper {

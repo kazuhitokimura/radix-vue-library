@@ -67,7 +67,7 @@ const selectOption = ref([
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 1rem;
+  padding: 8px 16px;
 }
 
 .actionWrapper {
@@ -88,6 +88,6 @@ const selectOption = ref([
 }
 
 .h1 {
-  margin-bottom: 1.75rem;
+  margin-bottom: 24px;
 }
 </style>

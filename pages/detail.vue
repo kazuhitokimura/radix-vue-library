@@ -64,7 +64,7 @@ import TablePattern1Detail from "../components/Sample/TablePattern1Detail.vue";
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 1rem;
+  padding: 8px 16px;
 }
 
 .actionWrapper {
@@ -82,7 +82,7 @@ import TablePattern1Detail from "../components/Sample/TablePattern1Detail.vue";
 /* 左メニューが白いので文章が右に寄っているのが気になる */
 
 .h1 {
-  margin-bottom: 1rem;
+  margin-bottom: 24px;
 }
 
 .chipWrapper {
@@ -93,26 +93,21 @@ import TablePattern1Detail from "../components/Sample/TablePattern1Detail.vue";
 }
 
 .h2 {
-  margin-top: 3rem;
-  margin-bottom: 1.25rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 .h3 {
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
+  margin-top: 36px;
+  margin-bottom: 16px;
 }
 .h4 {
   font-size: 1.1rem;
-  margin-top: 2.25rem;
-  margin-bottom: 1rem;
+  margin-top: 32px;
+  margin-bottom: 12px;
 }
-.h5 {
-  margin-top: 2rem;
-  margin-bottom: 0.75rem;
-}
-
 .p {
   font-size: 1rem;
-  line-height: 1.75rem;
+  line-height: 1.75;
   color: $gray-600;
 }
 </style>

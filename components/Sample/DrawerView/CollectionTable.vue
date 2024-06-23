@@ -28,6 +28,7 @@
                 <InputElement label="タイトル"><Input value="テキスト" /></InputElement>
                 <InputElement label="タイトル"><Input value="テキスト" /></InputElement>
                 <InputElement label="項目"><Input value="テキスト" /></InputElement>
+                <p :class="$style.requiredCaption">*は必須項目です</p>
                 <MessageDialog>
                   <template #dialogTrigger
                     ><Btn label="削除" color="destructive" size="M"
@@ -72,6 +73,7 @@
                 <InputElement label="タイトル"><Input value="テキスト" /></InputElement>
                 <InputElement label="タイトル"><Input value="テキスト" /></InputElement>
                 <InputElement label="項目"><Input value="テキスト" /></InputElement>
+                <p :class="$style.requiredCaption">*は必須項目です</p>
                 <MessageDialog>
                   <template #dialogTrigger
                     ><Btn label="削除" color="destructive" size="M"
@@ -105,5 +107,9 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+}
+
+.requiredCaption {
+  @include required-caption-base();
 }
 </style>

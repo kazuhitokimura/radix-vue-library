@@ -20,6 +20,7 @@
             <InputElement label="項目"><Input placeholder="項目" /></InputElement>
             <InputElement label="項目"><Input placeholder="項目" /></InputElement>
             <InputElement label="項目"><Input placeholder="項目" /></InputElement>
+            <p :class="$style.requiredCaption">*は必須項目です</p>
           </div>
         </template>
         <template #drawerFooter>
@@ -79,5 +80,9 @@ body {
   align-items: center;
   width: 100%;
   padding: 0.75rem 0;
+}
+
+.requiredCaption {
+  @include required-caption-base();
 }
 </style>

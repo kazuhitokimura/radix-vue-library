@@ -394,3 +394,10 @@
   max-width: 40rem;
   margin: 1rem 7.5rem 4rem 2rem;
 }
+
+/*必須項目の説明テキスト*/
+
+@mixin required-caption-base() {
+  @include text-body2();
+  color: $text-sub;
+}

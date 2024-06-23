@@ -41,6 +41,7 @@ definePageMeta({
 
 import TablePattern1 from "../components/Sample/PageView/CollectionTable.vue";
 import ActionDialog from "../components/ActionDialog .vue";
+import WipActionDialog from "../components/Wip/ActionDialog.vue";
 
 import { ref } from "vue";
 

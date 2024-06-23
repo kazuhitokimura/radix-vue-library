@@ -13,7 +13,7 @@
         icon="close"
         ariaLabel="閉じる"
         color="text"
-        size="L"
+        size="M"
         @click="toggleDrawer"
       />
     </div>
@@ -63,8 +63,8 @@ const props = defineProps({
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.75rem 1.5rem;
-  gap: 0.5rem;
+  padding: 16px 24px;
+  gap: 8px;
   width: 100%;
   border-bottom: 1px solid $border-divider;
 }

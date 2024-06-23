@@ -23,7 +23,7 @@
         <TdText
           text="パターン2"
           :isNuxtLink="true"
-          nuxtLink="/page-view/detailTableViewFullWidth"
+          nuxtLink="/page-view/detail-table-view-full-width"
           minWidth="15rem"
           :isTruncate="false"
           caption="これはキャプションです。この列はminWidth指定しています。"
@@ -36,7 +36,7 @@
         <TdText
           text="パターン3"
           :isNuxtLink="true"
-          nuxtLink="/page-view/detailTableView"
+          nuxtLink="/page-view/detail-table-view"
           minWidth="15rem"
           :isTruncate="false"
           caption="これはキャプションです。この列はminWidth指定しています。"

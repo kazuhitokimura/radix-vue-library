@@ -24,7 +24,7 @@ const props = defineProps({
   },
 });
 
-import RecordsPerPageSelect from "../components/Sample/RecordsPerPageSelect.vue";
+import RecordsPerPageSelect from "../components/RecordsPerPageSelect.vue";
 </script>
 
 <style lang="scss" module>

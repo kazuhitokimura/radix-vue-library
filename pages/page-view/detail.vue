@@ -2,8 +2,14 @@
   <div :class="$style.pageHeader">
     <LinkText text="戻る" :chevronLeft="true" />
     <div :class="$style.actionWrapper">
-      <Btn label="アクション" size="M" />
-      <Pattern1DetailPageDropDownMenu />
+      <Btn
+        label="編集"
+        size="M"
+        color="neutral"
+        :isNuxtLink="true"
+        nuxtLink="/page-view/edit"
+      />
+      <SingleViewMoreOptions />
     </div>
   </div>
   <div :class="$style.singleColumnPageContentWrapper">
@@ -43,7 +49,7 @@
       これらの斬新なデザインは、単なる視覚的な美しさだけでなく、私たちの生活や社会に対する深い洞察と課題解決の取り組みを反映しています。海の多様な色彩を探求するクレヨンから、地域社会のつながりを強化する共有スペースへの改修まで、それぞれが私たちに新しい視点と感動を提供してくれるでしょう。
     </p>
     <h2 :class="$style.h2">詳細</h2>
-    <TablePattern1Detail />
+    <SingleViewInfoTable />
   </div>
 </template>
 
@@ -52,8 +58,8 @@ definePageMeta({
   layout: "default",
 });
 
-import Pattern1DetailPageDropDownMenu from "/components/Sample/Pattern1DetailPageDropDownMenu.vue";
-import TablePattern1Detail from "/components/Sample/TablePattern1Detail.vue";
+import SingleViewMoreOptions from "/components/Sample/PageView/SingleViewMoreOptions.vue";
+import SingleViewInfoTable from "../../components/Sample/PageView/SingleViewInfoTable.vue";
 </script>
 
 <style lang="scss" module>

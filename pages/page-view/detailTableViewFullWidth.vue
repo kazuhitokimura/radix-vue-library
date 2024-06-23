@@ -17,9 +17,9 @@
       このページはコンテンツにmax-widthを指定していません。コンテンツの説明がテーブル表示になっています。
     </p>
     <h2 :class="$style.h2">作品一覧</h2>
-    <TablePattern1DetailRelated />
+    <SingleViewRelatedInfoTable />
     <h2 :class="$style.h2">詳細</h2>
-    <TablePattern1Detail />
+    <SingleViewInfoTable />
   </div>
 </template>
 
@@ -28,8 +28,8 @@ definePageMeta({
   layout: "default",
 });
 
-import TablePattern1DetailRelated from "../../components/Sample/TablePattern1DetailRelated.vue";
-import TablePattern1Detail from "../../components/Sample/TablePattern1Detail.vue";
+import SingleViewRelatedInfoTable from "../../components/Sample/PageView/SingleViewRelatedInfoTable.vue";
+import SingleViewInfoTable from "../../components/Sample/PageView/SingleViewInfoTable.vue";
 </script>
 
 <style lang="scss" module>

@@ -1,9 +1,6 @@
 <template>
   <div :class="$style.pageHeader">
     <LinkText text="戻る" nuxtLink="/page-view/detail" :chevronLeft="true" />
-    <div :class="$style.actionWrapper">
-      <Btn label="この内容で保存" size="L" />
-    </div>
   </div>
   <div :class="$style.singleColumnPageContentWrapper">
     <h1 :class="$style.h1">編集</h1>
@@ -68,6 +65,7 @@ const selectOption = ref([
   align-items: center;
   width: 100%;
   padding: 8px 16px;
+  min-height: 3.5rem;
 }
 
 .actionWrapper {

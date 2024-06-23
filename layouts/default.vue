@@ -26,7 +26,7 @@ const menuItems = ref([
   {
     label: "テーブルとドロワー",
     current: false,
-    nuxtLink: "/pattern2",
+    nuxtLink: "/drawer-view",
   },
 ]);
 </script>

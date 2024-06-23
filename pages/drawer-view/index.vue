@@ -28,7 +28,7 @@
         </template>
       </ActionDrawer>
     </div>
-    <TablePattern2 />
+    <CollectionTable />
     <div :class="$style.tableFooter">
       <PageNation />
     </div>
@@ -40,8 +40,7 @@ definePageMeta({
   layout: "custom",
 });
 
-import TablePattern2Test from "~/components/Sample/TablePattern2Test.vue";
-import TablePattern2 from "~/components/Sample/TablePattern2.vue";
+import CollectionTable from "../../components/Sample/DrawerView/CollectionTable.vue";
 </script>
 
 <style scoped>

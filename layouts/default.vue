@@ -35,7 +35,7 @@ const menuItems = ref([
 .gridWrapper {
   display: grid;
   display: grid;
-  grid-template-columns: 13rem 1fr;
+  grid-template-columns: 11rem 1fr;
 }
 
 .main {

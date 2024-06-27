@@ -41,14 +41,15 @@ const props = defineProps({
 <style lang="scss" module>
 .navMenuItem {
   display: block;
-  gap: 0.25rem;
+  gap: 4px;
   width: 100%;
-  padding: 0.5rem;
+  padding: 8px;
   color: $text-main;
   background-color: $gray-50;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  @include text-body2();
 
   &:hover {
     background-color: $gray-50;

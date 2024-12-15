@@ -6,17 +6,6 @@ export const drawerViewMocTableData = [
     status: "ステータス",
     hoge: "hogeデータ1",
     fuga: "fugaデータ1",
-    items: [
-      {
-        label: "タイトル",
-        value: "タイトルタイトルタイトルタイトル",
-        mandatory: true,
-      },
-      { label: "タイトル", value: "テキスト" },
-      { label: "タイトル", value: "テキスト" },
-      { label: "タイトル", value: "テキスト" },
-      { label: "項目変えます", value: "変えます" },
-    ],
   },
   {
     title: "タイトルタイトルタイトルタイトル",
@@ -25,16 +14,5 @@ export const drawerViewMocTableData = [
     status: "ステータスが入ります",
     hoge: "hogeデータ2",
     fuga: "fugaデータ2",
-    items: [
-      {
-        label: "タイトル",
-        value: "タイトルタイトルタイトルタイトル",
-        mandatory: true,
-      },
-      { label: "タイトル", value: "テキスト" },
-      { label: "タイトル", value: "テキスト" },
-      { label: "タイトル", value: "テキスト" },
-      { label: "項目", value: "テキスト" },
-    ],
   },
 ];

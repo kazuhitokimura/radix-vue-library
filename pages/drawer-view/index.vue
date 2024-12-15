@@ -42,6 +42,7 @@ definePageMeta({
 });
 
 import CollectionTable from "../../components/Sample/DrawerView/CollectionTable.vue";
+import drawerViewMockData from "../../mockdata/drawerViewMockData";
 </script>
 
 <style scoped>

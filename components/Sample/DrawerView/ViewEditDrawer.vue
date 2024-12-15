@@ -40,6 +40,7 @@ import InputElement from "../../InputElement.vue";
 import Input from "../../Input.vue";
 import RowDeleteDialog from "./RowDeleteDialog.vue";
 
+// InputElementのlabelとvalueに表示する内容をpropsで受け取る
 const props = defineProps({
   title: String,
   caption: String,

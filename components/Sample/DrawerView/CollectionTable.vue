@@ -13,7 +13,7 @@
       <tr v-for="(row, index) in drawerViewMocTableData" :key="index">
         <TdText :text="row.title" :caption="row.caption" :minWidth="row.minWidth" />
         <TdBtn>
-          <!--drawerView用のActionDrawerは別のコンポーネントで定義したい-->
+          <!--ViewEditDrawerのpropsにdrawerViewMocTableDataの内容をインポート-->
           <ViewEditDrawer
             :title="row.title"
             :caption="row.caption"

@@ -29,7 +29,7 @@ const props = defineProps({
   padding: 4px;
   min-height: calc(100vh - 3.75rem);
   height: 100%;
-  width: 11rem;
+  width: 9.75rem;
   background-color: $gray-50;
   border-right: 1px solid $gray-100;
 }

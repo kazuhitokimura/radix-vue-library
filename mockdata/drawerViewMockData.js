@@ -1,12 +1,40 @@
-export const mockData = [
-  { id: 1, name: "Alice", email: "alice@example.com" },
-  { id: 2, name: "Bob", email: "bob@example.com" },
-  { id: 3, name: "Charlie", email: "charlie@example.com" },
-  { id: 4, name: "David", email: "david@example.com" },
-  { id: 5, name: "Eve", email: "eve@example.com" },
-  { id: 6, name: "Frank", email: "frank@example.com" },
-  { id: 7, name: "Grace", email: "grace@example.com" },
-  { id: 8, name: "Hank", email: "hank@example.com" },
-  { id: 9, name: "Ivy", email: "ivy@example.com" },
-  { id: 10, name: "Jack", email: "jack@example.com" },
+export const drawerViewMocTableData = [
+  {
+    title: "タイトル",
+    caption: "キャプション",
+    minWidth: "15rem",
+    status: "ステータス",
+    hoge: "hogeデータ1",
+    fuga: "fugaデータ1",
+    items: [
+      {
+        label: "タイトル",
+        value: "タイトルタイトルタイトルタイトル",
+        mandatory: true,
+      },
+      { label: "タイトル", value: "テキスト" },
+      { label: "タイトル", value: "テキスト" },
+      { label: "タイトル", value: "テキスト" },
+      { label: "項目変えます", value: "変えます" },
+    ],
+  },
+  {
+    title: "タイトルタイトルタイトルタイトル",
+    caption: "これはキャプションです。この列はminWidth指定しています。",
+    minWidth: "15rem",
+    status: "ステータスが入ります",
+    hoge: "hogeデータ2",
+    fuga: "fugaデータ2",
+    items: [
+      {
+        label: "タイトル",
+        value: "タイトルタイトルタイトルタイトル",
+        mandatory: true,
+      },
+      { label: "タイトル", value: "テキスト" },
+      { label: "タイトル", value: "テキスト" },
+      { label: "タイトル", value: "テキスト" },
+      { label: "項目", value: "テキスト" },
+    ],
+  },
 ];

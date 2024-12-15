@@ -14,37 +14,13 @@
         <TdText :text="row.title" :caption="row.caption" :minWidth="row.minWidth" />
         <TdBtn>
           <!--drawerView用のActionDrawerは別のコンポーネントで定義したい-->
-          <ActionDrawer contentTitle="詳細表示" contentWidth="30rem">
-            <template #drawerTrigger>
-              <Btn label="詳細表示" color="neutral" size="M" />
-            </template>
-            <!--drawerBodyも、drawerViewMocTableDataの内容をインポート-->
-            <template #drawerBody>
-              <div :class="$style.inputColumn">
-                <InputElement label="タイトル" :mandatory="true">
-                  <Input :value="row.title" />
-                </InputElement>
-                <InputElement label="キャプション">
-                  <Input :value="row.caption" />
-                </InputElement>
-                <InputElement label="ステータス">
-                  <Input :value="row.status" />
-                </InputElement>
-                <InputElement label="hoge">
-                  <Input :value="row.hoge" />
-                </InputElement>
-                <InputElement label="fuga">
-                  <Input :value="row.fuga" />
-                </InputElement>
-                <p :class="$style.requiredCaption">*は必須項目です</p>
-                <RowDeleteDialog />
-              </div>
-            </template>
-            <template #drawerFooter>
-              <Btn label="キャンセル" color="neutral" size="L" />
-              <Btn label="この内容で保存" color="primary" size="L" />
-            </template>
-          </ActionDrawer>
+          <ViewEditDrawer
+            :title="row.title"
+            :caption="row.caption"
+            :status="row.status"
+            :hoge="row.hoge"
+            :fuga="row.fuga"
+          />
         </TdBtn>
         <TdStatus :text="row.status" />
         <TdText :text="row.hoge" />
@@ -57,6 +33,7 @@
 <script setup>
 import { drawerViewMocTableData } from "../../../mockdata/drawerViewMockData";
 import RowDeleteDialog from "./RowDeleteDialog.vue";
+import ViewEditDrawer from "./ViewEditDrawer.vue";
 </script>
 
 <style lang="scss" module>

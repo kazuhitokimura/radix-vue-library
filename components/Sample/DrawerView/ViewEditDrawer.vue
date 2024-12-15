@@ -3,23 +3,22 @@
     <template #drawerTrigger>
       <Btn label="詳細表示" color="neutral" size="M" />
     </template>
-    <!--drawerBodyも、drawerViewMocTableDataの内容をインポート-->
-    <template #drawerBody="{ row }">
+    <template #drawerBody>
       <div :class="$style.inputColumn">
         <InputElement label="タイトル" :mandatory="true">
-          <Input :value="row.title" />
+          <Input :value="title" />
         </InputElement>
         <InputElement label="キャプション">
-          <Input :value="row.caption" />
+          <Input :value="caption" />
         </InputElement>
         <InputElement label="ステータス">
-          <Input :value="row.status" />
+          <Input :value="status" />
         </InputElement>
         <InputElement label="hoge">
-          <Input :value="row.hoge" />
+          <Input :value="hoge" />
         </InputElement>
         <InputElement label="fuga">
-          <Input :value="row.fuga" />
+          <Input :value="fuga" />
         </InputElement>
         <p :class="$style.requiredCaption">*は必須項目です</p>
         <RowDeleteDialog />
@@ -33,12 +32,21 @@
 </template>
 
 <script setup>
+import { ref } from "vue";
 import { drawerViewMocTableData } from "../../../mockdata/drawerViewMockData";
 import ActionDrawer from "../../ActionDrawer.vue";
 import Btn from "../../Btn.vue";
 import InputElement from "../../InputElement.vue";
 import Input from "../../Input.vue";
 import RowDeleteDialog from "./RowDeleteDialog.vue";
+
+const props = defineProps({
+  title: String,
+  caption: String,
+  status: String,
+  hoge: String,
+  fuga: String,
+});
 </script>
 
 <style lang="scss" module>

@@ -37,19 +37,7 @@
                   <Input :value="row.fuga" />
                 </InputElement>
                 <p :class="$style.requiredCaption">*は必須項目です</p>
-                <!--dsrawerView削除用のActionDialogは別のコンポーネントで定義したい-->
-                <MessageDialog>
-                  <template #dialogTrigger>
-                    <Btn label="削除" color="destructive" size="M" />
-                  </template>
-                  <template #dialogTitle>削除します。よろしいですか？</template>
-                  <template #dialogDescription>
-                    削除すると取り消すことができません。
-                  </template>
-                  <template #dialogAction>
-                    <Btn label="削除" color="high-destructive" />
-                  </template>
-                </MessageDialog>
+                <RowDeleteDialog />
               </div>
             </template>
             <template #drawerFooter>
@@ -66,16 +54,9 @@
   </Table>
 </template>
 
-<script>
+<script setup>
 import { drawerViewMocTableData } from "../../../mockdata/drawerViewMockData";
-
-export default {
-  data() {
-    return {
-      drawerViewMocTableData,
-    };
-  },
-};
+import RowDeleteDialog from "./RowDeleteDialog.vue";
 </script>
 
 <style lang="scss" module>

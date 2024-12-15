@@ -20,6 +20,7 @@
             :status="row.status"
             :hoge="row.hoge"
             :fuga="row.fuga"
+            @toggleDrawer="toggleDrawer"
           />
         </TdBtn>
         <TdStatus :text="row.status" />
@@ -32,7 +33,6 @@
 
 <script setup>
 import { drawerViewMocTableData } from "../../../mockdata/drawerViewMockData";
-import RowDeleteDialog from "./RowDeleteDialog.vue";
 import ViewEditDrawer from "./ViewEditDrawer.vue";
 </script>
 

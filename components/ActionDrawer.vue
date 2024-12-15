@@ -1,7 +1,7 @@
 <template>
-  <button :class="$style.drawerTrigger" @click="toggleDrawer">
+  <div :class="$style.drawerTrigger" @click="toggleDrawer">
     <slot name="drawerTrigger" />
-  </button>
+  </div>
   <DrawerContent
     :class="[$style.drawerContent, { [$style.open]: drawerIsOpen }]"
     :style="{ width: contentWidth }"

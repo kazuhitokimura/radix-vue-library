@@ -47,6 +47,7 @@ const props = defineProps({
   status: String,
   hoge: String,
   fuga: String,
+  toggleDrawer: Function,
 });
 </script>
 

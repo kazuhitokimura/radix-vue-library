@@ -1,4 +1,5 @@
 <template>
+  <!--divをクリックする形になっているので要修正-->
   <div :class="$style.drawerTrigger" @click="toggleDrawer">
     <slot name="drawerTrigger" />
   </div>

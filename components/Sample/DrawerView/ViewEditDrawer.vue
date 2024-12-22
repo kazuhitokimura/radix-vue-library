@@ -1,7 +1,7 @@
 <template>
-  <ActionDrawer contentTitle="詳細表示" contentWidth="30rem">
+  <ActionDrawer :contentTitle="title" contentWidth="30rem">
     <template #drawerTrigger>
-      <Btn label="詳細表示" color="neutral" size="M" />
+      <Btn label="編集" color="neutral" size="M" />
     </template>
     <template #drawerBody>
       <div :class="$style.inputColumn">

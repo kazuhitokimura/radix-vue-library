@@ -7,27 +7,7 @@
           これはテーブルからドロワーを表示するパターンです。
         </p>
       </div>
-      <ActionDrawer contentTitle="登録" contentWidth="30rem">
-        <template #drawerTrigger>
-          <btn label="登録" size="L" />
-        </template>
-        <template #drawerBody>
-          <div :class="$style.inputColumn">
-            <InputElement label="タイトル" :mandatory="true"
-              ><Input placeholder="タイトル"
-            /></InputElement>
-            <InputElement label="項目"><Input placeholder="項目" /></InputElement>
-            <InputElement label="項目"><Input placeholder="項目" /></InputElement>
-            <InputElement label="項目"><Input placeholder="項目" /></InputElement>
-            <InputElement label="項目"><Input placeholder="項目" /></InputElement>
-            <p :class="$style.requiredCaption">*は必須項目です</p>
-          </div>
-        </template>
-        <template #drawerFooter>
-          <Btn label="キャンセル" color="neutral" size="L" />
-          <Btn label="この内容で登録" color="primary" size="L" />
-        </template>
-      </ActionDrawer>
+      <CreateDrawer />
     </div>
     <CollectionTable />
     <div :class="$style.tableFooter">
@@ -42,7 +22,7 @@ definePageMeta({
 });
 
 import CollectionTable from "../../components/Sample/DrawerView/CollectionTable.vue";
-import ActionDrawer from "../../components/ActionDrawer.vue";
+import CreateDrawer from "../../components/Sample/DrawerView/CreateDrawer.vue";
 import PageNation from "../../components/PageNation.vue";
 </script>
 

@@ -24,10 +24,6 @@
         <RowDeleteDialog />
       </div>
     </template>
-    <template #drawerFooter>
-      <Btn label="キャンセル" color="neutral" size="L" />
-      <Btn label="この内容で保存" color="primary" size="L" />
-    </template>
   </ActionDrawer>
 </template>
 

@@ -10,28 +10,26 @@
     <div :class="$style.drawerHeader">
       <LoadingSpinner v-if="isLoading" />
       <h2 :class="$style.contentTitle">{{ contentTitle }}</h2>
-      <IconBtn
-        icon="close"
-        ariaLabel="閉じる"
-        color="text"
-        size="M"
-        @click="toggleDrawer"
-      />
     </div>
     <div :class="$style.drawerBody">
       <slot name="drawerBody"></slot>
     </div>
     <div :class="$style.drawerFooter">
-      <slot name="drawerFooter"></slot>
+      <Btn :label="neutralBtnLabel" color="neutral" size="L" @click="toggleDrawer" />
+      <Btn :label="primaryBtnLabel" color="primary" size="L" />
     </div>
   </DrawerContent>
 </template>
 
 <script setup>
+import { ref, defineEmits } from "vue";
+
 const drawerIsOpen = ref(false);
+const emit = defineEmits(["toggle"]);
 
 const toggleDrawer = () => {
   drawerIsOpen.value = !drawerIsOpen.value;
+  emit("toggle", drawerIsOpen.value); //emitで親コンポーネントにdrawerIsOpenの値を渡す
 };
 
 const props = defineProps({
@@ -46,6 +44,14 @@ const props = defineProps({
   isLoading: {
     type: Boolean,
     default: false,
+  },
+  neutralBtnLabel: {
+    type: String,
+    default: "キャンセル",
+  },
+  primaryBtnLabel: {
+    type: String,
+    default: "この内容で保存",
   },
 });
 </script>
